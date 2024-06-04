@@ -1,0 +1,7 @@
+<div class="container">
+  <% @recommendations.each do |recommendation| %>
+    <h4>Description: <%= recommendation.description %></h4>
+    <p>Price: <%= recommendation.price %></p>
+    <%= link_to "click more", recommendation_path(recommendation) %>
+  <% end %>
+</div>
