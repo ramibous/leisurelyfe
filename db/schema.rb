@@ -10,9 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_06_04_161447) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_04_175419) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "favorites", force: :cascade do |t|
+    t.bigint "recommendation_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recommendation_id"], name: "index_favorites_on_recommendation_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
+  end
 
   create_table "recommendations", force: :cascade do |t|
     t.text "description"
@@ -33,4 +42,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_04_161447) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "favorites", "recommendations"
+  add_foreign_key "favorites", "users"
 end
