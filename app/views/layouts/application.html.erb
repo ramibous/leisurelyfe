@@ -1,18 +1,17 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Leisurelyfe</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="description" content="Leisurelyfe - Your go-to platform for leisure activities and recommendations.">
+  <title>Home - Leisurelyfe</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <%= stylesheet_link_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+  <%= render 'pages/top_bar' %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+  <%= yield %> <!-- Render the main content here -->
 
-  <body><%= render "shared/navbar" %>
-<%= render "shared/flashes" %>
+  <%= render 'pages/footer' %>
+  <%= render 'pages/search_main'%>
 
-    <%= yield %>
-  </body>
-</html>
+</body>
