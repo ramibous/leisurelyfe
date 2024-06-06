@@ -1,13 +1,23 @@
-<div class="row justify-content-center">
-  <div class="col-sm-8 my-3">
-
+<div class="container">
+  <h1>Search Results</h1>
+  <div class="main">
+    <div class="search-item">
+      <div class="image-icon">
+        <div class="image-container">
+          <div class="rating">4.9
+            <i class="fas fa-star"></i>
+          </div>
+          <img src="https://media.istockphoto.com/id/491391396/photo/venice.jpg?s=612x612&w=0&k=20&c=PPRqUgndF6QDuwnDDiE4Ff_BzKg9rchHbbgeX1sPO50=" alt="Venice">
+        </div>
+        <div class="share">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fas fa-share"></i>
+        </div>
+      </div>
+      <h2>Old Port Montreal</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic tempora ipsum delectus alias, sapiente aliquam ducimus ab, error est aperiam at porro eligendi, harum unde dicta maxime iste facere aut?</p>
+    </div>
+    <button class="btn btn-success btn-custom d-flex">Find Out More</button>
   </div>
 </div>
-<div class="container">
-  <% @recommendations.each do |recommendation| %>
-    <h1>Name: <%= recommendation.name %></h1>
-    <h4>Description: <%= recommendation.description %></h4>
-    <p>Price: <%= recommendation.price %></p>
-    <%= link_to "click more", recommendation_path(recommendation) %>
-  <% end %>
-</div>
+
