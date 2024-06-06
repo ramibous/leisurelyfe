@@ -1,0 +1,32 @@
+body { background-color: #fff;}
+
+
+.top-bar {
+  background-color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center; /* Centering the content horizontally */
+  align-items: center;
+  position: relative; /* Allows absolute positioning of the notification */
+}
+
+.top-bar-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  height: 73.83px;
+}
+
+.notification {
+  position: absolute; /* Position the notification independently */
+  right: 20px; /* Adjust as needed to position correctly */
+  font-size: 20px; /* Adjust the size */
+  color: rgb(7, 7, 7);
+  box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.43);
+  padding: 5px;
+  border-radius: 50%;
+}
