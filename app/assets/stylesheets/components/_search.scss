@@ -147,14 +147,14 @@
   }
   
 .notification {
-  position: absolute; /* Position the notification independently */
-  right: 20px; /* Adjust as needed to position correctly */
-  font-size: 22px; /* Slightly increase the size for better readability */
-  color: #030303; /* Use white color for text */
-  background-color: var(--primary-color); /* Add a background color */
-  padding: 10px 15px; /* Add some padding for better appearance */
-  box-shadow: 0 4px 6px rgba(243, 243, 243, 0.1); /* Softer shadow for a modern look */
-  border-radius: 12px; /* Consistent border radius for a rounded look */
+  position: absolute;
+  right: 20px; 
+  font-size: 22px; 
+  color: #030303; 
+  background-color: var(--primary-color); 
+  padding: 10px 15px; 
+  box-shadow: 0 4px 6px rgba(243, 243, 243, 0.1); 
+  border-radius: 12px; 
   display: flex;
   align-items: center;
   justify-content: center;
