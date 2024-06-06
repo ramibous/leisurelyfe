@@ -12,11 +12,9 @@
 </div>
 <div class="container">
   <% @recommendations.each do |recommendation| %>
+    <h1>Name: <%= recommendation.name %></h1>
     <h4>Description: <%= recommendation.description %></h4>
     <p>Price: <%= recommendation.price %></p>
     <%= link_to "click more", recommendation_path(recommendation) %>
   <% end %>
 </div>
-
-
-https://donnees.montreal.ca/dataset/installations-recreatives-sportives-et-culturelles/resource/2dac229f-6089-4cb7-ab0b-eadc6a147d5d/view/29f8afdd-c32a-459c-82b2-58213fec7c27
