@@ -1,3 +1,4 @@
+/* General styles */
 .search {
     background-color: var(--background-color);
     padding: 20px;
@@ -5,45 +6,45 @@
     box-shadow: var(--box-shadow);
     display: grid;
     gap: 15px;
-  }
-  
-  .input-group {
+}
+
+.input-group {
     display: flex;
     align-items: center;
     gap: 10px;
     border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 0 30px;
+    border-radius: 18px;
+    padding: 0 10px;
     height: 50px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: white;
-  }
-  
-  .input-group i {
+}
+
+.input-group i {
     font-size: 20px;
     color: #888;
-  }
-  
-  .input-group input {
+}
+
+.input-group input {
     flex: 1;
     border: none;
     outline: none;
     font-size: 16px;
     padding: 10px;
     border-radius: 8px;
-  }
-  
-  .input-group input[type="number"] {
+}
+
+.input-group input[type="number"] {
     -moz-appearance: textfield;
-  }
-  
-  .input-group input::-webkit-outer-spin-button,
-  .input-group input::-webkit-inner-spin-button {
+}
+
+.input-group input::-webkit-outer-spin-button,
+.input-group input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
-  }
-  
-  .button-minus, .button-plus {
+}
+
+.button-minus, .button-plus {
     background-color: transparent;
     color: #333;
     border: none;
@@ -58,28 +59,28 @@
     height: 30px;
     border-radius: 50%;
     transition: background-color 0.3s ease;
-  }
-  
-  .button-plus::before {
+}
+
+.button-plus::before {
     color: #ccc;
     margin-right: 1px;
     font-size: 20px;
-  }
-  
-  .button-minus:hover, .button-plus:hover {
+}
+
+.button-minus:hover, .button-plus:hover {
     background-color: var(--light-gray);
-  }
-  
-  .button-minus:focus, .button-plus:focus {
+}
+
+.button-minus:focus, .button-plus:focus {
     outline: none;
     box-shadow: none;
-  }
-  
-  .pets-label {
+}
+
+.pets-label {
     margin-left: 10px;
-  }
-  
-  .search-button {
+}
+
+.search-button {
     padding: 15px;
     background-color: var(--primary-color);
     color: white;
@@ -87,58 +88,58 @@
     border-radius: 25px;
     cursor: pointer;
     font-size: 16px;
-    width: 50%;
-    margin: 0 auto;
-  }
-  
-  .search-button:hover {
+    width: 100%;
+    max-width: 300px; /* Limit the max-width */
+    margin: 0 auto; /* Center the button */
+}
+
+.search-button:hover {
     background-color: var(--secondary-color);
-  }
-  
-  .form-with {
+}
+
+.form-with {
     display: grid;
     gap: 15px;
-  }
-  
-  .form-submit {
+}
+
+.form-submit {
     display: flex;
     justify-content: center;
-    width: 100%; 
-  }
-  
-  .icons-section {
+}
+
+.icons-section {
     display: flex;
     align-items: center;
     position: relative;
     margin-top: 20px;
-  }
-  
-  .icon-container {
+}
+
+.icon-container {
     display: flex;
     overflow-x: auto;
     width: 100%;
     scroll-behavior: smooth;
     padding: 0 10px;
-  }
-  
-  .icon-item {
+}
+
+.icon-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 10px;
-  }
-  
-  .icon-item i {
+}
+
+.icon-item i {
     font-size: 24px;
-  }
-  
-  .icon-name {
+}
+
+.icon-name {
     margin-top: 5px;
     font-size: 14px;
     text-align: center;
-  }
-  
-  .arrow {
+}
+
+.arrow {
     background: none;
     border: none;
     font-size: 24px;
@@ -147,13 +148,60 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
-  }
-  
-  .left-arrow {
+    transition: opacity 0.3s ease;
+}
+
+.arrow.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.left-arrow {
     left: 0;
-  }
-  
-  .right-arrow {
+}
+
+.right-arrow {
     right: 0;
-  }
-  
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .input-group {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+        height: auto;
+    }
+
+    .input-group i {
+        margin-right: 10px;
+    }
+
+    .input-group input {
+        flex: 1;
+        padding: 5px;
+    }
+
+    .button-minus, .button-plus {
+        width: 40px;
+        height: 40px;
+    }
+
+    .search-button {
+        width: 120px;
+        max-width: none;
+    }
+
+    .form-submit {
+        justify-content: center;
+    }
+
+    .checkbox-wrapper-61 {
+        display: flex;
+        align-items: center;
+    }
+
+    .checkbox-wrapper-61 label {
+        margin-left: 10px;
+    }
+}

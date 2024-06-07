@@ -14,14 +14,14 @@
   .recommendation {
     background-color: var(--secondary-color);
     padding: 20px; /* Increased padding */
-    border-radius: 8px;
+    border-radius: 30px;
     box-shadow: var(--box-shadow);
     margin-bottom: 20px; 
   }
 
   .recommendation img {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 25px;
   }
 
   .recommendation-content {
@@ -55,11 +55,6 @@
     color: white;
     font-size: 14px;
   }
-
-
-
-
-
   .recommendation-image-container {
     position: relative;
     margin-bottom: 10px; 
