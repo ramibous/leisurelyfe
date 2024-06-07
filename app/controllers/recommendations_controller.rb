@@ -9,3 +9,4 @@ class RecommendationsController < ApplicationController
     @recommendation = Recommendation.find(params[:id])
   end
 end
+

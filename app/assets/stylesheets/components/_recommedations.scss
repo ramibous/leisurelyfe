@@ -11,6 +11,11 @@
     padding: 20px;
   }
 
+  .recommendation-image {
+    width: 100%;
+    height: 50%;
+    border-radius: 8px;
+
   .recommendation {
     background-color: var(--secondary-color);
     padding: 20px; /* Increased padding */
@@ -26,6 +31,7 @@
 
   .recommendation-content {
     margin-top: 10px;
+
   }
 
   .review-label {
@@ -38,9 +44,22 @@
     font-size: 14px;
     display: flex;
     align-items: center;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+  }
+
+  .review-score {
+    font-weight: bold;
+  }
+
+  .review-star {
+    color: gold;
+
   }
 
   .review-label .review-star {
+
     margin-left: 5px;
     color: gold;
   }
@@ -55,6 +74,29 @@
     color: white;
     font-size: 14px;
   }
+
+  .recommendation-content {
+    margin-top: 10px;
+  }
+
+
+  .recommendations {
+    margin-top: 20px;
+  }
+
+  .recommendation {
+    background-color: var(--secondary-color);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 10px;
+  }
+
+  .recommendation img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
   .recommendation-image-container {
     position: relative;
     margin-bottom: 10px; 
@@ -68,4 +110,3 @@
     font-size: 12px;
     display: inline-block;
   }
-
