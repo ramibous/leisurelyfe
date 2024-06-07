@@ -10,3 +10,4 @@ class RecommendationsController < ApplicationController
     @quote = Faker::Quote.matz
   end
 end
+
