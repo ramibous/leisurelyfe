@@ -1,0 +1,86 @@
+
+
+
+.custom-recommendations {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content */
+}
+
+.custom-title-home-page {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-top: 20px;
+}
+
+.custom-recommendation {
+  background-color: #C8EAD0; /* Light green background */
+  padding: 20px;
+  border-radius: 16px; /* Adjust border radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-bottom: 20px;
+  max-width: 600px; /* Set a max-width for the recommendation card */
+  width: 100%; /* Ensure it takes the full width within the max-width constraint */
+}
+
+.custom-recommendation-image-container {
+  position: relative;
+  margin-bottom: 10px;
+  overflow: hidden; /* Add overflow hidden to ensure the image does not overflow */
+  border-radius: 16px; /* Ensure the container is also rounded */
+  background-color: #C8EAD0; /* Updated background color */
+}
+
+.custom-recommendation-image {
+  width: 100%;
+  height: auto; /* Maintain the aspect ratio */
+  display: block;
+}
+
+.custom-review-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.custom-review-score {
+  font-weight: bold;
+  color: #333;
+}
+
+.custom-review-star {
+  margin-left: 5px;
+  color: gold;
+}
+
+.custom-recommendation-label {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(34, 139, 34, 0.9); /* Green transparent background */
+  padding: 10px 20px;
+  color: white;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  clip-path: polygon(0 50%, 10% 0, 100% 0, 100% 100%, 10% 100%);
+}
+
+.custom-recommendation-content {
+  margin-top: 10px;
+}
+
+.custom-recommendation-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
