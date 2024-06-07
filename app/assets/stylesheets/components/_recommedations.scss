@@ -1,9 +1,9 @@
 
 .recommendations .title_home_page {
-    text-align: center; 
-    font-size: 16px; 
-    color: #333; 
-    margin-top: 20px; 
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    margin-top: 20px;
   }
 
 .recommendations {
@@ -21,7 +21,7 @@
     padding: 20px; /* Increased padding */
     border-radius: 30px;
     box-shadow: var(--box-shadow);
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
   }
 
   .recommendation img {
@@ -68,7 +68,7 @@
     position: absolute;
     bottom: 10px;
     right: 10px;
-    background: rgba(34, 34, 34, 0.7); 
+    background: rgba(34, 34, 34, 0.7);
     padding: 5px 10px;
     border-radius: 20px;
     color: white;
@@ -99,7 +99,7 @@
 
   .recommendation-image-container {
     position: relative;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
   }
 
   .badge {
@@ -110,3 +110,4 @@
     font-size: 12px;
     display: inline-block;
   }
+}

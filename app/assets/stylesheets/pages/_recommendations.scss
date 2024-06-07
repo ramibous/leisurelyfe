@@ -2,51 +2,23 @@
 .container {
   background-color: #ffffff; /* Background color */
 }
-
-  h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #394867; /* Primary color */
-    font-weight: 600;
-    letter-spacing: 1px;
-    line-height: 1.2;
-    text-transform: capitalize;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-  }
-
   .main {
     margin-bottom: 30px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
     background-color: #fff;
-
-    .search-item {
-      .image-icon {
-        display: flex;
-        align-items: center;
-      }
+    .image-icon {
+      display: flex;
+      align-items: center;
     }
   }
-
 
 .search-item {
   .image-icon {
     position: relative;
     display: flex;
     align-items: center;
-  }
-
-  h2 {
-    margin-top: 10px;
-    font-size: 1.3em;
-    color: black;
-    line-height: 1.6;
-    letter-spacing: 0.5px;
-    font-family: 'Arial', sans-serif;
-    text-align: center;
-    font-weight: bold;
   }
 }
 
@@ -91,14 +63,6 @@
   background-color: #5B7553;
   border-radius: 10px;
 }
-      p {
-        margin-top: 20px;
-        font-size: 1.1em;
-        color: #394867; /* Primary color */
-        line-height: 1.6;
-        letter-spacing: 0.5px;
-      }
-
 .share i {
   color: #85d5b7;
 }
@@ -113,4 +77,23 @@
   border: none;
   cursor: pointer;
   transition: background-color 0.3s;
+}
+
+
+// SHOW Page in Recommendations
+
+.show-image {
+  width: 100%;
+}
+.show-text {
+  background-color: white;
+  margin-bottom: 10px;
+  padding: 1em 3em;
+  border-radius: 25px 25px 0 0;
+  width: 80%;
+}
+.fa-arrow-left, .fa-share-nodes, .fa-heart, .fa-heart-circle-plus {
+  font-size: 25px;
+  color: #5B7553;
+  padding: 10px;
 }
