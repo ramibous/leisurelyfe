@@ -19,6 +19,7 @@
         </div>
         <h2><%= recommendation.name %></h2>
         <p><%= truncate(recommendation.description, length: 100) %></p>
+        <p><%= recommendation.description %></p>
       </div>
       <%= link_to recommendation_path(recommendation), class:"text-decoration-none" do %>
         <button class="btn-custom">Find Out More</button>

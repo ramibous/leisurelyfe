@@ -2,6 +2,31 @@
   padding: 20px;
   background-color: #f4f4f4;
 }
+  background-color: #f4f4f4; /* Background color */
+
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #394867; /* Primary color */
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .main {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+
+    .search-item {
+      .image-icon {
+        display: flex;
+        align-items: center;
 
 .main {
   margin-bottom: 30px;
@@ -71,6 +96,13 @@
   background-color: #5B7553;
   border-radius: 10px;
 }
+      p {
+        margin-top: 20px;
+        font-size: 1.1em;
+        color: #394867; /* Primary color */
+        line-height: 1.6;
+        letter-spacing: 0.5px;
+      }
 
 .share i {
   color: #85d5b7;
