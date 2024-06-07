@@ -1,6 +1,8 @@
+// THIS IS FOR INDEX
 .container {
-  padding: 20px;
-  background-color: #f4f4f4; /* Background color */
+  background-color: #ffffff; /* Background color */
+
+}
 
   h1 {
     font-size: 2.5em;
@@ -96,4 +98,31 @@
       }
     }
   }
+
+// THIS IS FOR SHOW
+
+// icons
+.fa-heart-circle-plus {
+  font-size: 35px;
+  border-radius: 50%;
+  padding: 20px;
+  color: #5B7553;
+}
+.fa-arrow-left, .fa-share-nodes, .fa-heart {
+  font-size: 25px;
+  padding: 10px;
+  color: #5B7553;
+}
+// images
+.show-image {
+  width: 100%;
+}
+// Position
+.position-absolute {
+  background-color: #ffffff;
+  padding: 1em 2em;
+  width: 80%;
+  margin-bottom: 10px;
+  border-radius: 25px 25px 0 0;
+  text-align: center;
 }

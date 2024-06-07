@@ -7,5 +7,6 @@ class RecommendationsController < ApplicationController
 
   def show
     @recommendation = Recommendation.find(params[:id])
+    @quote = Faker::Quote.matz
   end
 end

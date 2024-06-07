@@ -1,6 +1,47 @@
 <div class="d-flex flex-row-reverse bd-highlight">
   <div class="p-2 bd-highlight"><i class="fa-solid fa-heart-circle-plus"></i></div>
 </div>
-<div class="show">
+
+<div class="show position-relative">
   <%= image_tag(@recommendation.image_url, class: "show-image")%>
+  <div class="position-absolute bottom-0 start-50 translate-middle-x">
+    <h3><%= @recommendation.name %></h3>
+  </div>
+</div>
+
+<div class="flex-row">
+  <div class="d-flex justify-content-between">
+    <div class="flex-item"><i class="fa-solid fa-arrow-left"></i></div>
+    <div class="flex-item"><i class="fa-solid fa-share-nodes"></i><i class="fa-regular fa-heart"></i></div>
+  </div>
+</div>
+
+<hr class="hr" style="color: #5B7553">
+
+<div class="container">
+
+  <h3>From $<%= @recommendation.price || @recommendation.price_range %> per adult</h3>
+
+  <br>
+
+  <h1>What to expect</h1>
+    <p><strong>Is it Kids friendly? </strong>
+      <% if @recommendation.kid_friendly %>
+        Yes
+      <% else %>
+        No
+      <% end %>
+    </p>
+    <p><strong>Start time: </strong><%= @recommendation.start_time %></p>
+    <p><strong>End time: </strong><%= @recommendation.end_time %></p>
+
+  <h3>Departure and return</h3>
+    <ul>
+      <li><%= @recommendation.address %></li>
+    </ul>
+
+  <h1>About</h1>
+    <p><i class="fa-solid fa-quote-left"></i> <%= @quote %> <i class="fa-solid fa-quote-right"></i></p>
+
+  <hr class="hr" style="color: #5B7553">
 </div>
