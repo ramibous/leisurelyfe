@@ -12,16 +12,12 @@
     </div>
   <%= form_with url: recommendations_path, method: :get, class: "d-flex" do |f| %>
     <div class="input-group">
-      <%# <label for="pets" class="pets-label"> with Children?</label>
-      <input type="checkbox" id="pets">
-      <label for="pets" class="pets-label">with pets?</label>
-      <input type="checkbox" id="pets"> %>
       <%= f.label :kid_friendly, "with children", class: "pets-label", id: "pets" %>
       <%= check_box_tag :kid_friendly %>
       <%= f.label :dog_friendly, "with pets?", class: "pets-label", id: "pets" %>
       <%= check_box_tag :dog_friendly %>
     </div>
-    <%= f.submit "Search" %>
+    <%= f.submit "Search", class: "search-button" %>
   <% end %>
   </section>
   <section class="icons">
