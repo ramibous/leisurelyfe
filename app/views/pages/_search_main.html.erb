@@ -6,12 +6,12 @@
         <i class="fas fa-calendar-alt"></i>
         <input type="text" placeholder="July 08 - July 15" class="input-date">
       </div>
-      <div class="input-group guests-group">
+       <div class="input-group guests-group">
         <i class="fas fa-user-friends"></i>
         <input type="number" placeholder="2 Guests" class="input-guests">
         <button class="button-minus">-</button>
         <button class="button-plus">+</button>
-      </div>
+      </div> 
       <%= form_with url: recommendations_path, method: :get, class: "form-with" do |f| %>
         <div class="input-group">
           <div class="checkbox-wrapper-61">
@@ -45,61 +45,60 @@
       <% end %>
     </section>
 
-    <!-- Icons Section with Arrows -->
-    <section class="icons-section">
-      <button class="arrow left-arrow" onclick="scrollLeft()">&#10094;</button>
-      <div class="icon-container">
+<section class="icons-section">
+    <button class="arrow left-arrow" id="left-arrow">&#10094;</button>
+    <div class="icon-container" id="icon-container">
         <div class="icon-item">
-          <i class="fas fa-umbrella-beach"></i>
-          <span class="icon-name">Beach</span>
+            <i class="fas fa-umbrella-beach"></i>
+            <span class="icon-name">Beach</span>
         </div>
         <div class="icon-item">
-          <i class="fas fa-utensils"></i>
-          <span class="icon-name">Food</span>
+            <i class="fas fa-utensils"></i>
+            <span class="icon-name">Food</span>
         </div>
         <div class="icon-item">
-          <i class="fas fa-biking"></i>
-          <span class="icon-name">Biking</span>
+            <i class="fas fa-biking"></i>
+            <span class="icon-name">Biking</span>
         </div>
         <div class="icon-item">
-          <i class="fas fa-dog"></i>
-          <span class="icon-name">Pets</span>
+            <i class="fas fa-dog"></i>
+            <span class="icon-name">Pets</span>
         </div>
         <div class="icon-item">
-          <i class="fas fa-tshirt"></i>
-          <span class="icon-name">Shopping</span>
+            <i class="fas fa-tshirt"></i>
+            <span class="icon-name">Shopping</span>
         </div>
         <div class="icon-item">
-          <i class="fas fa-train"></i>
-          <span class="icon-name">Transport</span>
+            <i class="fas fa-train"></i>
+            <span class="icon-name">Transport</span>
         </div>
         <div class="icon-item">
-          <i class="fas fa-tree"></i>
-          <span class="icon-name">Parks</span>
+            <i class="fas fa-tree"></i>
+            <span class="icon-name">Parks</span>
         </div>
         <div class="icon-item">
-          <i class="fas fa-hotdog"></i>
-          <span class="icon-name">Street Food</span>
+            <i class="fas fa-hotdog"></i>
+            <span class="icon-name">Street Food</span>
         </div>
         <div class="icon-item">
-          <i class="fas fa-mountain"></i>
-          <span class="icon-name">Outdoor</span>
+            <i class="fas fa-mountain"></i>
+            <span class="icon-name">Outdoor</span>
         </div>
         <div class="icon-item">
-          <i class="fas fa-paw"></i>
-          <span class="icon-name">Dogs Activity</span>
+            <i class="fas fa-paw"></i>
+            <span class="icon-name">Dogs Activity</span>
         </div>
         <div class="icon-item">
-          <i class="fas fa-child"></i>
-          <span class="icon-name">Kids Activity</span>
+            <i class="fas fa-child"></i>
+            <span class="icon-name">Kids Activity</span>
         </div>
         <div class="icon-item">
-          <i class="fas fa-hippo"></i>
-          <span class="icon-name">Zoo</span>
+            <i class="fas fa-hippo"></i>
+            <span class="icon-name">Zoo</span>
         </div>
-      </div>
-      <button class="arrow right-arrow" onclick="scrollRight()">&#10095;</button>
-    </section>
+    </div>
+    <button class="arrow right-arrow" id="right-arrow">&#10095;</button>
+</section>
 
     <!-- Recommendations Section -->
     <section class="recommendations">
@@ -119,30 +118,37 @@
     </section>
   </main>
   <script>
-    function scrollLeft() {
-      const iconContainer = document.querySelector('.icon-container');
-      console.log('Scrolling left');
-      iconContainer.scrollBy({ left: -100, behavior: 'smooth' });
+document.addEventListener('DOMContentLoaded', () => {
+    const iconContainer = document.querySelector('#icon-container');
+    const leftArrow = document.querySelector('#left-arrow');
+    const rightArrow = document.querySelector('#right-arrow');
+
+    if (iconContainer) {
+        iconContainer.addEventListener('scroll', () => {
+            if (iconContainer.scrollLeft > 0) {
+                leftArrow.classList.add('hidden');
+            } else {
+                leftArrow.classList.remove('hidden');
+            }
+
+            if (iconContainer.scrollLeft + iconContainer.clientWidth < iconContainer.scrollWidth) {
+                rightArrow.classList.add('hidden');
+            } else {
+                rightArrow.classList.remove('hidden');
+            }
+        });
     }
 
-    function scrollRight() {
-      const iconContainer = document.querySelector('.icon-container');
-      console.log('Scrolling right');
-      iconContainer.scrollBy({ left: 100, behavior: 'smooth' });
+    if (leftArrow && rightArrow) {
+        leftArrow.addEventListener('click', () => {
+            iconContainer.scrollBy({ left: -100, behavior: 'smooth' });
+        });
+
+        rightArrow.addEventListener('click', () => {
+            iconContainer.scrollBy({ left: 100, behavior: 'smooth' });
+        });
     }
+});
 
-    document.addEventListener('DOMContentLoaded', () => {
-      console.log('JavaScript is loaded and running');
-      const iconContainer = document.querySelector('.icon-container');
-      const leftArrow = document.querySelector('.left-arrow');
-      const rightArrow = document.querySelector('.right-arrow');
-
-      if (iconContainer) console.log('Icon container found');
-      if (leftArrow && rightArrow) {
-        console.log('Event listeners added to arrows');
-        leftArrow.addEventListener('click', scrollLeft);
-        rightArrow.addEventListener('click', scrollRight);
-      }
-    });
   </script>
 
