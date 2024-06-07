@@ -1,3 +1,5 @@
+
+
 .search {
     background-color: var(--background-color);
     padding: 20px;
@@ -6,16 +8,19 @@
     display: grid;
     gap: 15px;
   }
+  
   .input-group {
     display: flex;
     align-items: center;
-    gap: 0px; 
+    gap: 10px;
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    padding: 10px;
-   
+    padding: 0 10px; /* Adjust padding to fit content better */
+    height: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for a modern look */
+    background-color: white; /* Ensure background color is white */
   }
-
+  
   .input-group i {
     font-size: 20px;
     color: #888;
@@ -26,7 +31,8 @@
     border: none;
     outline: none;
     font-size: 16px;
-    padding: 5px;
+    padding: 10px; /* Add padding to input for better spacing */
+    border-radius: 8px; /* Ensure input is rounded */
   }
   
   .input-group input[type="number"] {
@@ -41,83 +47,40 @@
   
   .button-minus, .button-plus {
     background-color: transparent;
-    color: var(--font-color); 
-    border: none; 
-    outline: none; 
-    border-radius: 4px;
-    padding: 5px 10px;
+    color: #333; /* Darker color for better visibility */
+    border: none; /* Remove border */
+    outline: none; /* Remove outline */
     cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .button-plus {
-    margin-right: -2px;
+    font-size: 20px; /* Increased font size */
+    font-weight: bold; /* Make text bold */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; /* Make buttons circular */
+    transition: background-color 0.3s ease; /* Add a transition effect */
   }
   
   .button-plus::before {
-    content: '|'; 
-    color: var(--font-color); 
-    margin-right: 10px; 
-    font-size: 16px;
-  }
-  
-  .button-minus:focus, .button-plus:focus {
-    outline: none; 
-    box-shadow: none; 
+   
+    color: #ccc; /* Lighter color for separator */
+    margin-right: 1px; /* Adjust margin for better positioning */
+    font-size: 20px; /* Ensure consistent font size */
   }
   
   .button-minus:hover, .button-plus:hover {
-    background-color: var(--light-gray); 
+    background-color: var(--light-gray); /* Optional: Add a hover effect */
   }
+  
+  .button-minus:focus, .button-plus:focus {
+    outline: none; /* Remove focus outline */
+    box-shadow: none; /* Remove box-shadow on focus */
+  }
+  
   
   .pets-label {
     margin-left: 10px;
-  }
-
-  
-  .top-bar {
-    background-color: var(--background-color);
-    padding: 10px 20px;
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    position: relative; 
-    min-height: 100px; 
-  }
-  
-  .top-bar-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .logo {
-    height: 73px !important;
-    width: auto !important; 
-  }
-  
-  .notification {
-    position: absolute; 
-    right: 20px;
-    font-size: 20px; 
-    color: var(--gray);
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.43);
-    padding: 5px;
-    border-radius: 50%;
-  }
-  
-  main {
-    padding: 20px;
-  }
-  
-  .search {
-    background-color: var(--background-color);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: var(--box-shadow);
-    display: grid;
-    gap: 15px;
   }
   
   .search-button {
@@ -128,41 +91,80 @@
     border-radius: 25px;
     cursor: pointer;
     font-size: 16px;
-    width: 200px;
-    margin: 0 auto;
+    width: 100%;
   }
   
   .search-button:hover {
-    background-color: var(--secondary-color); 
+    background-color: var(--secondary-color);
+  }
+  
+  .form-with {
+    display: grid;
+    gap: 15px;
+  }
+  
+  .form-submit {
+    display: flex;
+    justify-content: center;
   }
   
   .icons {
     margin-top: 20px;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap; /* Allow icons to wrap to next line if needed */
   }
-  .icons i {
+  
+  .icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px; /* Add some spacing around each icon */
+  }
+  
+  .icon-item i {
     font-size: 24px;
     color: #000000;
   }
   
-.notification {
-  position: absolute;
-  right: 20px; 
-  font-size: 22px; 
-  color: #030303; 
-  background-color: var(--primary-color); 
-  padding: 10px 15px; 
-  box-shadow: 0 4px 6px rgba(243, 243, 243, 0.1); 
-  border-radius: 12px; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
+  .icon-name {
+    margin-top: 5px; /* Space between icon and name */
+    font-size: 14px; /* Font size for the name */
+    color: #070707; /* Color for the name text */
+    text-align: center; /* Center the text */
+  }
   
-
-@media (max-width: 430px) {
+  .recommendations {
+    margin-top: 20px;
+  }
+  
+  .recommendation {
+    background-color: var(--background-color);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 10px;
+  }
+  
+  .recommendation img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .recommendation-content {
+    margin-top: 10px;
+  }
+  
+  .badge {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    display: inline-block;
+  }
+  
+  @media (max-width: 430px) {
     body {
       font-size: 14px;
     }
@@ -193,8 +195,7 @@
     }
   
     .button-minus, .button-plus {
-      padding: 2%;
+      padding: 8px;
     }
   }
   
-
