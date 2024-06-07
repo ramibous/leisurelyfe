@@ -1,5 +1,6 @@
-<div class="container">
-  <h1> Welcome to show page ! </h1>
-  <p><%= @recommendation.description %></p>
-  <p><%= @recommendation.price %></p>
+<div class="d-flex flex-row-reverse bd-highlight">
+  <div class="p-2 bd-highlight"><i class="fa-solid fa-heart-circle-plus"></i></div>
+</div>
+<div class="show">
+  <%= image_tag(@recommendation.image_url, class: "show-image")%>
 </div>

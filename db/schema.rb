@@ -10,25 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_06_06_185104) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_04_161447) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "favorites", force: :cascade do |t|
-    t.bigint "recommendation_id", null: false
-    t.bigint "user_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["recommendation_id"], name: "index_favorites_on_recommendation_id"
-    t.index ["user_id"], name: "index_favorites_on_user_id"
-  end
-
   create_table "recommendations", force: :cascade do |t|
+    t.string "name", null: false
     t.text "description"
+    t.integer "category", default: 0, null: false
+    t.string "price_range"
     t.float "price"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.string "location"
+    t.string "address"
+    t.float "longitude"
+    t.float "latitude"
+    t.boolean "kid_friendly"
+    t.boolean "dog_friendly"
+    t.boolean "outdoor"
+    t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "image_url"
   end
 
   create_table "users", force: :cascade do |t|
@@ -43,6 +46,4 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_06_185104) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "favorites", "recommendations"
-  add_foreign_key "favorites", "users"
 end
