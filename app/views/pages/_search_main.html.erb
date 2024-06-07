@@ -1,92 +1,153 @@
-<main>
-  <!-- Search Section -->
-  <section class="search">
-    <div class="input-group">
-      <i class="fas fa-calendar-alt"></i>
-      <input type="text" placeholder="July 08 - July 15" class="input-date">
-    </div>
-    <div class="input-group">
-      <i class="fas fa-user-friends"></i>
-      <input type="number" placeholder="2 Guests" class="input-guests">
-      <button class="button-minus">-</button>
-      <div class="separator">|</div>
-      <button class="button-plus">+</button>
-    </div>
-    <%= form_with url: recommendations_path, method: :get, class: "form-with" do |f| %>
-      <div class="input-group">
-        <div class="checkbox-wrapper-61">
-          <%= f.check_box :kid_friendly, class: 'check', id: 'check1-61' %>
-          <label for="check1-61" class="label">
-            <svg width="45" height="45" viewbox="0 0 95 95">
-              <rect x="30" y="20" width="50" height="50" stroke="black" fill="none" />
-              <g transform="translate(0,-952.36222)">
-                <path d="m 56,963 c -102,122 6,9 7,9 17,-5 -66,69 -38,52 122,-77 -7,14 18,4 29,-11 45,-43 23,-4 " stroke="black" stroke-width="3" fill="none" class="path1" />
-              </g>
-            </svg>
-            <span> Kids</span>
-          </label>
-        </div>
-        <div class="checkbox-wrapper-61">
-          <%= f.check_box :dog_friendly, class: 'check', id: 'check2-61' %>
-          <label for="check2-61" class="label">
-            <svg width="45" height="45" viewbox="0 0 95 95">
-              <rect x="30" y="20" width="50" height="50" stroke="black" fill="none" />
-              <g transform="translate(0,-952.36222)">
-                <path d="m 56,963 c -102,122 6,9 7,9 17,-5 -66,69 -38,52 122,-77 -7,14 18,4 29,-11 45,-43 23,-4 " stroke="black" stroke-width="3" fill="none" class="path1" />
-              </g>
-            </svg>
-            <span> with Dog?</span>
-          </label>
-        </div>
-      </div>
-      <div class="form-submit">
-        <%= f.submit "Search", class: "search-button" %>
-      </div>
-    <% end %>
-  </section>
 
-  <!-- Icons Section -->
-<section class="icons">
-  <div class="icon-item">
-    <i class="fas fa-umbrella-beach"></i>
-    <span class="icon-name">Beach</span>
-  </div>
-  <div class="icon-item">
-    <i class="fas fa-utensils"></i>
-    <span class="icon-name">Food</span>
-  </div>
-  <div class="icon-item">
-    <i class="fas fa-biking"></i>
-    <span class="icon-name">Biking</span>
-  </div>
-  <div class="icon-item">
-    <i class="fas fa-dog"></i>
-    <span class="icon-name">Pets</span>
-  </div>
-  <div class="icon-item">
-    <i class="fas fa-tshirt"></i>
-    <span class="icon-name">Shopping</span>
-  </div>
-  <div class="icon-item">
-    <i class="fas fa-train"></i>
-    <span class="icon-name">Transport</span>
-  </div>
+  <main>
+    <!-- Search Section -->
+    <section class="search">
+      <div class="input-group">
+        <i class="fas fa-calendar-alt"></i>
+        <input type="text" placeholder="July 08 - July 15" class="input-date">
+      </div>
+       <div class="input-group guests-group">
+        <i class="fas fa-user-friends"></i>
+        <input type="number" placeholder="2 Guests" class="input-guests">
+        <button class="button-minus">-</button>
+        <button class="button-plus">+</button>
+      </div>
+      <%= form_with url: recommendations_path, method: :get, class: "form-with" do |f| %>
+        <div class="input-group">
+          <div class="checkbox-wrapper-61">
+            <%= f.check_box :kid_friendly, class: 'check', id: 'check1-61' %>
+            <label for="check1-61" class="label">
+              <svg width="45" height="45" viewbox="0 0 95 95">
+                <rect x="30" y="20" width="50" height="50" stroke="black" fill="none" />
+                <g transform="translate(0,-952.36222)">
+                  <path d="m 56,963 c -102,122 6,9 7,9 17,-5 -66,69 -38,52 122,-77 -7,14 18,4 29,-11 45,-43 23,-4 " stroke="black" stroke-width="3" fill="none" class="path1" />
+                </g>
+              </svg>
+              <span> Kids</span>
+            </label>
+          </div>
+          <div class="checkbox-wrapper-61">
+            <%= f.check_box :dog_friendly, class: 'check', id: 'check2-61' %>
+            <label for="check2-61" class="label">
+              <svg width="45" height="45" viewbox="0 0 95 95">
+                <rect x="30" y="20" width="50" height="50" stroke="black" fill="none" />
+                <g transform="translate(0,-952.36222)">
+                  <path d="m 56,963 c -102,122 6,9 7,9 17,-5 -66,69 -38,52 122,-77 -7,14 18,4 29,-11 45,-43 23,-4 " stroke="black" stroke-width="3" fill="none" class="path1" />
+                </g>
+              </svg>
+              <span> with Dog?</span>
+            </label>
+          </div>
+        </div>
+        <div class="form-submit">
+          <%= f.submit "Search", class: "search-button" %>
+        </div>
+      <% end %>
+    </section>
+
+<section class="icons-section">
+    <button class="arrow left-arrow" id="left-arrow">&#10094;</button>
+    <div class="icon-container" id="icon-container">
+        <div class="icon-item">
+            <i class="fas fa-umbrella-beach"></i>
+            <span class="icon-name">Beach</span>
+        </div>
+        <div class="icon-item">
+            <i class="fas fa-utensils"></i>
+            <span class="icon-name">Food</span>
+        </div>
+        <div class="icon-item">
+            <i class="fas fa-biking"></i>
+            <span class="icon-name">Biking</span>
+        </div>
+        <div class="icon-item">
+            <i class="fas fa-dog"></i>
+            <span class="icon-name">Pets</span>
+        </div>
+        <div class="icon-item">
+            <i class="fas fa-tshirt"></i>
+            <span class="icon-name">Shopping</span>
+        </div>
+        <div class="icon-item">
+            <i class="fas fa-train"></i>
+            <span class="icon-name">Transport</span>
+        </div>
+        <div class="icon-item">
+            <i class="fas fa-tree"></i>
+            <span class="icon-name">Parks</span>
+        </div>
+        <div class="icon-item">
+            <i class="fas fa-hotdog"></i>
+            <span class="icon-name">Street Food</span>
+        </div>
+        <div class="icon-item">
+            <i class="fas fa-mountain"></i>
+            <span class="icon-name">Outdoor</span>
+        </div>
+        <div class="icon-item">
+            <i class="fas fa-paw"></i>
+            <span class="icon-name">Dogs Activity</span>
+        </div>
+        <div class="icon-item">
+            <i class="fas fa-child"></i>
+            <span class="icon-name">Kids Activity</span>
+        </div>
+        <div class="icon-item">
+            <i class="fas fa-hippo"></i>
+            <span class="icon-name">Zoo</span>
+        </div>
+    </div>
+    <button class="arrow right-arrow" id="right-arrow">&#10095;</button>
 </section>
 
-  <!-- Recommendations Section -->
-  <section class="search-section">
-    <h2 class="title_home_page">Things to do in Montreal this June 2024</h2>
-    <article class="search-item">
-      <div class="search-item-image-container">
-        <img src="https://wallpapers.com/images/high/notre-dame-basilica-of-montreal-lre8tt8764jua14r.webp" alt="Montreal" class="search-item-image">
-        <div class="review-label">
-          <span class="review-score">4.9</span> <span class="review-star">★</span>
+    <!-- Recommendations Section -->
+    <section class="recommendations">
+      <h2 class="title_home_page">Things to do in Montreal this June 2024</h2>
+      <article class="recommendation">
+        <div class="recommendation-image-container">
+          <img src="https://wallpapers.com/images/high/notre-dame-basilica-of-montreal-lre8tt8764jua14r.webp" alt="Montreal" class="recommendation-image">
+          <div class="review-label">
+            <span class="review-score">4.9</span> <span class="review-star">★</span>
+          </div>
+          <div class="recommendation-label">100% Recommended</div>
         </div>
-        <div class="search-item-label">100% Recommended</div>
-      </div>
-      <div class="search-item-content">
-        <p>Summer starts its engines in Montréal this June — not only with the Grand Prix Formula 1 races but with a high-energy summer festival season. From MURAL to the Jazz Fest to the Francos...</p>
-      </div>
-    </article>
-  </section>
-</main>
+        <div class="recommendation-content">
+          <p>Summer starts its engines in Montréal this June — not only with the Grand Prix Formula 1 races but with a high-energy summer festival season. From MURAL to the Jazz Fest to the Francos...</p>
+        </div>
+      </article>
+    </section>
+  </main>
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const iconContainer = document.querySelector('#icon-container');
+    const leftArrow = document.querySelector('#left-arrow');
+    const rightArrow = document.querySelector('#right-arrow');
+
+    if (iconContainer) {
+        iconContainer.addEventListener('scroll', () => {
+            if (iconContainer.scrollLeft > 0) {
+                leftArrow.classList.add('hidden');
+            } else {
+                leftArrow.classList.remove('hidden');
+            }
+
+            if (iconContainer.scrollLeft + iconContainer.clientWidth < iconContainer.scrollWidth) {
+                rightArrow.classList.add('hidden');
+            } else {
+                rightArrow.classList.remove('hidden');
+            }
+        });
+    }
+
+    if (leftArrow && rightArrow) {
+        leftArrow.addEventListener('click', () => {
+            iconContainer.scrollBy({ left: -100, behavior: 'smooth' });
+        });
+
+        rightArrow.addEventListener('click', () => {
+            iconContainer.scrollBy({ left: 100, behavior: 'smooth' });
+        });
+    }
+});
+
+  </script>
