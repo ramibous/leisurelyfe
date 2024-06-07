@@ -1,6 +1,6 @@
 class RecommendationsController < ApplicationController
   def index
-    @recommendations = Recommendation.all
+    @recommendations = Recommendation.all.includes(images_attachments: :blob)
   end
 
   def show

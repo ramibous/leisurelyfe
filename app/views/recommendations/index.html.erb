@@ -1,22 +1,22 @@
-<div class="row justify-content-center">
-  <div class="col-sm-8 my-3">
-    <%= form_with url: recommendations_path, method: :get, class: "d-flex" do %>
-      <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Type a keyword"
-        %>
-      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
-    <% end %>
+<div class="container">
+  <h1>Search Results</h1>
+  <div class="main">
+    <div class="search-item">
+      <div class="image-icon">
+        <div class="image-container">
+          <div class="rating">4.9
+            <i class="fas fa-star"></i>
+          </div>
+          <img src="https://media.istockphoto.com/id/491391396/photo/venice.jpg?s=612x612&w=0&k=20&c=PPRqUgndF6QDuwnDDiE4Ff_BzKg9rchHbbgeX1sPO50=" alt="Venice">
+        </div>
+        <div class="share">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fas fa-share"></i>
+        </div>
+      </div>
+      <h2>Old Port Montreal</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic tempora ipsum delectus alias, sapiente aliquam ducimus ab, error est aperiam at porro eligendi, harum unde dicta maxime iste facere aut?</p>
+    </div>
+    <button class="btn btn-success btn-custom d-flex">Find Out More</button>
   </div>
 </div>
-<div class="container">
-  <% @recommendations.each do |recommendation| %>
-    <h4>Description: <%= recommendation.description %></h4>
-    <p>Price: <%= recommendation.price %></p>
-    <%= link_to "click more", recommendation_path(recommendation) %>
-  <% end %>
-</div>
-
-
-https://donnees.montreal.ca/dataset/installations-recreatives-sportives-et-culturelles/resource/2dac229f-6089-4cb7-ab0b-eadc6a147d5d/view/29f8afdd-c32a-459c-82b2-58213fec7c27
