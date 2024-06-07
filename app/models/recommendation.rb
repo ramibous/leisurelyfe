@@ -1,11 +1,12 @@
 class Recommendation < ApplicationRecord
   validates :name, presence: true
-
-  attribute :category, :integer
-  enum category: {
+  enum recommendation_category: {
     unknown: 0,
     restaurant: 10,
     street_food: 11,
-    event: 20
-  }, _default: :unknown
+    # Add other categories as needed
+  }, _prefix: true
+
+  # Declare enum column type explicitly
+  attribute :recommendation_category, :integer
 end

@@ -17,11 +17,11 @@
             <i class="fas fa-share"></i>
           </div>
         </div>
-        <%# <h2><%= recommendation.name %></h2> %>
-        <p><%= recommendation.description %></p>
+        <h2><%= recommendation.name %></h2>
+        <p><%= truncate(recommendation.description, length: 100) %></p>
       </div>
       <%= link_to recommendation_path(recommendation), class:"text-decoration-none" do %>
-        <button class="btn btn-success btn-custom  rounded-pill d-flex">Find Out More</button>
+        <button class="btn-custom">Find Out More</button>
       <% end %>
     </div>
   <% end %>
