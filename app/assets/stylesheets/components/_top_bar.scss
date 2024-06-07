@@ -7,10 +7,10 @@ body{
   background-color: var(--background-color);
   padding: 10px 20px;
   display: flex;
-  justify-content: center; /* Centering the content horizontally */
+  justify-content: center;
   align-items: center;
-  position: relative; /* Allows absolute positioning of the notification */
-  min-height: 100px; /* Ensures the top bar can expand */
+  position: relative; 
+  min-height: 100px; 
 }
 
 .top-bar-content {
@@ -21,14 +21,14 @@ body{
 }
 
 .logo {
-  height: 73px !important; /* Force the height */
-  width: auto !important; /* Maintain aspect ratio */
+  height: 83px !important; 
+  width: auto !important; 
 }
 
 .notification {
-  position: absolute; /* Position the notification independently */
-  right: 20px; /* Adjust as needed to position correctly */
-  font-size: 20px; /* Adjust the size */
+  position: absolute;
+  right: 20px; 
+  font-size: 20px; 
   color: var(--gray);
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.43);
   padding: 10px;
