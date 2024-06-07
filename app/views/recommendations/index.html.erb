@@ -1,10 +1,10 @@
 <%= render 'pages/top_bar' %>
 
 <div class="container">
-  <h1>Search Results</h1>
+  <h1 class="search-recommendation">Search Results</h1>
   <% @recommendations.each do |recommendation| %>
     <div class="main">
-      <div class="search-item">
+      <div class="search-item-recommendation">
         <div class="image-icon">
           <div class="image-container">
             <div class="rating"><%= rand(1..5) %>.0
@@ -14,11 +14,11 @@
           </div>
           <div class="share">
             <i class="fa-regular fa-heart"></i>
-            <i class="fas fa-share"></i>
+            <i class="fa-solid fa-share-nodes"></i>
           </div>
         </div>
-        <h2><%= recommendation.name %></h2>
-        <p><%= truncate(recommendation.description, length: 100) %></p>
+        <h2 class ="description-name"><%= recommendation.name %></h2>
+        <p class="description"><%= truncate(recommendation.description, length: 100) %></p>
       </div>
       <%= link_to recommendation_path(recommendation), class:"text-decoration-none" do %>
         <button class="btn-custom">Find Out More</button>
