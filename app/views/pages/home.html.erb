@@ -1,11 +1,2 @@
-<div class="container">
-  <%= form_with url: recommendations_path, method: :get, class: "d-flex" do |f| %>
-    <%= f.label :kid_friendly, "Children" %>
-    <%# f.check_box :kid_friendly %>
-    <%= check_box_tag :kid_friendly %>
-    <%= f.label :dog_friendly, "Dog" %>
-    <%# f.check_box :dog_friendly %>
-    <%= check_box_tag :dog_friendly %>
-    <%= f.submit "Search", class: "btn btn-primary" %>
-  <% end %>
-</div>
+<%= render 'pages/top_bar' %>
+<%= render 'pages/search_main' %>

@@ -10,13 +10,19 @@
       <button class="button-minus">-</button>
       <button class="button-plus">+</button>
     </div>
+  <%= form_with url: recommendations_path, method: :get, class: "d-flex" do |f| %>
     <div class="input-group">
-      <label for="pets" class="pets-label"> with Children?</label>
+      <%# <label for="pets" class="pets-label"> with Children?</label>
       <input type="checkbox" id="pets">
       <label for="pets" class="pets-label">with pets?</label>
-      <input type="checkbox" id="pets">
+      <input type="checkbox" id="pets"> %>
+      <%= f.label :kid_friendly, "with children", class: "pets-label", id: "pets" %>
+      <%= check_box_tag :kid_friendly %>
+      <%= f.label :dog_friendly, "with pets?", class: "pets-label", id: "pets" %>
+      <%= check_box_tag :dog_friendly %>
     </div>
-    <button type="button" class="search-button">Search</button>
+    <%= f.submit "Search" %>
+  <% end %>
   </section>
   <section class="icons">
     <i class="fas fa-umbrella-beach"></i>
@@ -37,10 +43,9 @@
       <div class="recommendation-label">100% Recommended</div>
     </div>
     <div class="recommendation-content">
-      
+
       <p>Summer starts its engines in Montréal this June — not only with the Grand Prix Formula 1 races but with a high-energy summer festival season. From MURAL to the Jazz Fest to the Francos...</p>
     </div>
   </article>
 </section>
-
 </main>
