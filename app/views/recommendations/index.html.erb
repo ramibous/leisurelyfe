@@ -1,56 +1,36 @@
+<!-- app/views/recommendations/index.html.erb -->
+<!-- resualt page -->
+<!-- css pages/_recommendations.scss-->
+
 <%= render 'pages/top_bar' %>
-<div class="container">
+<div class="recommendations-container" data-controller="recommendations">
   <h1 class="search-recommendation">Search Results</h1>
+  <%= form_with url: recommendations_path, method: :get, local: true, data: { recommendations_target: "searchForm" } do %>
+    <div class="input-group-recommendation">
+      <input type="text" name="query" placeholder="Search by name" class="form-control-recommendation" data-recommendations-target="searchInput" id="search-input" value="<%= params[:query] %>">
+      <button type="submit" class="btn-primary-recommendation">Search</button>
+    </div>
+  <% end %>
+
   <% @recommendations.each do |recommendation| %>
     <div class="search-item-recommendation">
-      <div class="image-container">
-        <h2 class="description-name"><%= recommendation.name %></h2>
-        <div class="rating"><%= rand(1..5) %>.0
+      <div class="image-container-recommendation">
+        <h2 class="description-name-recommendation"><%= recommendation.name %></h2>
+        <div class="rating-recommendation"><%= rand(1..5) %>.0
           <i class="fas fa-star"></i>
         </div>
         <img src="<%= recommendation.image_url %>" alt="">
-        <div class="overlay-icons">
-          <i class="fa-regular fa-heart heart-icon" data-recommendation-id="<%= recommendation.id %>"></i>
+        <div class="overlay-icons-recommendation">
+          <i class="fa-regular fa-heart heart-icon-recommendation" data-recommendations-target="heart"></i>
         </div>
       </div>
-      <div class="labels">
-        <span class="label label-<%= recommendation.category %>"><%= recommendation.category.humanize %></span>
+      <div class="labels-recommendation">
+        <span class="label-recommendation label-<%= recommendation.category %>"><%= recommendation.category.humanize %></span>
       </div>
-      <p class="description"><%= truncate(recommendation.description, length: 100) %></p>
+      <p class="description-recommendation"><%= truncate(recommendation.description, length: 100) %></p>
       <%= link_to recommendation_path(recommendation), class: "text-decoration-none" do %>
-        <button class="btn-custom">Find Out More</button>
+        <button class="btn-find-out-more-recommendation">Find Out More</button>
       <% end %>
     </div>
   <% end %>
 </div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const heartIcons = document.querySelectorAll('.heart-icon');
-    heartIcons.forEach(icon => {
-      icon.addEventListener('click', function() {
-        const recommendationId = icon.dataset.recommendationId;
-        const isFavorited = icon.classList.contains('fa-solid');
-        const url = isFavorited ? `/recommendations/${recommendationId}/favorite` : `/recommendations/${recommendationId}/favorite`;
-
-        fetch(url, {
-          method: isFavorited ? 'DELETE' : 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'X-CSRF-Token': document.querySelector('meta[name="csrf-token"]') ? document.querySelector('meta[name="csrf-token"]').getAttribute('content') : null
-          },
-          credentials: 'same-origin'
-        }).then(response => response.json())
-          .then(data => {
-            if (data.status === 'added') {
-              icon.classList.remove('fa-regular');
-              icon.classList.add('fa-solid');
-            } else if (data.status === 'removed') {
-              icon.classList.remove('fa-solid');
-              icon.classList.add('fa-regular');
-            }
-          });
-      });
-    });
-  });
-</script>

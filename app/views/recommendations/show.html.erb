@@ -1,65 +1,64 @@
-<div class="d-flex flex-row-reverse bd-highlight">
-  <div class="p-2 bd-highlight"><i class="fa-solid fa-heart-circle-plus"></i></div>
-</div>
-
-<div class="show position-relative">
-  <%= image_tag(@recommendation.image_url, class: "show-image")%>
-  <div class="show-text position-absolute bottom-0 start-50 translate-middle-x">
-    <h3 class="colored-text" style="text-align: center"><%= @recommendation.name %></h3>
+<!-- Container for the show section -->
+<div class="show-container">
+  <%= image_tag(@recommendation.image_url, class: "show-image") %>
+  <div class="show-text">
+    <span class="label-recommendation label-<%= @recommendation.category %>"><%= @recommendation.category.humanize %></span>
+    <h3 class="image-text"><%= @recommendation.name %></h3>
   </div>
 </div>
 
-<div class="flex-row">
-  <div class="d-flex justify-content-between">
-    <div class="flex-item"><%= link_to recommendations_path do %><i class="fa-solid fa-arrow-left"></i><% end %></div>
-    <div class="flex-item"><i class="fa-solid fa-share-nodes"></i><i class="fa-regular fa-heart"></i></div>
+<!-- Container for navigation items -->
+<div class="navigation-container">
+  <div class="navigation-item">
+    <%= link_to recommendations_path do %>
+      <i class="fa-solid fa-arrow-left"></i>
+    <% end %>
+  </div>
+  <div class="navigation-icons">
+    <i class="fa-solid fa-share-nodes"></i>
+    <i class="fa-regular fa-heart heart-icon-recommendation"></i>
   </div>
 </div>
 
-<hr class="hr" style="color: #5B7553">
+<!-- Custom horizontal rule -->
+<hr class="custom-hr">
 
-<div class="container">
-
+<!-- Container for details section -->
+<div class="details-container">
   <h3 class="colored-text">From $<%= @recommendation.price || @recommendation.price_range %> per adult</h3>
 
-  <br>
-
   <h1 class="colored-text">What to expect</h1>
-    <p><strong>Is it Kids friendly? </strong>
-      <% if @recommendation.kid_friendly %>
-        Yes
-      <% else %>
-        No
-      <% end %>
-    </p>
-    <p><strong>Is it Dogs friendly? </strong>
-      <% if @recommendation.dog_friendly %>
-        Yes
-      <% else %>
-        No
-      <% end %>
-    </p>
-    <p><strong>Start time: </strong><%= @recommendation.start_time %></p>
-    <p><strong>End time: </strong><%= @recommendation.end_time %></p>
+  <p><strong>Is it Kids friendly? </strong>
+    <%= @recommendation.kid_friendly ? 'Yes' : 'No' %>
+  </p>
+  <p><strong>Is it Dogs friendly? </strong>
+    <%= @recommendation.dog_friendly ? 'Yes' : 'No' %>
+  </p>
+  <p><strong>Start time: </strong><%= @recommendation.start_time %></p>
+  <p><strong>End time: </strong><%= @recommendation.end_time %></p>
 
   <h3 class="colored-text">Departure and return</h3>
-    <ul>
-      <li><%= @recommendation.address %></li>
-    </ul>
+  <ul>
+    <li><%= @recommendation.address %></li>
+  </ul>
 
   <h1 class="colored-text">About</h1>
-    <p><i class="fa-solid fa-quote-left"></i> <%= @quote %> <i class="fa-solid fa-quote-right"></i></p>
+  <p class="quote-text"><i class="fa-solid fa-quote-left"></i> <%= @quote %> <i class="fa-solid fa-quote-right"></i></p>
+</div>
 
-  <hr class="hr" style="color: #5B7553">
+<!-- Custom horizontal rule -->
+<hr class="custom-hr">
 
+<!-- Container for recommendation rows -->
+<div class="details-container">
   <h3 class="colored-text">Recommendations based on your likes</h3>
-  <div class="row">
-    <div class="col">
-      <div class="card">
-      <%= image_tag(@recommendation.image_url) %>
-        <div class="card-body">
-          <h5 class="card-title"><%= @recommendation.name %></h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+  <div class="recommendations-row">
+    <div class="recommendation-col">
+      <div class="recommendation-card">
+        <%= image_tag(@recommendation.image_url, class: "recommendation-image") %>
+        <div class="recommendation-card-body">
+          <h5 class="recommendation-card-title"><%= @recommendation.name %></h5>
+          <p class="recommendation-card-text">With supporting text below as a natural lead-in to additional content.</p>
         </div>
       </div>
     </div>

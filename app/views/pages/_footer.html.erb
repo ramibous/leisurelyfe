@@ -1,29 +1,11 @@
-
-<footer class="footer">
+<!-- app/views/layouts/application.html.erb (or the appropriate view file) -->
+<footer class="footer" data-controller="footer">
   <nav>
     <ul>
       <li><a href="<%= root_path %>"><i class="fas fa-home"></i></a></li>
       <li><a href="<%= recommendations_path %>"><i class="fas fa-search"></i></a></li>
-      <li><a href="#"><i class="fa-solid fa-heart"></i></a></li>
+      <li><a href="#"><i class='bx bx-calendar-heart' ></i>
       <li><a href="<%= user_session_path %>"><i class="fas fa-user-circle"></i></a></li>
     </ul>
   </nav>
 </footer>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const footer = document.querySelector('.footer');
-    let lastScrollY = window.scrollY;
-
-    const onScroll = function() {
-      if (window.scrollY > lastScrollY) {
-        footer.classList.add('hidden');
-      } else {
-        footer.classList.remove('hidden');
-      }
-      lastScrollY = window.scrollY;
-    };
-
-    window.addEventListener('scroll', onScroll);
-  });
-</script>

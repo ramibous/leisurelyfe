@@ -3,10 +3,10 @@
     <%= link_to root_path do %>
       <%= image_tag "logo.png", class: "logo", alt: "leisurelyfe_logo" %>
     <% end %>
-    <% if params[:controller] == 'recommendations' %>
-      <%= link_to favorites_path, class: "favorites-icon" do %>
-        <i class="fas fa-heart"></i>
-      <% end %>
-    <% end %>
   </div>
+  <% if params[:controller] == 'recommendations' %>
+    <%= link_to favorites_path, class: "favorites-icon" do %>
+      <i class='bx bx-calendar-heart' ></i>
+    <% end %>
+  <% end %>
 </div>
