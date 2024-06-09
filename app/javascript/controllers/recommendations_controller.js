@@ -5,7 +5,8 @@ export default class extends Controller {
   static targets = ["heart", "searchInput", "searchForm"]
 
   connect() {
-   
+    console.log("Recommendations controller connected")
+
     this.heartTargets.forEach(icon => {
       icon.addEventListener('click', () => this.toggleHeart(icon))
     })

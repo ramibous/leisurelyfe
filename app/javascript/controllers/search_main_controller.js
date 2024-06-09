@@ -1,4 +1,5 @@
 // app/javascript/controllers/search_main_controller.js
+// this javascript for the home page search_main_html.erb
 import { Controller } from "@hotwired/stimulus"
 import flatpickr from "flatpickr"
 
