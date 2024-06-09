@@ -1,16 +1,11 @@
-
-body{ 
-  background-color: var(--background-color);
-}
-
 .top-bar {
   background-color: var(--background-color);
   padding: 10px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative; 
-  min-height: 100px; 
+  position: relative;
+  min-height: 100px;
 }
 
 .top-bar-content {
@@ -21,20 +16,29 @@ body{
 }
 
 .logo {
-  height: 83px !important; 
-  width: auto !important; 
+  height: 83px !important;
+  width: auto !important;
 }
 
 .notification {
   position: absolute;
-  right: 20px; 
-  font-size: 20px; 
+  right: 20px;
+  font-size: 20px;
   color: var(--gray);
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.43);
   padding: 10px;
   border-radius: 50%;
 }
 
+.favorites-icon {
+  position: absolute;
+  right: 60px; /* Adjusted to leave space for notification */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: var(--primary-color); /* Adjust color as needed */
+}
 
-
-
+.favorites-icon i {
+  font-size: 24px;
+}
