@@ -1,6 +1,12 @@
+# app/controllers/recommendations_controller.rb
 class RecommendationsController < ApplicationController
   def index
     @recommendations = Recommendation.all
+
+    if params[:query].present?
+      @recommendations = @recommendations.search_by_name(params[:query])
+    end
+
     @recommendations = @recommendations.where(kid_friendly: true) if params[:kid_friendly] == "1"
     @recommendations = @recommendations.where(dog_friendly: true) if params[:dog_friendly] == "1"
   end
@@ -10,4 +16,3 @@ class RecommendationsController < ApplicationController
     @quote = Faker::Quote.matz
   end
 end
-

@@ -10,9 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_06_04_161447) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_09_203413) do
   # These are extensions that must be enabled in order to support this database
+  enable_extension "pg_trgm"
   enable_extension "plpgsql"
+
+  create_table "favorites", force: :cascade do |t|
+  end
 
   create_table "recommendations", force: :cascade do |t|
     t.string "name", null: false

@@ -1,10 +1,17 @@
+//this is css for the index page meaning search page //
+
+.recommendations-container {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+}
 
 .search-recommendation {
   font-size: 2.5em;
   margin-bottom: 20px;
   text-align: center;
-  color: #394867;
-  font-weight: 600;
+  color: #5B7553;
+  font-weight: 200;
   letter-spacing: 1px;
   line-height: 1.2;
   text-transform: capitalize;
@@ -12,33 +19,72 @@
   padding-top: 20px;
 }
 
+.input-group-recommendation {
+  display: flex;
+  margin-bottom: 20px;
+  background-color: #f1f1f1; /* Light background for the input group */
+  border-radius: 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.input-group-recommendation input {
+  flex: 1;
+  padding: 10px 15px;
+  font-size: 1em;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.input-group-recommendation button {
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  background-color: #5B7553; /* Primary color */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.input-group-recommendation button:hover {
+  background-color: #2e3a56; /* Darker shade of primary color */
+}
+
 .search-item-recommendation {
   background-color: #ffffff;
-  padding: 20px;
+  padding: 0;
   border-radius: 8px;
   margin-bottom: 30px;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
 }
 
-.image-container {
+.image-container-recommendation {
   position: relative;
   width: 100%;
   height: 400px;
   overflow: hidden;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  margin-bottom: 10px;
+  border-radius: 8px 8px 0 0;
+  margin: 0;
+  padding: 0;
   z-index: 1;
 }
 
-.image-container img {
+.image-container-recommendation img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
 }
 
-.description-name {
+.description-name-recommendation {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -51,7 +97,7 @@
   z-index: 3;
 }
 
-.rating {
+.rating-recommendation {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -68,12 +114,12 @@
   z-index: 2;
 }
 
-.rating i {
+.rating-recommendation i {
   color: #F9B908;
   margin-left: 5px;
 }
 
-.overlay-icons {
+.overlay-icons-recommendation {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -82,23 +128,23 @@
   z-index: 3;
 }
 
-.overlay-icons .heart-icon {
+.overlay-icons-recommendation .heart-icon-recommendation {
   color: white;
   font-size: 18px;
   cursor: pointer;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-.labels {
-  margin-top: 10px;
+.labels-recommendation {
+  margin: 10px 20px;
   display: flex;
   justify-content: flex-start;
   gap: 10px;
 }
 
-.label {
+.label-recommendation {
   padding: 5px 10px;
-  border-radius: 20px;
+  border-radius: 5px;
   color: white;
   font-size: 0.9em;
   font-weight: bold;
@@ -121,8 +167,8 @@
   background-color: #9E9E9E;
 }
 
-.description {
-  margin-top: 20px;
+.description-recommendation {
+  margin: 10px 20px 0;
   font-size: 1.1em;
   color: #394867;
   line-height: 1.6;
@@ -130,8 +176,8 @@
   text-align: center;
 }
 
-.btn-custom {
-  margin-top: 20px;
+.btn-find-out-more-recommendation {
+  margin: 10px 20px 10px;
   padding: 10px 20px;
   font-size: 1em;
   border-radius: 25px;
@@ -145,15 +191,15 @@
   margin-right: auto;
 }
 
-.btn-custom:hover {
+.btn-find-out-more-recommendation:hover {
   background-color: #85c7a5;
 }
 
-.show-image {
+.show-image-recommendation {
   width: 100%;
 }
 
-.show-text {
+.show-text-recommendation {
   background-color: white;
   margin-bottom: 10px;
   padding: 1em 3em;

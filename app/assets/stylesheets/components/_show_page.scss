@@ -1,0 +1,200 @@
+
+  /* Container for the show section */
+  .show-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  /* Image in the show section */
+  .show-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border-radius: 8px;
+  }
+
+  .show-image:hover {
+    transform: scale(1.05);
+    filter: brightness(80%);
+  }
+
+  /* Text overlay in the show section */
+  .show-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    line-height: 1.4;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+
+  .label-recommendation {
+    background-color: #f1c40f;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-right: 10px;
+    white-space: nowrap;
+  }
+
+  .image-text {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0;
+    flex: 1;
+  }
+
+  /* Container for navigation items */
+  .navigation-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 20px;
+  }
+
+  /* Navigation item styles */
+  .navigation-item {
+    color: #394867;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    cursor: pointer;
+  }
+
+  /* Icons within navigation items */
+  .navigation-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .navigation-icons i {
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+    cursor: pointer;
+  }
+
+  .navigation-icons i:hover {
+    color: #2e3a56;
+  }
+
+  /* Custom horizontal rule */
+  .custom-hr {
+    border: 1px solid #5B7553;
+    margin: 20px 0;
+  }
+
+  /* Container for details section */
+  .details-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+  }
+
+  /* Headings and paragraphs within details section */
+  .details-container h3,
+  .details-container h1,
+  .details-container p,
+  .details-container ul {
+    margin-bottom: 15px;
+  }
+
+  .details-container ul {
+    padding-left: 20px;
+  }
+
+  .details-container li {
+    list-style-type: disc;
+  }
+
+  .quote-text {
+    font-style: italic;
+    color: #555;
+  }
+
+  /* Container for recommendation rows */
+  .recommendations-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  /* Column within recommendation rows */
+  .recommendation-col {
+    flex: 1;
+    min-width: 300px;
+  }
+
+  /* Card within recommendation columns */
+  .recommendation-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .recommendation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+
+  /* Image within recommendation cards */
+  .recommendation-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .recommendation-image:hover {
+    transform: scale(1.05);
+  }
+
+  /* Body of recommendation cards */
+  .recommendation-card-body {
+    padding: 20px;
+  }
+
+  /* Title within recommendation cards */
+  .recommendation-card-title {
+    color: #394867;
+    font-size: 1.25em;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  /* Text within recommendation cards */
+  .recommendation-card-text {
+    color: #394867;
+    font-size: 1em;
+    line-height: 1.6;
+  }
+
+  /* Heart icon styles */
+  .heart-icon-recommendation {
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  .heart-icon-recommendation:hover {
+    color: #e74c3c;
+  }
