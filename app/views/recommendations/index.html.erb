@@ -10,7 +10,7 @@
         </div>
         <img src="<%= recommendation.image_url %>" alt="">
         <div class="overlay-icons">
-          <i class="fa-regular fa-heart heart-icon"></i>
+          <i class="fa-regular fa-heart heart-icon" data-recommendation-id="<%= recommendation.id %>"></i>
         </div>
       </div>
       <div class="labels">
@@ -29,31 +29,27 @@
     const heartIcons = document.querySelectorAll('.heart-icon');
     heartIcons.forEach(icon => {
       icon.addEventListener('click', function() {
-        if (icon.classList.contains('fa-regular')) {
-          icon.classList.remove('fa-regular');
-          icon.classList.add('fa-solid');
-        } else {
-          icon.classList.remove('fa-solid');
-          icon.classList.add('fa-regular');
-        }
-      });
-    });
-  });
-</script>
+        const recommendationId = icon.dataset.recommendationId;
+        const isFavorited = icon.classList.contains('fa-solid');
+        const url = isFavorited ? `/recommendations/${recommendationId}/favorite` : `/recommendations/${recommendationId}/favorite`;
 
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const heartIcons = document.querySelectorAll('.heart-icon');
-    heartIcons.forEach(icon => {
-      icon.addEventListener('click', function() {
-        if (icon.classList.contains('fa-regular')) {
-          icon.classList.remove('fa-regular');
-          icon.classList.add('fa-solid');
-        } else {
-          icon.classList.remove('fa-solid');
-          icon.classList.add('fa-regular');
-        }
+        fetch(url, {
+          method: isFavorited ? 'DELETE' : 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': document.querySelector('meta[name="csrf-token"]') ? document.querySelector('meta[name="csrf-token"]').getAttribute('content') : null
+          },
+          credentials: 'same-origin'
+        }).then(response => response.json())
+          .then(data => {
+            if (data.status === 'added') {
+              icon.classList.remove('fa-regular');
+              icon.classList.add('fa-solid');
+            } else if (data.status === 'removed') {
+              icon.classList.remove('fa-solid');
+              icon.classList.add('fa-regular');
+            }
+          });
       });
     });
   });

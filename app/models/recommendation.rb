@@ -1,4 +1,7 @@
 class Recommendation < ApplicationRecord
+  has_many :favorites
+  has_many :users, through: :favorites
+
   validates :name, presence: true
 
   enum category: {
