@@ -2,7 +2,7 @@
   background-color: var(--background-color);
   padding: 10px 20px;
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Center content horizontally */
   align-items: center;
   position: relative;
   min-height: 100px;
@@ -13,6 +13,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  position: relative; /* Ensures proper positioning of the logo */
 }
 
 .logo {
@@ -32,13 +33,14 @@
 
 .favorites-icon {
   position: absolute;
-  right: 60px; /* Adjusted to leave space for notification */
+  right: 20px; /* Positioned to the far right */
   top: 50%;
   transform: translateY(-50%);
-  font-size: 24px;
+  font-size: 30px;
   color: var(--primary-color); /* Adjust color as needed */
 }
 
-.favorites-icon i {
-  font-size: 24px;
+.cart-icon {
+  height: 24px; /* Adjust size as needed */
+  width: 24px;  /* Adjust size as needed */
 }
