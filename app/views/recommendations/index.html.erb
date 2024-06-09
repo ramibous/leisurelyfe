@@ -1,28 +1,60 @@
 <%= render 'pages/top_bar' %>
-
 <div class="container">
   <h1 class="search-recommendation">Search Results</h1>
   <% @recommendations.each do |recommendation| %>
-    <div class="main">
-      <div class="search-item-recommendation">
-        <div class="image-icon">
-          <div class="image-container">
-            <div class="rating"><%= rand(1..5) %>.0
-              <i class="fas fa-star"></i>
-            </div>
-            <img src="<%= recommendation.image_url %>" alt="">
-          </div>
-          <div class="share">
-            <i class="fa-regular fa-heart"></i>
-            <i class="fa-solid fa-share-nodes"></i>
-          </div>
+    <div class="search-item-recommendation">
+      <div class="image-container">
+        <h2 class="description-name"><%= recommendation.name %></h2>
+        <div class="rating"><%= rand(1..5) %>.0
+          <i class="fas fa-star"></i>
         </div>
-        <h2 class ="description-name"><%= recommendation.name %></h2>
-        <p class="description"><%= truncate(recommendation.description, length: 100) %></p>
+        <img src="<%= recommendation.image_url %>" alt="">
+        <div class="overlay-icons">
+          <i class="fa-regular fa-heart heart-icon"></i>
+        </div>
       </div>
-      <%= link_to recommendation_path(recommendation), class:"text-decoration-none" do %>
+      <div class="labels">
+        <span class="label label-<%= recommendation.category %>"><%= recommendation.category.humanize %></span>
+      </div>
+      <p class="description"><%= truncate(recommendation.description, length: 100) %></p>
+      <%= link_to recommendation_path(recommendation), class: "text-decoration-none" do %>
         <button class="btn-custom">Find Out More</button>
       <% end %>
     </div>
   <% end %>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const heartIcons = document.querySelectorAll('.heart-icon');
+    heartIcons.forEach(icon => {
+      icon.addEventListener('click', function() {
+        if (icon.classList.contains('fa-regular')) {
+          icon.classList.remove('fa-regular');
+          icon.classList.add('fa-solid');
+        } else {
+          icon.classList.remove('fa-solid');
+          icon.classList.add('fa-regular');
+        }
+      });
+    });
+  });
+</script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const heartIcons = document.querySelectorAll('.heart-icon');
+    heartIcons.forEach(icon => {
+      icon.addEventListener('click', function() {
+        if (icon.classList.contains('fa-regular')) {
+          icon.classList.remove('fa-regular');
+          icon.classList.add('fa-solid');
+        } else {
+          icon.classList.remove('fa-solid');
+          icon.classList.add('fa-regular');
+        }
+      });
+    });
+  });
+</script>
