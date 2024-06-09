@@ -1,5 +1,8 @@
 class Recommendation < ApplicationRecord
+  has_many :favorites
+  has_many :users, through: :favorites
   include PgSearch::Model
+
 
   validates :name, presence: true
 
