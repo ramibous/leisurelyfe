@@ -200,24 +200,5 @@ Recommendation.create!(
   end_time: random_time_range[1]
 )
 
-90.times do
-  start_time, end_time = random_time_range
-  Recommendation.create!(
-    name: Faker::Restaurant.name,
-    description: Faker::Lorem.paragraph,
-    category: ["restaurant", "street_food", "cafe", "attraction"].sample,
-    price_range: ["$", "$$", "$$$", "$$$$"].sample,
-    location: Faker::Address.community,
-    address: Faker::Address.full_address,
-    longitude: Faker::Address.longitude,
-    latitude: Faker::Address.latitude,
-    kid_friendly: random_boolean,
-    dog_friendly: random_boolean,
-    outdoor: random_boolean,
-    image_url: "https://picsum.photos/200",
-    start_time: start_time,
-    end_time: end_time
-  )
-end
-
 puts "Done!"
+puts "All done!"
