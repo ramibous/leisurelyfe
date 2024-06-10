@@ -11,6 +11,7 @@
       <button type="submit" class="btn-primary-recommendation">Search</button>
     </div>
   <% end %>
+  <h3 class="opacity-50">There is <%= @recommendations.count %> results</h3>
 
   <% @recommendations.each do |recommendation| %>
     <div class="search-item-recommendation">
