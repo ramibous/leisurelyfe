@@ -7,6 +7,7 @@
       <button type="submit" class="btn-primary-recommendation">Search</button>
     </div>
   <% end %>
+  <h3 class="opacity-50">There is <%= @recommendations.count %> results</h3>
 
   <% if @recommendations.any? %>
     <% @recommendations.each do |recommendation| %>
