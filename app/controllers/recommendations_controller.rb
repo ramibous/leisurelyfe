@@ -1,4 +1,3 @@
-# app/controllers/recommendations_controller.rb
 class RecommendationsController < ApplicationController
   def index
     @recommendations = Recommendation.all
@@ -14,5 +13,6 @@ class RecommendationsController < ApplicationController
   def show
     @recommendation = Recommendation.find(params[:id])
     @quote = Faker::Quote.matz
+    @recommendations = Recommendation.where(category: @recommendation.category).where.not(id: @recommendation.id).limit(4) # Fetch related recommendations
   end
 end
