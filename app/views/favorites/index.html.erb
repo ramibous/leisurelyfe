@@ -1,1 +1,15 @@
-<h1> Finally, you have arrived to Favorites page! </h1>
+<h1>My Favorite Recommendations</h1>
+<div class="favorite-list">
+  <% @favorites.each do |favorite| %>
+    <div class="favorite-item">
+      <div class="image-container">
+        <img src="<%= favorite.recommendation.image_url %>" alt="<%= favorite.recommendation.name %>">
+        <h3 class="restaurant-name"><%= favorite.recommendation.name %></h3>
+      </div>
+      <div class="description-container">
+        <p class="truncated-description"><%= truncate(favorite.recommendation.description, length: 100) %></p>
+        <a href="<%= recommendation_path(favorite.recommendation) %>" class="see-more-link">See More</a>
+      </div>
+    </div>
+  <% end %>
+</div>

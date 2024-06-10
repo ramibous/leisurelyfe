@@ -1,19 +1,32 @@
 class FavoritesController < ApplicationController
   def index
-    @favorites = Favorite.all
+    @favorites = current_user.favorites
   end
 
-  def create
-    @favorite = Favorite.create(favorite_params)
-  end
+  def toggle
+    @recommendation = Recommendation.find(params[:recommendation_id])
+    @existing_recommendation = current_user.favorites.find_by(recommendation: @recommendation)
 
-  def destroy
-    @favorite = Favorite.find(params[:id]).destroy
+    if @existing_recommendation
+      destroy
+      render json: { status: "removed" }
+    else
+      create
+      render json: { status: "added" }
+    end
   end
 
   private
 
-  def favorite_params
-    params.require(:favorite).permit(:recommendation_id, :user_id)
+  def create
+    @favorite = Favorite.new(
+      user: current_user,
+      recommendation: @recommendation
+    )
+    @favorite.save
+  end
+
+  def destroy
+    @existing_recommendation.destroy
   end
 end

@@ -7,7 +7,12 @@
       <button type="submit" class="btn-primary-recommendation">Search</button>
     </div>
   <% end %>
-  <h3 class="opacity-50">There is <%= @recommendations.count %> results</h3>
+  <h3 class="opacity-50">There is <%= @recommendations.count %>
+    <% if params[:category].present? %>
+      <%= params[:category].humanize %>
+    <% end %>
+    results
+  </h3>
 
   <% if @recommendations.any? %>
     <% @recommendations.each do |recommendation| %>
@@ -19,12 +24,17 @@
           </div>
           <img src="<%= recommendation.image_url %>" alt="">
           <div class="overlay-icons-recommendation">
-            <i class="fa-regular fa-heart heart-icon-recommendation" data-recommendations-target="heart"></i>
+            <i class="fa-regular fa-heart heart-icon-recommendation <%= 'liked' if current_user.favorites.exists?(recommendation: recommendation) %>"
+               data-controller="favorite"
+               data-action="click->favorite#toggle"
+               data-favorite-target="heart"
+               data-recommendation-id="<%= recommendation.id %>">
+            </i>
           </div>
         </div>
         <div class="labels-recommendation d-flex justify-content-between opacity-50">
           <span class="label-recommendation label-<%= recommendation.category %>"><%= recommendation.category.humanize %></span>
-          <span class="label-recommendation-time label-start-end-time"><%= recommendation.start_time.strftime('%H:%M') %> - <%= recommendation.end_time.strftime('%H:%M') %></span>
+          <span class="label-recommendation-time label-start-end-time"><%= recommendation.start_time&.strftime('%H:%M') %> - <%= recommendation.end_time&.strftime('%H:%M') %></span>
         </div>
         <p class="description-recommendation"><%= truncate(recommendation.description, length: 100) %></p>
         <%= link_to recommendation_path(recommendation), class: "text-decoration-none" do %>

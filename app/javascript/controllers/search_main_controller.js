@@ -1,5 +1,4 @@
 // app/javascript/controllers/search_main_controller.js
-// this javascript for the home page search_main_html.erb
 import { Controller } from "@hotwired/stimulus"
 import flatpickr from "flatpickr"
 
@@ -33,6 +32,7 @@ export default class extends Controller {
     if (value > parseInt(this.inputGuestsTarget.min)) {
       value--
       this.inputGuestsTarget.value = value
+      document.getElementById("guests-count").value = value
     }
   }
 
@@ -40,5 +40,6 @@ export default class extends Controller {
     let value = parseInt(this.inputGuestsTarget.value)
     value++
     this.inputGuestsTarget.value = value
+    document.getElementById("guests-count").value = value
   }
 }

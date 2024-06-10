@@ -26,7 +26,6 @@ puts "Done!"
 puts "Creating recommendations..."
 
 recommendations = [
-
   {
     name: "Quartier des Spectacles",
     description: "Quartier des Spectacles has been Montreal's cultural heart for more than a century. Today, the entertainment district boasts North America's most concentrated and diverse group of cultural venues, making Montreal one of the world's great cultural metropolises. As an exceptional creative space open to artistic diversity, it is the year-round host to countless festivals and events, many of which include free outdoor shows and activities.****Depuis plus de 100 ans, le Quartier des spectacles constitue le coeur culturel de Montreal.Il offre aujourd'hui la plus grande concentration et diversite de lieux de diffusion culturelle en Amerique du Nord, ce qui fait de Montreal une metropole culturelle incontournable dans le monde. Lieu de creation exceptionnel ouvert a la diversite artistique et au metissage culturel, il est anime toute l'annee par un grand nombre de festivals et d'evenements, qui comportent une importante programmation exterieure gratuite.",
