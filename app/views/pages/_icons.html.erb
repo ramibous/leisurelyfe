@@ -1,55 +1,54 @@
-
-  <section class="icons-section">
-    <button class="arrow left-arrow" id="left-arrow">&#10094;</button>
-    <div class="icon-container" id="icon-container">
-      <div class="icon-item">
-        <i class="fas fa-umbrella-beach"></i>
-        <span class="icon-name">Beach</span>
-      </div>
-      <div class="icon-item">
-        <i class="fas fa-utensils"></i>
-        <span class="icon-name">Food</span>
-      </div>
-      <div class="icon-item">
-        <i class="fas fa-biking"></i>
-        <span class="icon-name">Biking</span>
-      </div>
-      <div class="icon-item">
-        <i class="fas fa-dog"></i>
-        <span class="icon-name">Pets</span>
-      </div>
-      <div class="icon-item">
-        <i class="fas fa-tshirt"></i>
-        <span class="icon-name">Shopping</span>
-      </div>
-      <div class="icon-item">
-        <i class="fas fa-train"></i>
-        <span class="icon-name">Transport</span>
-      </div>
-      <div class="icon-item">
-        <i class="fas fa-tree"></i>
-        <span class="icon-name">Parks</span>
-      </div>
-      <div class="icon-item">
-        <i class="fas fa-hotdog"></i>
-        <span class="icon-name">Street Food</span>
-      </div>
-      <div class="icon-item">
-        <i class="fas fa-mountain"></i>
-        <span class="icon-name">Outdoor</span>
-      </div>
-      <div class="icon-item">
-        <i class="fas fa-paw"></i>
-        <span class="icon-name">Dogs Activity</span>
-      </div>
-      <div class="icon-item">
-        <i class="fas fa-child"></i>
-        <span class="icon-name">Kids Activity</span>
-      </div>
-      <div class="icon-item">
-        <i class="fas fa-hippo"></i>
-        <span class="icon-name">Zoo</span>
-      </div>
-    </div>
-    <button class="arrow right-arrow" id="right-arrow">&#10095;</button>
-  </section>
+<section class="icons-section">
+  <button class="arrow left-arrow" id="left-arrow">&#10094;</button>
+  <div class="icon-container" id="icon-container">
+    <%= link_to recommendations_path(category: 'beach'), class: "icon-item text-decoration-none text-dark" do %>
+      <i class="fas fa-umbrella-beach"></i>
+      <span class="icon-name">Beach</span>
+    <% end %>
+    <%= link_to recommendations_path(category: 'restaurant'), class: "icon-item text-decoration-none text-dark" do %>
+      <i class="fas fa-utensils"></i>
+      <span class="icon-name">Food</span>
+    <% end %>
+    <%= link_to recommendations_path(category: 'biking'), class: "icon-item text-decoration-none text-dark" do %>
+      <i class="fas fa-biking"></i>
+      <span class="icon-name">Biking</span>
+    <% end %>
+    <%= link_to recommendations_path(category: 'pets'), class: "icon-item text-decoration-none text-dark" do %>
+      <i class="fas fa-dog"></i>
+      <span class="icon-name">Pets</span>
+    <% end %>
+    <%= link_to recommendations_path(category: 'shopping'), class: "icon-item text-decoration-none text-dark" do %>
+      <i class="fas fa-tshirt"></i>
+      <span class="icon-name">Shopping</span>
+    <% end %>
+    <%= link_to recommendations_path(category: 'transport'), class: "icon-item text-decoration-none text-dark" do %>
+      <i class="fas fa-train"></i>
+      <span class="icon-name">Transport</span>
+    <% end %>
+    <%= link_to recommendations_path(category: 'park'), class: "icon-item text-decoration-none text-dark" do %>
+      <i class="fas fa-tree"></i>
+      <span class="icon-name">Parks</span>
+    <% end %>
+    <%= link_to recommendations_path(category: 'street_food'), class: "icon-item text-decoration-none text-dark" do %>
+      <i class="fas fa-hotdog"></i>
+      <span class="icon-name">Street Food</span>
+    <% end %>
+    <%= link_to recommendations_path(category: 'outdoor'), class: "icon-item text-decoration-none text-dark" do %>
+      <i class="fas fa-mountain"></i>
+      <span class="icon-name">Outdoor</span>
+    <% end %>
+    <%= link_to recommendations_path(category: 'dogs_activity'), class: "icon-item text-decoration-none text-dark" do %>
+      <i class="fas fa-paw"></i>
+      <span class="icon-name">Dogs Activity</span>
+    <% end %>
+    <%= link_to recommendations_path(category: 'kids_activity'), class: "icon-item text-decoration-none text-dark" do %>
+      <i class="fas fa-child"></i>
+      <span class="icon-name">Kids Activity</span>
+    <% end %>
+    <%= link_to recommendations_path(category: 'zoo'), class: "icon-item text-decoration-none text-dark" do %>
+      <i class="fas fa-hippo"></i>
+      <span class="icon-name">Zoo</span>
+    <% end %>
+  </div>
+  <button class="arrow right-arrow" id="right-arrow">&#10095;</button>
+</section>
