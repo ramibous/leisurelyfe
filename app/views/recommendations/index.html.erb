@@ -1,3 +1,4 @@
+<!-- app/views/recommendations/index.html.erb -->
 <%= render 'pages/top_bar' %>
 <div class="recommendations-container" data-controller="recommendations">
   <h1 class="search-recommendation">Search Results</h1>
@@ -7,7 +8,7 @@
       <button type="submit" class="btn-primary-recommendation">Search</button>
     </div>
   <% end %>
-  <h3 class="opacity-50">There is <%= @recommendations.count %>
+  <h3 class="opacity-50">There are <%= @recommendations.count %>
     <% if params[:category].present? %>
       <%= params[:category].humanize %>
     <% end %>
@@ -19,12 +20,12 @@
       <div class="search-item-recommendation">
         <div class="image-container-recommendation">
           <h2 class="description-name-recommendation"><%= recommendation.name %></h2>
-          <div class="rating-recommendation"><%= rand(1..5) %>.0
+          <div class="rating-recommendation"><%= recommendation.rating %>
             <i class="fas fa-star"></i>
           </div>
           <img src="<%= recommendation.image_url %>" alt="">
           <div class="overlay-icons-recommendation">
-            <i class="fa-regular fa-heart heart-icon-recommendation <%= 'liked' if current_user.favorites.exists?(recommendation: recommendation) %>"
+            <i class="fa-regular fa-heart heart-icon-recommendation <%= 'liked' if current_user&.favorites.exists?(recommendation: recommendation) %>"
                data-controller="favorite"
                data-action="click->favorite#toggle"
                data-favorite-target="heart"
