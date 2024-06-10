@@ -12,7 +12,9 @@ class Recommendation < ApplicationRecord
     street_food: 11,
     event: 20,
     park: 30,
-    attraction: 40
+    attraction: 40,
+    shopping: 50,
+    hotel: 60
   }, _prefix: true, _default: :unknown
 
   pg_search_scope :search_by_name,
