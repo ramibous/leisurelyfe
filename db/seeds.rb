@@ -85,7 +85,8 @@ Recommendation.create!(
   outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0f/14/36/55/img-20170408-192159-516.jpg",
   start_time: random_time_range[0],
-  end_time: random_time_range[1]
+  end_time: random_time_range[1],
+  max_guests: "5"
 )
 
 Recommendation.create!(
