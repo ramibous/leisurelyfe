@@ -1,0 +1,35 @@
+.favorite-list {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.favorite-item {
+  background-color: #C8EAD0;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.favorite-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+.favorite-name-label {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(34, 139, 34, 0.9); 
+  padding: 10px 20px;
+  color: white;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+}

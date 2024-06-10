@@ -1,6 +1,4 @@
-import { Controller } from "stimulus";
-import axios from "axios";
-
+import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["heart"];
 
@@ -8,12 +6,20 @@ export default class extends Controller {
     event.preventDefault();
 
     const recommendationId = this.heartTarget.dataset.recommendationId;
-    const url = `/favorites/toggle`;
+    const url = `/recommendations/${recommendationId}/favorite/toggle`;
 
-    axios.post(url, { recommendation_id: recommendationId })
-      .then(response => {
-        if (response.data.status === "added") {
+    const options = {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+     };
+
+    fetch(url, options)
+      .then(response => response.json())
+      .then((data) => {
+        if (data.status === "added") {
           this.heartTarget.classList.add("liked");
+          this.heartTarget.classList.add("fa-solid");
           this.heartTarget.classList.add("vibrate");
           setTimeout(() => { this.heartTarget.classList.remove("vibrate"); }, 300);
         } else {
