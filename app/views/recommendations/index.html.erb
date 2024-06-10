@@ -19,7 +19,12 @@
           </div>
           <img src="<%= recommendation.image_url %>" alt="">
           <div class="overlay-icons-recommendation">
-            <i class="fa-regular fa-heart heart-icon-recommendation" data-recommendations-target="heart"></i>
+            <i class="fa-regular fa-heart heart-icon-recommendation <%= 'liked' if current_user.favorites.exists?(recommendation: recommendation) %>"
+               data-controller="favorite"
+               data-action="click->favorite#toggle"
+               data-favorite-target="heart"
+               data-recommendation-id="<%= recommendation.id %>">
+            </i>
           </div>
         </div>
         <div class="labels-recommendation">
@@ -35,3 +40,5 @@
     <p>No recommendations found.</p>
   <% end %>
 </div>
+
+ 

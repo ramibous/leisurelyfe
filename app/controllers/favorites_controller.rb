@@ -1,19 +1,19 @@
 class FavoritesController < ApplicationController
+  before_action :authenticate_user!
+
   def index
-    @favorites = Favorite.all
+    @favorites = current_user.favorites
   end
 
   def create
-    @favorite = Favorite.create(favorite_params)
+    @recommendation = Recommendation.find(params[:recommendation_id])
+    current_user.favorite(@recommendation)
+    render json: { status: "added" }
   end
 
   def destroy
-    @favorite = Favorite.find(params[:id]).destroy
-  end
-
-  private
-
-  def favorite_params
-    params.require(:favorite).permit(:recommendation_id, :user_id)
+    @recommendation = Recommendation.find(params[:recommendation_id])
+    current_user.unfavorite(@recommendation)
+    render json: { status: "removed" }
   end
 end

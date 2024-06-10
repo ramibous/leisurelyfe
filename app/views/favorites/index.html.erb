@@ -1,1 +1,6 @@
-<h1> Finally, you have arrived to Favorites page! </h1>
+<h1> My Favorite Recommendations</h1>
+<% @favorites.each do |favorite| %>
+  <div>
+    <%= favorite.recommendation.name %>
+  </div>
+<% end %>
