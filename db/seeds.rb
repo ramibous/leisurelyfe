@@ -1,4 +1,3 @@
-
 puts "Deleting previous data..."
 Recommendation.destroy_all
 User.destroy_all
@@ -20,7 +19,7 @@ Recommendation.create!(
   address: "200 rue Notre-Dame O, Montreal, Quebec H2Y 1Z5 Canada",
   longitude: -73.55742,
   latitude: 45.50371,
-  kid_friendly: false,
+  kid_friendly: true,
   dog_friendly: false,
   outdoor: false,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0e/d9/3c/1b/20170401-160920-largejpg.jpg"
@@ -35,7 +34,7 @@ Recommendation.create!(
   longitude: -73.5539,
   latitude: 45.505527,
   kid_friendly: false,
-  dog_friendly: false,
+  dog_friendly: true,
   outdoor: false,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/14/05/ea/55/restaurant.jpg"
 )
@@ -48,9 +47,9 @@ Recommendation.create!(
   address: "845 Sherbrooke Street West (At McGill College), Montreal, Quebec H3A 0B9 Canada",
   longitude: -73.57715,
   latitude: 45.504795,
-  kid_friendly: false,
+  kid_friendly: true,
   dog_friendly: false,
-  outdoor: false,
+  outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/07/27/5f/e4/mcgill-university.jpg"
 )
 
@@ -63,8 +62,8 @@ Recommendation.create!(
   longitude: -73.5937,
   latitude: 45.546574,
   kid_friendly: false,
-  dog_friendly: false,
-  outdoor: false,
+  dog_friendly: true,
+  outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0f/14/36/55/img-20170408-192159-516.jpg"
 )
 
@@ -76,8 +75,8 @@ Recommendation.create!(
   address: "4351 Saint-Laurent Blvd, Montreal, Quebec H2W 1Z8 Canada",
   longitude: -73.583755,
   latitude: 45.518837,
-  kid_friendly: false,
-  dog_friendly: false,
+  kid_friendly: true,
+  dog_friendly: true,
   outdoor: false,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-m/1280/23/87/3c/39/omnivore-herbivore-carnivore.jpg"
 )
@@ -92,7 +91,7 @@ Recommendation.create!(
   latitude: 45.52303,
   kid_friendly: false,
   dog_friendly: false,
-  outdoor: false,
+  outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0f/61/73/ba/photo1jpg.jpg"
 )
 
@@ -104,8 +103,8 @@ Recommendation.create!(
   address: "1016 St Laurent, Montreal, Quebec H2Z 1J3 Canada",
   longitude: -73.55969,
   latitude: 45.507954,
-  kid_friendly: false,
-  dog_friendly: false,
+  kid_friendly: true,
+  dog_friendly: true,
   outdoor: false,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-s/02/7d/d1/5d/filename-sam-5301-jpg.jpg"
 )
@@ -119,8 +118,8 @@ Recommendation.create!(
   longitude: -73.57887,
   latitude: 45.480865,
   kid_friendly: false,
-  dog_friendly: false,
-  outdoor: false,
+  dog_friendly: true,
+  outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/05/22/59/2a/photo-of-greenspot-restaurant.jpg"
 )
 
@@ -132,12 +131,11 @@ Recommendation.create!(
   address: "407, Place Jacques-Cartier Vieux-Montreal, Montreal, Quebec H2Y 3B1 Canada",
   longitude: -73.55269,
   latitude: 45.50792,
-  kid_friendly: false,
+  kid_friendly: true,
   dog_friendly: false,
-  outdoor: false,
+  outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/02/39/3b/5b/welcome-at-jardin-nelson.jpg"
 )
-
 
 Recommendation.create!(
   name: "L'amere a boire",
@@ -162,7 +160,7 @@ Recommendation.create!(
   longitude: -73.55349,
   latitude: 45.50613,
   kid_friendly: false,
-  dog_friendly: false,
+  dog_friendly: true,
   outdoor: false,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/06/4f/dd/05/vieux-port-steakhouse.jpg"
 )
@@ -175,8 +173,8 @@ Recommendation.create!(
   address: "139 St-Paul Ouest, Montreal, Quebec H2Y 1Z5 Canada",
   longitude: -73.55463,
   latitude: 45.50399,
-  kid_friendly: false,
-  dog_friendly: false,
+  kid_friendly: true,
+  dog_friendly: true,
   outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-w/17/6a/0d/59/photo0jpg.jpg"
 )
@@ -189,7 +187,7 @@ Recommendation.create!(
   address: "413 Bourke Ave, Dorval, Quebec H9S 3W8 Canada",
   longitude: -73.72164,
   latitude: 45.44503,
-  kid_friendly: false,
+  kid_friendly: true,
   dog_friendly: false,
   outdoor: false,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0a/54/53/6e/photo0jpg.jpg"
@@ -204,8 +202,8 @@ Recommendation.create!(
   longitude: -73.566376,
   latitude: 45.46772,
   kid_friendly: false,
-  dog_friendly: false,
-  outdoor: false,
+  dog_friendly: true,
+  outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0b/91/d6/22/photo0jpg.jpg"
 )
 
@@ -217,7 +215,7 @@ Recommendation.create!(
   address: "115 Rachel E, Montreal, Quebec H2W 1C8 Canada",
   longitude: -73.580536,
   latitude: 45.519314,
-  kid_friendly: false,
+  kid_friendly: true,
   dog_friendly: false,
   outdoor: false,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-w/17/26/b1/26/romados.jpg"
@@ -232,8 +230,8 @@ Recommendation.create!(
   longitude: -73.62256,
   latitude: 45.541557,
   kid_friendly: false,
-  dog_friendly: false,
-  outdoor: false,
+  dog_friendly: true,
+  outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/06/7b/b4/da/tapeo.jpg"
 )
 
@@ -245,9 +243,9 @@ Recommendation.create!(
   address: "1455, Peel street 3rd Floor, Montreal, Quebec H3A 1T5 Canada",
   longitude: -73.57391,
   latitude: 45.501305,
-  kid_friendly: false,
+  kid_friendly: true,
   dog_friendly: false,
-  outdoor: false,
+  outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0f/52/a3/98/barbie-expo.jpg"
 )
 
@@ -260,8 +258,8 @@ Recommendation.create!(
   longitude: -73.5789,
   latitude: 45.528343,
   kid_friendly: false,
-  dog_friendly: false,
-  outdoor: false,
+  dog_friendly: true,
+  outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0f/8e/2f/4e/photo0jpg.jpg"
 )
 
@@ -273,7 +271,7 @@ Recommendation.create!(
   address: "433 Rue Mayor, Montreal, Quebec H3A 1N9 Canada",
   longitude: -73.56858,
   latitude: 45.50555,
-  kid_friendly: false,
+  kid_friendly: true,
   dog_friendly: false,
   outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/05/cd/b5/84/cote-bistro.jpg"
@@ -287,7 +285,7 @@ Recommendation.create!(
   address: "1085 de la Cathedrale (René-Lévesque W. and Mansfield), Montreal, Quebec H3B 2V3 Canada",
   longitude: -73.56856,
   latitude: 45.49933,
-  kid_friendly: false,
+  kid_friendly: true,
   dog_friendly: false,
   outdoor: false,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-m/1280/14/44/04/20/caption.jpg"
@@ -302,7 +300,7 @@ Recommendation.create!(
   longitude: -73.61319,
   latitude: 45.533108,
   kid_friendly: false,
-  dog_friendly: false,
+  dog_friendly: true,
   outdoor: false,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0b/9a/41/42/impasto.jpg"
 )
@@ -315,8 +313,8 @@ Recommendation.create!(
   address: "191 Rue Jean Talon E, Montreal, Quebec H2R 1S8 Canada",
   longitude: -73.61641,
   latitude: 45.536453,
-  kid_friendly: false,
-  dog_friendly: false,
+  kid_friendly: true,
+  dog_friendly: true,
   outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/10/3c/ef/f3/le-petit-alep.jpg"
 )
@@ -330,7 +328,7 @@ Recommendation.create!(
   longitude: -73.56348,
   latitude: 45.510223,
   kid_friendly: false,
-  dog_friendly: false,
+  dog_friendly: true,
   outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/07/63/bc/6e/accords.jpg"
 )
@@ -343,8 +341,8 @@ Recommendation.create!(
   address: "360 Rue St-jean, Longueuil, Quebec J4H 2X6 Canada",
   longitude: -73.50803,
   latitude: 45.53563,
-  kid_friendly: false,
-  dog_friendly: false,
+  kid_friendly: true,
+  dog_friendly: true,
   outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0d/45/15/9a/gousto-bistro.jpg"
 )
@@ -358,7 +356,7 @@ Recommendation.create!(
   longitude: -73.56744,
   latitude: 45.46495,
   kid_friendly: false,
-  dog_friendly: false,
+  dog_friendly: true,
   outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/03/80/67/d7/saucisses-grilllees-du.jpg"
 )
@@ -371,7 +369,7 @@ Recommendation.create!(
   address: "201 Place d'Youville, Montreal, Quebec H2Y 2B3 Canada",
   longitude: -73.55489,
   latitude: 45.502514,
-  kid_friendly: false,
+  kid_friendly: true,
   dog_friendly: false,
   outdoor: false,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/14/d6/1b/e8/main-front-entrance.jpg"
@@ -386,7 +384,7 @@ Recommendation.create!(
   longitude: -73.59623,
   latitude: 45.519302,
   kid_friendly: false,
-  dog_friendly: false,
+  dog_friendly: true,
   outdoor: false,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/01/d5/d2/3a/grilled-shrimp-was-excellent.jpg"
 )
@@ -400,7 +398,7 @@ Recommendation.create!(
   longitude: -73.56927,
   latitude: 45.48901,
   kid_friendly: false,
-  dog_friendly: false,
+  dog_friendly: true,
   outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0a/b8/dc/97/candide.jpg"
 )
@@ -413,8 +411,8 @@ Recommendation.create!(
   address: "988 Ottawa, Montreal, Quebec H3C 1S3 Canada",
   longitude: -73.55825,
   latitude: 45.49525,
-  kid_friendly: false,
-  dog_friendly: false,
+  kid_friendly: true,
+  dog_friendly: true,
   outdoor: false,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-m/1280/1b/1b/db/b1/photo0jpg.jpg"
 )
@@ -428,7 +426,7 @@ Recommendation.create!(
   longitude: -73.61606,
   latitude: 45.470432,
   kid_friendly: false,
-  dog_friendly: false,
+  dog_friendly: true,
   outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0f/f8/4e/39/l-orozco.jpg"
 )
@@ -442,8 +440,8 @@ Recommendation.create!(
   longitude: -73.51053,
   latitude: 45.50129,
   kid_friendly: false,
-  dog_friendly: false,
-  outdoor: false,
+  dog_friendly: true,
+  outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-s/07/94/5d/64/moghel-tandoori.jpg"
 )
 
@@ -455,13 +453,11 @@ Recommendation.create!(
   address: "1360 Boul Sainte-Foy, Longueuil, Quebec J4K 1X9 Canada",
   longitude: -73.49964,
   latitude: 45.51332,
-  kid_friendly: false,
+  kid_friendly: true,
   dog_friendly: false,
-  outdoor: false,
+  outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-w/29/9c/87/f4/caption.jpg"
 )
-
-
 
 Recommendation.create!(
   name: "Wilensky's Light Lunch",
@@ -473,7 +469,7 @@ Recommendation.create!(
   latitude: 45.52329,
   kid_friendly: false,
   dog_friendly: false,
-  outdoor: false,
+  outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/08/4d/a4/24/wilensky-s-light-lunch.jpg"
 )
 
@@ -485,9 +481,9 @@ Recommendation.create!(
   address: "400 St-Paul St. E. Metro Champ-de-Mars, Montreal, Quebec H2Y 1H4 Canada",
   longitude: -73.55124,
   latitude: 45.50979,
-  kid_friendly: false,
-  dog_friendly: false,
-  outdoor: false,
+  kid_friendly: true,
+  dog_friendly: true,
+  outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0e/12/0c/17/premiere-chapelle-de.jpg"
 )
 
@@ -499,9 +495,9 @@ Recommendation.create!(
   address: "1268 Van Horne Avenue, Montreal, Quebec H2V 1K6 Canada",
   longitude: -73.61388,
   latitude: 45.521656,
-  kid_friendly: false,
+  kid_friendly: true,
   dog_friendly: false,
-  outdoor: false,
+  outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0c/30/09/0c/20160217-lesprovisions.jpg"
 )
 
@@ -513,9 +509,9 @@ Recommendation.create!(
   address: "Montreal, Quebec H2Y 3Y8 Canada",
   longitude: -73.55596,
   latitude: 45.50401,
-  kid_friendly: false,
-  dog_friendly: false,
-  outdoor: false,
+  kid_friendly: true,
+  dog_friendly: true,
+  outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-s/00/10/11/d7/hotel-de-ville-city-hall.jpg"
 )
 
@@ -527,8 +523,8 @@ Recommendation.create!(
   address: "3706 St Denis, Montreal, Quebec H2X 3L7 Canada",
   longitude: -73.57115,
   latitude: 45.51853,
-  kid_friendly: false,
-  dog_friendly: false,
+  kid_friendly: true,
+  dog_friendly: true,
   outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-m/1280/29/7d/fb/8a/faithful-since-1993.jpg"
 )
@@ -541,9 +537,9 @@ Recommendation.create!(
   address: "4690 St-Denis, Montreal, Quebec H2J 2L3 Canada",
   longitude: -73.585495,
   latitude: 45.525135,
-  kid_friendly: false,
+  kid_friendly: true,
   dog_friendly: false,
-  outdoor: false,
+  outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/07/cd/39/47/photo0jpg.jpg"
 )
 
@@ -555,9 +551,9 @@ Recommendation.create!(
   address: "4720 Marquette, Montreal, Quebec H2J 3Y6 Canada",
   longitude: -73.578735,
   latitude: 45.533722,
-  kid_friendly: false,
-  dog_friendly: false,
-  outdoor: false,
+  kid_friendly: true,
+  dog_friendly: true,
+  outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/08/ea/57/c8/photo3jpg.jpg"
 )
 
@@ -570,8 +566,8 @@ Recommendation.create!(
   longitude: -73.57859,
   latitude: 45.52136,
   kid_friendly: false,
-  dog_friendly: false,
-  outdoor: false,
+  dog_friendly: true,
+  outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0e/9e/00/5d/photo0jpg.jpg"
 )
 
@@ -583,12 +579,11 @@ Recommendation.create!(
   address: "1255 Rue Jeanne-Mance, Montreal, Quebec H5B 1E5 Canada",
   longitude: -73.56544,
   latitude: 45.50732,
-  kid_friendly: false,
+  kid_friendly: true,
   dog_friendly: false,
   outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-m/1280/1d/2f/db/af/terrace.jpg"
 )
-
 
 Recommendation.create!(
   name: "Brit & Chips",
@@ -599,7 +594,7 @@ Recommendation.create!(
   longitude: -73.55819,
   latitude: 45.500507,
   kid_friendly: false,
-  dog_friendly: false,
+  dog_friendly: true,
   outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/14/7c/cf/d1/popcorn-shrimps.jpg"
 )
@@ -612,8 +607,8 @@ Recommendation.create!(
   address: "2153 Mackay Street, Montreal, Quebec H3G 2J2 Canada",
   longitude: -73.58021,
   latitude: 45.49727,
-  kid_friendly: false,
-  dog_friendly: false,
+  kid_friendly: true,
+  dog_friendly: true,
   outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/07/18/eb/34/la-panthere-verte.jpg"
 )
@@ -626,9 +621,9 @@ Recommendation.create!(
   address: "1595 boulevard des Laurentides, Laval, Quebec H7N 4Y6 Canada",
   longitude: -73.70417,
   latitude: 45.581112,
-  kid_friendly: false,
+  kid_friendly: true,
   dog_friendly: false,
-  outdoor: false,
+  outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-m/1280/13/d1/49/47/tamashi-restaurant.jpg"
 )
 
@@ -641,7 +636,7 @@ Recommendation.create!(
   longitude: -73.57113,
   latitude: 45.515617,
   kid_friendly: false,
-  dog_friendly: false,
+  dog_friendly: true,
   outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-s/02/98/9b/18/filename-sourisd-agneau.jpg"
 )
@@ -654,9 +649,9 @@ Recommendation.create!(
   address: "4101 Sherbrooke St. E, Montreal, Quebec H1X 2B2 Canada",
   longitude: -73.55637,
   latitude: 45.55677,
-  kid_friendly: false,
+  kid_friendly: true,
   dog_friendly: false,
-  outdoor: false,
+  outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-m/1280/25/14/9a/e1/entree-principale-du.jpg"
 )
 
@@ -669,7 +664,7 @@ Recommendation.create!(
   longitude: -73.591125,
   latitude: 45.522163,
   kid_friendly: false,
-  dog_friendly: false,
+  dog_friendly: true,
   outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-m/1280/24/8b/eb/9e/the-pamika-restaurant.jpg"
 )
@@ -682,9 +677,9 @@ Recommendation.create!(
   address: "425 Mcgill, Montreal, Quebec H2Y 2H1 Canada",
   longitude: -73.55806,
   latitude: 45.50047,
-  kid_friendly: false,
+  kid_friendly: true,
   dog_friendly: false,
-  outdoor: false,
+  outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-s/02/fa/87/f8/vallier-restaurant-licencie.jpg"
 )
 
@@ -696,9 +691,9 @@ Recommendation.create!(
   address: "199, Rue Jean Talon Est, Montreal, Quebec H2R 1S8 Canada",
   longitude: -73.61604,
   latitude: 45.53654,
-  kid_friendly: false,
-  dog_friendly: false,
-  outdoor: false,
+  kid_friendly: true,
+  dog_friendly: true,
+  outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/11/5d/fb/0e/photo0jpg.jpg"
 )
 
@@ -711,7 +706,7 @@ Recommendation.create!(
   longitude: -73.729164,
   latitude: 45.440964,
   kid_friendly: false,
-  dog_friendly: false,
+  dog_friendly: true,
   outdoor: false,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-s/03/f5/81/1e/ajouter-une-legende.jpg"
 )
@@ -724,7 +719,7 @@ Recommendation.create!(
   address: "1327 Avenue Laurier E, Montreal, Quebec H2J 1H4 Canada",
   longitude: -73.58402,
   latitude: 45.533318,
-  kid_friendly: false,
+  kid_friendly: true,
   dog_friendly: false,
   outdoor: false,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0d/bb/0b/d0/photo0jpg.jpg"
@@ -738,8 +733,8 @@ Recommendation.create!(
   address: "1145 Fleury Est, Montreal, Quebec H2C 1P9 Canada",
   longitude: -73.65889,
   latitude: 45.558548,
-  kid_friendly: false,
-  dog_friendly: false,
+  kid_friendly: true,
+  dog_friendly: true,
   outdoor: false,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0f/27/62/ab/saumon.jpg"
 )
@@ -753,8 +748,8 @@ Recommendation.create!(
   longitude: -73.4914,
   latitude: 45.456104,
   kid_friendly: false,
-  dog_friendly: false,
-  outdoor: false,
+  dog_friendly: true,
+  outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-m/1280/18/81/19/ee/our-famous-couscous-royale.jpg"
 )
 
@@ -766,9 +761,9 @@ Recommendation.create!(
   address: "705 Saint-Catherine St W Le Centre Eaton de Montréal, Montreal, Quebec H3B 4G5 Canada",
   longitude: -73.57061,
   latitude: 45.503674,
-  kid_friendly: false,
-  dog_friendly: false,
-  outdoor: false,
+  kid_friendly: true,
+  dog_friendly: true,
+  outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/24/d3/51/44/caption.jpg"
 )
 
@@ -781,8 +776,8 @@ Recommendation.create!(
   longitude: -73.56029,
   latitude: 45.508305,
   kid_friendly: false,
-  dog_friendly: false,
-  outdoor: false,
+  dog_friendly: true,
+  outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0a/45/08/90/img-20160208-135813-largejpg.jpg"
 )
 
@@ -794,7 +789,7 @@ Recommendation.create!(
   address: "1250 Rue de Bleury, Montreal, Quebec H3B 2W4 Canada",
   longitude: -73.566475,
   latitude: 45.506313,
-  kid_friendly: false,
+  kid_friendly: true,
   dog_friendly: false,
   outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/10/7a/a9/ce/photo1jpg.jpg"
@@ -808,8 +803,8 @@ Recommendation.create!(
   address: "1200 Boul. Rome Local W Brossard, Brossard, Quebec J4W 3H3 Canada",
   longitude: -73.48999,
   latitude: 45.457546,
-  kid_friendly: false,
-  dog_friendly: false,
+  kid_friendly: true,
+  dog_friendly: true,
   outdoor: false,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-s/03/83/f6/db/fried-calamari.jpg"
 )
@@ -822,8 +817,8 @@ Recommendation.create!(
   address: "1065 Rue de la Montagne, Montreal, Quebec H3G 0B9 Canada",
   longitude: -73.57181,
   latitude: 45.49639,
-  kid_friendly: false,
-  dog_friendly: false,
+  kid_friendly: true,
+  dog_friendly: true,
   outdoor: false,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-m/1280/1b/87/37/ec/venez-vivre-l-experience.jpg"
 )
@@ -836,7 +831,7 @@ Recommendation.create!(
   address: "1333 Rue Ste-Catherine Est, Montreal, Quebec H2L 2H4 Canada",
   longitude: -73.55496,
   latitude: 45.51986,
-  kid_friendly: false,
+  kid_friendly: true,
   dog_friendly: false,
   outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0d/3a/52/8a/la-terrasse.jpg"
@@ -850,8 +845,8 @@ Recommendation.create!(
   address: "2379 Blvd Rosemont, Montreal, Quebec H2G 1T9 Canada",
   longitude: -73.58735,
   latitude: 45.5457,
-  kid_friendly: false,
-  dog_friendly: false,
+  kid_friendly: true,
+  dog_friendly: true,
   outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0e/dd/b2/a8/ossu-bucco-wapiti-sauce.jpg"
 )
@@ -864,7 +859,7 @@ Recommendation.create!(
   address: "5002 Ch de la Cote des Neiges, Montreal, Quebec H3V 1G6 Canada",
   longitude: -73.61837,
   latitude: 45.49449,
-  kid_friendly: false,
+  kid_friendly: true,
   dog_friendly: false,
   outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-m/1280/24/29/7a/96/duc-de-lorraine-montreal.jpg"
@@ -878,9 +873,9 @@ Recommendation.create!(
   address: "1365 Ontario East, Montreal, Quebec H2L 1S2 Canada",
   longitude: -73.56116,
   latitude: 45.52317,
-  kid_friendly: false,
-  dog_friendly: false,
-  outdoor: false,
+  kid_friendly: true,
+  dog_friendly: true,
+  outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-s/03/10/59/b5/poutineville.jpg"
 )
 
@@ -892,9 +887,9 @@ Recommendation.create!(
   address: "3430 Avenue Du Parc, Montreal, Quebec H2X 2H5 Canada",
   longitude: -73.57224,
   latitude: 45.508686,
-  kid_friendly: false,
+  kid_friendly: true,
   dog_friendly: false,
-  outdoor: false,
+  outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/07/4e/45/5a/poutine.jpg"
 )
 
@@ -906,9 +901,9 @@ Recommendation.create!(
   address: "Rue St-Paul, Montreal, Quebec Canada",
   longitude: -73.55675,
   latitude: 45.50064,
-  kid_friendly: false,
-  dog_friendly: false,
-  outdoor: false,
+  kid_friendly: true,
+  dog_friendly: true,
+  outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0f/ee/f9/06/caption.jpg"
 )
 
@@ -921,7 +916,7 @@ Recommendation.create!(
   longitude: -73.56461,
   latitude: 45.515472,
   kid_friendly: false,
-  dog_friendly: false,
+  dog_friendly: true,
   outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0b/6e/31/b5/img-20160526-145559-largejpg.jpg"
 )
@@ -934,9 +929,9 @@ Recommendation.create!(
   address: "1155 Place Nobel # A, Boucherville, Quebec J4B 7L3 Canada",
   longitude: -73.44793,
   latitude: 45.571327,
-  kid_friendly: false,
+  kid_friendly: true,
   dog_friendly: false,
-  outdoor: false,
+  outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0d/b2/c7/9c/photo0jpg.jpg"
 )
 
@@ -949,8 +944,8 @@ Recommendation.create!(
   longitude: -73.574974,
   latitude: 45.496826,
   kid_friendly: false,
-  dog_friendly: false,
-  outdoor: false,
+  dog_friendly: true,
+  outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0e/02/b2/4e/photo0jpg.jpg"
 )
 
@@ -962,9 +957,9 @@ Recommendation.create!(
   address: "1065 Cote Du Beaver-hall, Montreal, Quebec H2Z 1S5 Canada",
   longitude: -73.56474,
   latitude: 45.502373,
-  kid_friendly: false,
-  dog_friendly: false,
-  outdoor: false,
+  kid_friendly: true,
+  dog_friendly: true,
+  outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0f/ec/b7/9d/photo1jpg.jpg"
 )
 
@@ -977,8 +972,8 @@ Recommendation.create!(
   longitude: -73.577995,
   latitude: 45.481213,
   kid_friendly: false,
-  dog_friendly: false,
-  outdoor: false,
+  dog_friendly: true,
+  outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/12/4f/8c/f2/arrive-early-and-get.jpg"
 )
 
@@ -990,9 +985,9 @@ Recommendation.create!(
   address: "St-Hubert, Montreal, Quebec Canada",
   longitude: -73.606735,
   latitude: 45.53781,
-  kid_friendly: false,
-  dog_friendly: false,
-  outdoor: false,
+  kid_friendly: true,
+  dog_friendly: true,
+  outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/11/a8/97/d4/img-20180101-225434-290.jpg"
 )
 
@@ -1004,9 +999,9 @@ Recommendation.create!(
   address: "4255 Ontario Est, Montreal, Quebec H1V 1K4 Canada",
   longitude: -73.540245,
   latitude: 45.551945,
-  kid_friendly: false,
+  kid_friendly: true,
   dog_friendly: false,
-  outdoor: false,
+  outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-m/1280/14/8c/97/be/pain-challah-et-beurre.jpg"
 )
 
@@ -1018,8 +1013,8 @@ Recommendation.create!(
   address: "6185 Boulevard Taschereau Local 108, Brossard, Quebec J4Z 1A6 Canada",
   longitude: -73.46613,
   latitude: 45.474705,
-  kid_friendly: false,
-  dog_friendly: false,
+  kid_friendly: true,
+  dog_friendly: true,
   outdoor: false,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/08/bc/31/b3/delhi-kabab.jpg"
 )
@@ -1031,336 +1026,179 @@ Recommendation.create!(
   price_range: "$",
   address: "3 Saint-Catherine West, Montreal, Quebec H2X 1Z5 Canada",
   longitude: -73.56399,
-  latitude: 45.50971,
-  kid_friendly: false,
-  dog_friendly: false,
-  outdoor: false,
-  image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0c/79/ed/f3/photo0jpg.jpg"
+  latitude: 45.50938,
+  kid_friendly: true,
+  dog_friendly: true,
+  outdoor: true,
+  image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0f/2d/12/f8/cachito-de-jamon.jpg"
 )
 
 Recommendation.create!(
-  name: "Resto Modena",
-  description: "Modena Restaurant located at 295 Saint –Paul street Est, in the former Rasco Hotel (dating back to the 1800’s). Situated across from the Marché Bonsecours (National Historical site of Canada) in the heart Old Montreal. Modena is a modern classic, built on the perfect balance of old world and new. On entering the restaurant, you will be immersed in its European ambiance. You will especially be impressed by the immense Tuscan style courtyard located at the rear of the building. Take in the beauty of its original vines and foliage greenery surrounding its historical stone walls. It is the perfect place to enjoy Montreal’s warm summer weather, “la dolce Vita,” as they say in Italy.",
+  name: "Plaza McGill",
+  description: "Héritage de notre histoire en plein centre-ville de Montréal, la Plaza McGill fait partie du quotidien de notre clientèle depuis plus de 30 ans. À deux pas de la Basilique Notre-Dame de Montréal, de la rue De La Commune, des antiquaires et de plusieurs institutions financières, la Plaza McGill a su diversifier sa clientèle et ses services.",
   category: :restaurant,
   price_range: "$$ - $$$",
-  address: "295 Rue St-Paul E, Montreal, Quebec H2Y 1H1 Canada",
-  longitude: -73.552246,
-  latitude: 45.508427,
-  kid_friendly: false,
+  address: "84 Rue St-Paul E, Montreal, Quebec H2Y 1G6 Canada",
+  longitude: -73.55446,
+  latitude: 45.50779,
+  kid_friendly: true,
   dog_friendly: false,
   outdoor: true,
-  image_url: "https://media-cdn.tripadvisor.com/media/photo-m/1280/18/a5/db/7d/modena-pasta-pizza-dolce.jpg"
+  image_url: "https://media-cdn.tripadvisor.com/media/photo-s/02/e2/d4/f2/plaza-mcgill.jpg"
 )
 
 Recommendation.create!(
-  name: "Le Saint-Jacques",
+  name: "Restaurant Ganadara",
   description: "None",
   category: :restaurant,
   price_range: "$$ - $$$",
-  address: "6001, de Jumonville Montreal,QC, Montreal, Quebec H1M 1R5 Canada",
-  longitude: -73.54998,
-  latitude: 45.578056,
-  kid_friendly: false,
-  dog_friendly: false,
+  address: "1862 Rue Sainte-Catherine O, Montreal, Quebec H3H 1M1 Canada",
+  longitude: -73.58076,
+  latitude: 45.492523,
+  kid_friendly: true,
+  dog_friendly: true,
   outdoor: true,
-  image_url: "https://media-cdn.tripadvisor.com/media/photo-o/11/d2/b9/d4/a-romantic-evening-at.jpg"
+  image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0e/f7/98/b6/photo2jpg.jpg"
 )
 
 Recommendation.create!(
-  name: "Arthurs Nosh Bar",
-  description: "None",
-  category: :restaurant,
+  name: "Le Centre Sheraton Montreal Hotel",
+  description: "A downtown hotel, located on René-Lévesque Boulevard, near Bell Centre.",
+  category: :attraction,
   price_range: "$$ - $$$",
-  address: "4621 Notre Dame O, Montreal, Quebec H4C 1S5 Canada",
-  longitude: -73.58817,
-  latitude: 45.473423,
-  kid_friendly: false,
-  dog_friendly: false,
-  outdoor: true,
-  image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0e/e4/22/6b/iced-sugar-cookie.jpg"
-)
-
-Recommendation.create!(
-  name: "Restaurant Rouby",
-  description: "Authentically prepared dishes at very moderate prices; that’s what Restaurant Rouby is all about. The proprietor, Vahe Tejirian’s dream: a Lebanese / Armenian family-oriented restaurant where quality, freshness, consistency and customer satisfaction are top priority. Named after his eldest daughter, Rouby offers healthy Mediterranean food in a warm, cozy atmosphere where the enticing smells and tastes of the food will keep you coming back for more.",
-  category: :restaurant,
-  price_range: "$$ - $$$",
-  address: "3268 St. Martin West, Laval, Quebec H7T 1A1 Canada",
-  longitude: -73.74796,
-  latitude: 45.556072,
-  kid_friendly: false,
-  dog_friendly: false,
+  address: "1201 Rene-Levesque Blvd West, Montreal, Quebec H3B 2L7 Canada",
+  longitude: -73.57188,
+  latitude: 45.49797,
+  kid_friendly: true,
+  dog_friendly: true,
   outdoor: false,
-  image_url: "https://media-cdn.tripadvisor.com/media/photo-s/09/9e/6e/47/restaurant-rouby.jpg"
+  image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0f/2b/b9/83/a-downtown-hotel-located.jpg"
 )
 
-
-
 Recommendation.create!(
-  name: "Pick Thai",
-  description: "None",
+  name: "La Banquise",
+  description: "Open 24 hours and located on Rachel Street in the heart of Le Plateau Mont-Royal, La Banquise is the ultimate spot to satisfy your poutine craving any time of day! For more than 50 years, this family-run restaurant has been a staple in Montreal’s vibrant poutine scene, serving up classic and creative poutine dishes to locals and visitors alike.",
   category: :restaurant,
   price_range: "$$ - $$$",
-  address: "5221 de Maisonneuve Ouest, Montreal, Quebec H4A 0A4 Canada",
-  longitude: -73.60515,
-  latitude: 45.47358,
-  kid_friendly: false,
-  dog_friendly: false,
+  address: "994 Rue Rachel E, Montreal, Quebec H2J 2J3 Canada",
+  longitude: -73.58056,
+  latitude: 45.52772,
+  kid_friendly: true,
+  dog_friendly: true,
   outdoor: false,
-  image_url: "https://media-cdn.tripadvisor.com/media/photo-o/06/a6/11/af/pick-thai-restaurant.jpg"
+  image_url: "https://media-cdn.tripadvisor.com/media/photo-o/10/1f/4e/84/la-banquise.jpg"
 )
 
 Recommendation.create!(
-  name: "Place d'Armes",
-  description: "This major plaza in Old Montreal, built in the 17th century, once served as the training grounds for the military.",
+  name: "Montreal Holocaust Museum",
+  description: "The Montreal Holocaust Museum tells the story of Jewish communities before, during, and after the Holocaust through the eyes of those who lived through it. You will discover thousands of authentic artifacts, documents and photos, all donated by Holocaust survivors and their families. Committed to raising awareness of the universal perils of antisemitism, racism, hate and indifference, the Museum offers memorable and moving exhibitions, events, and educational programs both online and in person.",
   category: :attraction,
   price_range: "$$",
-  address: "Chateau Frontenac at the intersection of rue Saint-Louis and rue du Fort., Montreal, Quebec H2Y 1T1 Canada",
-  longitude: -73.55716,
-  latitude: 45.50505,
-  kid_friendly: false,
-  dog_friendly: false,
-  outdoor: false,
-  image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0d/4b/bb/93/place-d-armes.jpg"
-)
-
-Recommendation.create!(
-  name: "Restaurant Le Jardin De Panos",
-  description: "None",
-  category: :restaurant,
-  price_range: "$$ - $$$",
-  address: "521 Av. Duluth E, Montreal, Quebec H2L 1A8 Canada",
-  longitude: -73.57478,
-  latitude: 45.522026,
-  kid_friendly: false,
+  address: "5151 Chemin de la Côte-Sainte-Catherine, Montreal, Quebec H3W 1M6 Canada",
+  longitude: -73.62706,
+  latitude: 45.49742,
+  kid_friendly: true,
   dog_friendly: false,
   outdoor: true,
-  image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0b/fe/2b/62/photo0jpg.jpg"
+  image_url: "https://media-cdn.tripadvisor.com/media/photo-o/10/14/bb/36/exposition-permanente.jpg"
 )
 
 Recommendation.create!(
-  name: "Sushi Hamachi",
+  name: "Riverside St-Henri",
   description: "None",
   category: :restaurant,
   price_range: "$$ - $$$",
-  address: "690 Rue De Montbrun Suite N, Boucherville, Quebec J4B 8H2 Canada",
-  longitude: -73.43916,
-  latitude: 45.611504,
-  kid_friendly: false,
-  dog_friendly: false,
-  outdoor: false,
-  image_url: "https://media-cdn.tripadvisor.com/media/photo-o/06/ad/a3/e9/plateau-de-sushi-specialite.jpg"
+  address: "5020 Rue Saint-Ambroise, Montreal, Quebec H4C 2G1 Canada",
+  longitude: -73.58057,
+  latitude: 45.47275,
+  kid_friendly: true,
+  dog_friendly: true,
+  outdoor: true,
+  image_url: "https://media-cdn.tripadvisor.com/media/photo-m/1280/1a/1f/92/6a/riverside-saint-henri.jpg"
 )
 
 Recommendation.create!(
-  name: "Beni Hana Cuisine Japonaise",
-  description: "None",
+  name: "Universel Dejeuners et Grillades PEEL",
+  description: "In a refined and relaxed atmosphere, Universel Restuarant offers an impressive choice of breakfasts, pastas, pizzas, burgers and sandwiches.",
   category: :restaurant,
   price_range: "$$ - $$$",
-  address: "5666 Sherbrooke Est, Montreal, Quebec H1N 1A1 Canada",
-  longitude: -73.548904,
-  latitude: 45.57257,
-  kid_friendly: false,
-  dog_friendly: false,
-  outdoor: false,
-  image_url: "https://media-cdn.tripadvisor.com/media/photo-m/1280/14/04/4b/3e/flambe.jpg"
-)
-
-Recommendation.create!(
-  name: "Plateau Mont-Royal",
-  description: "None",
-  category: :attraction,
-  price_range: "$$",
-  address: "Montreal, Quebec Canada",
-  longitude: -73.57095,
-  latitude: 45.51545,
-  kid_friendly: false,
-  dog_friendly: false,
-  outdoor: false,
-  image_url: "https://media-cdn.tripadvisor.com/media/photo-o/10/bf/31/8b/plateau-mont-royal.jpg"
-)
-
-Recommendation.create!(
-  name: "Lester's Deli",
-  description: "Family delicatessen in the heart of Montreal for over 65 years. Serving the finest Montreal smoked meat, hand cut french fries, 100% beef hot dogs, award winning poutines and of course AAA rib steaks. Warm and welcoming staff, retro setting and our terrasse during the warm months are the perfect setting any time of day!",
-  category: :restaurant,
-  price_range: "$$ - $$$",
-  address: "1057 Ave Bernard O. Outremont, Montreal, Quebec H2V 1V1 Canada",
-  longitude: -73.607,
-  latitude: 45.52213,
-  kid_friendly: false,
+  address: "2055 Rue Peel, Montreal, Quebec H3A 1V4 Canada",
+  longitude: -73.57606,
+  latitude: 45.500404,
+  kid_friendly: true,
   dog_friendly: false,
   outdoor: true,
-  image_url: "https://media-cdn.tripadvisor.com/media/photo-o/10/d0/27/f0/since-1951.jpg"
+  image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0b/58/99/96/universel-dejeuners-et.jpg"
 )
 
 Recommendation.create!(
-  name: "Chez Gus",
+  name: "Bouillon Bilk",
   description: "None",
-  category: :restaurant,
-  price_range: "$$ - $$$",
-  address: "38, Rue Beaubien E, Montreal, Quebec H2S 1P8 Canada",
-  longitude: -73.608,
-  latitude: 45.530804,
-  kid_friendly: false,
-  dog_friendly: false,
-  outdoor: false,
-  image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0d/b3/9f/6c/chez-gus-lamb-chops.jpg"
-)
-
-Recommendation.create!(
-  name: "Les 3 Brasseurs",
-  description: "None",
-  category: :restaurant,
-  price_range: "$$ - $$$",
-  address: "1356 Sainte-Catherine Ouest, Montreal, Quebec H3G 1P6 Canada",
-  longitude: -73.575584,
-  latitude: 45.497208,
-  kid_friendly: false,
-  dog_friendly: false,
-  outdoor: true,
-  image_url: "https://media-cdn.tripadvisor.com/media/photo-o/12/66/bc/82/photo0jpg.jpg"
-)
-
-Recommendation.create!(
-  name: "Restaurant Le Speakeasy",
-  description: "Le Speakeasy, located at 120 rue McGill is a concept of Restaurant Cocktail based on the 1930's prohibition theme. The main restaurant is hidden behind a sandwich shop, which is operating and open for lunch 7 days a week. In the sandwich store, you will have to find the door that gives access to the Restaurant Cocktail, which is open in the evening from 5PM to 1AM, 7 nights a week. The restaurant menu is based on a cold cuisine with prices from 8 to 18$.",
-  category: :restaurant,
-  price_range: "$$ - $$$",
-  address: "120 Mcgill Street, Montreal, Quebec H2Y 2E5 Canada",
-  longitude: -73.555725,
-  latitude: 45.49965,
-  kid_friendly: false,
-  dog_friendly: false,
-  outdoor: false,
-  image_url: "https://media-cdn.tripadvisor.com/media/photo-m/1280/1c/12/27/25/mix-assiettes-au-restaurant.jpg"
-)
-
-Recommendation.create!(
-  name: "Shack Attakk Beaubien",
-  description: "None",
-  category: :restaurant,
-  price_range: "$$ - $$$",
-  address: "2500 Rue Beaubien E La Grand-Mère Poule & Shack Attakk Beaubien, Montreal, Quebec H1Y 1G2 Canada",
-  longitude: -73.59147,
-  latitude: 45.548958,
-  kid_friendly: false,
-  dog_friendly: false,
-  outdoor: true,
-  image_url: "https://media-cdn.tripadvisor.com/media/photo-m/1280/26/d1/4e/dc/menu-diner-et-souper.jpg"
-)
-
-Recommendation.create!(
-  name: "Le Canal Restaurant Poissonerie",
-  description: "None",
-  category: :restaurant,
-  price_range: "$$ - $$$",
-  address: "4945 Boul. Saint Jean, Montreal, Quebec H9H 2A9 Canada",
-  longitude: -73.85065,
-  latitude: 45.49186,
-  kid_friendly: false,
-  dog_friendly: false,
-  outdoor: false,
-  image_url: "https://media-cdn.tripadvisor.com/media/photo-w/15/15/b0/4f/delicious-fries-tahini.jpg"
-)
-
-Recommendation.create!(
-  name: "Hoogan et Beaufort",
-  description: "Hoogan & Beaufort's cuisine is detailed, meticulous and often described as delicate because of its choice of products and its finesse. Marc-André Jetté works on precise balances of flavors and textures. Uncompromising on quality, choice of products, taste and creative approach, the chef does not use any processed products. A cuisine that is constantly reinventing itself: refined, contemporary and that highlights local talent.",
   category: :restaurant,
   price_range: "$$$$",
-  address: "4095 Rue Molson, Montreal, Quebec H1Y 3L1 Canada",
-  longitude: -73.56359,
-  latitude: 45.542133,
-  kid_friendly: false,
-  dog_friendly: false,
+  address: "1595, Boul Saint-Laurent, Montreal, Quebec H2X 2S9 Canada",
+  longitude: -73.56632,
+  latitude: 45.51087,
+  kid_friendly: true,
+  dog_friendly: true,
   outdoor: true,
-  image_url: "https://media-cdn.tripadvisor.com/media/photo-o/11/cc/fc/a6/salle-a-manger.jpg"
+  image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0e/3a/0f/34/salade-de-poulpe.jpg"
 )
 
 Recommendation.create!(
-  name: "Le Bon Vivant",
-  description: "None",
+  name: "Bonaparte",
+  description: "Located in the heart of Old Montreal, Bonaparte will charm you with its original French-inspired cuisine that brings together tradition and trends.",
   category: :restaurant,
-  price_range: "$$ - $$$",
-  address: "2705 Notre Dame Ouest, Montreal, Quebec H3J 1N9 Canada",
-  longitude: -73.57719,
-  latitude: 45.48174,
+  price_range: "$$$$",
+  address: "443 St-François-Xavier, Montreal, Quebec H2Y 2T1 Canada",
+  longitude: -73.55849,
+  latitude: 45.503914,
   kid_friendly: false,
-  dog_friendly: false,
-  outdoor: false,
-  image_url: "https://media-cdn.tripadvisor.com/media/photo-o/06/f0/cb/b7/grilled-cheese.jpg"
-)
-
-Recommendation.create!(
-  name: "gaZette Restaurant and Lounge in Le Westin Montreal",
-  description: "None",
-  category: :restaurant,
-  price_range: "$$ - $$$",
-  address: "270 St-Antoine Street, Montreal, Quebec H2Y 0A3 Canada",
-  longitude: -73.56012,
-  latitude: 45.503197,
-  kid_friendly: false,
-  dog_friendly: false,
-  outdoor: false,
-  image_url: "https://media-cdn.tripadvisor.com/media/photo-o/02/59/c0/8a/gazette-restaurant-and.jpg"
-)
-
-Recommendation.create!(
-  name: "Rasoi",
-  description: "Modern Indian Tapas & Cocktail Bar Lunch Catering Services Full Bar License: All guests must be 18 years of age and over",
-  category: :restaurant,
-  price_range: "$$ - $$$",
-  address: "3459 Rue Notre-dame O, Montreal, Quebec H4C 1P3 Canada",
-  longitude: -73.57982,
-  latitude: 45.480286,
-  kid_friendly: false,
-  dog_friendly: false,
-  outdoor: false,
-  image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0c/a7/28/a5/rasoi.jpg"
-)
-
-Recommendation.create!(
-  name: "Boustan",
-  description: "Voted Best Middle-Eastern Restaurant in the Montreal Mirror in 2004, 2006, 2007, 2008, 2009, 2010, 2011 and 2012. Best Middle-Eastern and Late-Night Eats in the CultMTL Best of Montreal 2013, 2014, 2015 and 2016 editions.",
-  category: :restaurant,
-  price_range: "$",
-  address: "2020A Crescent, Montreal, Quebec H3G 2B6 Canada",
-  longitude: -73.577644,
-  latitude: 45.498184,
-  kid_friendly: false,
-  dog_friendly: false,
-  outdoor: false,
-  image_url: "https://media-cdn.tripadvisor.com/media/photo-o/08/8f/0a/18/boustan.jpg"
-)
-
-Recommendation.create!(
-  name: "Pointe-a-Calliere, Montreal Archaeology and History Complex",
-  description: "Pointe-a-Calliere, the birthplace of Montreal and a National Historic Site, offers visitors the opportunity to explore history through an original underground circuit leading through archaeological excavations. At the start of their visit, an immersive multimedia show presents a high-speed view of the city's history, the remains come to life and the count down begins! The museum also offers year-round temporary local and international exhibitions. For Montreal's 375th anniversary in May 2017, Pointe-a-Calliere inaugurated a new pavilion highlighting Fort Ville-Marie.",
-  category: :attraction,
-  price_range: "$$",
-  address: "350 Place Royale, Montreal, Quebec H2Y 3Y5 Canada",
-  longitude: -73.55417,
-  latitude: 45.502644,
-  kid_friendly: false,
-  dog_friendly: false,
-  outdoor: false,
-  image_url: "https://media-cdn.tripadvisor.com/media/photo-o/07/d9/1b/8b/pointe-a-calliere-museum.jpg"
-)
-
-Recommendation.create!(
-  name: "Le Passe Compose",
-  description: "None",
-  category: :restaurant,
-  price_range: "$$ - $$$",
-  address: "1310 Boulevard de Maisonneuve East Àu Coin De La Visitation, Montreal, Quebec H2L 2A5 Canada",
-  longitude: -73.55661,
-  latitude: 45.520016,
-  kid_friendly: false,
-  dog_friendly: false,
+  dog_friendly: true,
   outdoor: true,
-  image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0f/d7/5d/54/la-terrasse.jpg"
+  image_url: "https://media-cdn.tripadvisor.com/media/photo-o/06/92/28/95/bonaparte.jpg"
+)
+
+Recommendation.create!(
+  name: "LOV de la Montagne",
+  description: "Located near the Bell Center and famous Crescent street, LOV de la Montagne is the 5th location of the LOV family and 2nd to open in Montreal. Conveniently accessible by car or public transportation, it will be the new trendy place in downtown to grab brunch, lunch or diner with friends or loved ones.",
+  category: :restaurant,
+  price_range: "$$ - $$$",
+  address: "1232 de la Montagne, Montreal, Quebec H3G 1Z1 Canada",
+  longitude: -73.57528,
+  latitude: 45.494057,
+  kid_friendly: true,
+  dog_friendly: true,
+  outdoor: true,
+  image_url: "https://media-cdn.tripadvisor.com/media/photo-m/1280/23/8e/8f/20/lov-de-la-montagne.jpg"
+)
+
+Recommendation.create!(
+  name: "Candide",
+  description: "Le restaurant Candide welcomes you to their dining room. They are open at night from Wednesday to Sunday. You can pay by MasterCard, Visa, gift certificates and Interac.",
+  category: :restaurant,
+  price_range: "$$$$",
+  address: "551 Rue Saint Martin, Montreal, Quebec H3J 2L6 Canada",
+  longitude: -73.56927,
+  latitude: 45.48901,
+  kid_friendly: true,
+  dog_friendly: true,
+  outdoor: false,
+  image_url: "https://media-cdn.tripadvisor.com/media/photo-o/09/56/d4/1a/restaurant-candide.jpg"
+)
+
+Recommendation.create!(
+  name: "Kyo Bar Japonais",
+  description: "Located in the heart of Old Montreal, Kyo Bar Japonais is a culinary experience that blends traditional and contemporary Japanese cuisine. With its extensive sake list and a variety of small plates, Kyo offers a unique dining experience in a stylish setting.",
+  category: :restaurant,
+  price_range: "$$ - $$$",
+  address: "711 Côte de la Place d'Armes, Montreal, Quebec H2Y 2X6 Canada",
+  longitude: -73.5542,
+  latitude: 45.50305,
+  kid_friendly: false,
+  dog_friendly: true,
+  outdoor: true,
+  image_url: "https://media-cdn.tripadvisor.com/media/photo-o/1a/6b/36/c0/kyo-bar-japonais.jpg"
 )
 
 puts "Done!"
-puts "All done!"
