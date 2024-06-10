@@ -22,8 +22,9 @@
             <i class="fa-regular fa-heart heart-icon-recommendation" data-recommendations-target="heart"></i>
           </div>
         </div>
-        <div class="labels-recommendation">
+        <div class="labels-recommendation d-flex justify-content-between opacity-50">
           <span class="label-recommendation label-<%= recommendation.category %>"><%= recommendation.category.humanize %></span>
+          <span class="label-recommendation-time label-start-end-time"><%= recommendation.start_time.strftime('%H:%M') %> - <%= recommendation.end_time.strftime('%H:%M') %></span>
         </div>
         <p class="description-recommendation"><%= truncate(recommendation.description, length: 100) %></p>
         <%= link_to recommendation_path(recommendation), class: "text-decoration-none" do %>
