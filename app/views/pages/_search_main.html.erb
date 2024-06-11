@@ -1,6 +1,5 @@
 <!-- app/views/pages/_search_main.html.erb -->
 <main data-controller="search-main">
-  <!-- Search Section -->
   <section class="search">
     <div class="input-group">
       <i class="fas fa-calendar-alt"></i>
@@ -8,13 +7,13 @@
     </div>
     <div class="input-group guests-group">
       <i class="fas fa-user-friends"></i>
-      <input type="number" class="input-guests" value="1" min="1" readonly data-search-main-target="inputGuests">
+      <input type="number" class="input-guests" name="guests" value="0" min="0" data-search-main-target="inputGuests">
       <button class="button-minus" data-search-main-target="minusButton">-</button>
       <button class="button-plus" data-search-main-target="plusButton">+</button>
     </div>
     <%= form_with url: recommendations_path, method: :get, class: "form-with" do |f| %>
       <div class="input-group">
-        <input type="hidden" name="guests" id="guests-count" value="1">
+        <input type="hidden" name="guests" id="guests-count" value="0">
         <div class="checkbox-wrapper-61">
           <%= f.check_box :kid_friendly, class: 'check', id: 'check1-61' %>
           <label for="check1-61" class="label">
@@ -59,23 +58,6 @@
       </div>
       <div class="custom-recommendation-content">
         <h3 class="custom-recommendation-title">Montreal Casino</h3>
-        <p>Summer starts its engines in Montréal this June — not only with the Grand Prix Formula 1 races but with a high-energy summer festival season. From MURAL to the Jazz Fest to the Francos...</p>
-      </div>
-    </article>
-  </section>
-
-  <section class="custom-recommendations">
-    <h2 class="custom-title-home-page">Top Picks of the Week</h2>
-    <article class="custom-recommendation">
-      <div class="custom-recommendation-image-container">
-        <img src="https://media.timeout.com/images/105460600/1536/1152/image.webp" alt="Montreal" class="custom-recommendation-image">
-        <div class="custom-review-label">
-          <span class="custom-review-score">4.9</span> <span class="custom-review-star">★</span>
-        </div>
-        <div class="custom-recommendation-label">100% Recommended</div>
-      </div>
-      <div class="custom-recommendation-content">
-        <h3 class="custom-recommendation-title">Parc Jean-Drapeau</h3>
         <p>Summer starts its engines in Montréal this June — not only with the Grand Prix Formula 1 races but with a high-energy summer festival season. From MURAL to the Jazz Fest to the Francos...</p>
       </div>
     </article>

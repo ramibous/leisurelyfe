@@ -13,7 +13,7 @@ class RecommendationsController < ApplicationController
     @recommendations = @recommendations.where(kid_friendly: true) if params[:kid_friendly] == "1"
     @recommendations = @recommendations.where(dog_friendly: true) if params[:dog_friendly] == "1"
 
-    if params[:guests].present?
+    if params[:guests].present? && params[:guests].to_i > 0
       @recommendations = @recommendations.where('max_guests >= ?', params[:guests])
     end
   end

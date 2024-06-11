@@ -16,7 +16,11 @@
   </div>
   <div class="navigation-icons">
     <i class="fa-solid fa-share-nodes"></i>
-    <i class="fa-regular fa-heart heart-icon-recommendation"></i>
+    <i class="fa-regular fa-heart heart-icon-recommendation <%= 'liked' if current_user&.favorites.exists?(recommendation: @recommendation) %>"
+       data-controller="favorite"
+       data-action="click->favorite#toggle"
+       data-favorite-target="heart"
+       data-recommendation-id="<%= @recommendation.id %>"></i>
   </div>
 </div>
 
@@ -65,4 +69,3 @@
     <% end %>
   </div>
 </div>
-hello
