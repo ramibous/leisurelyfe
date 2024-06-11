@@ -12,15 +12,38 @@ def random_boolean
   [true, false].sample
 end
 
-puts "Deleting previous data..."
-Recommendation.destroy_all
-User.destroy_all
-puts "Done!"
+puts "Starting the seeding process..."
+
+# Print initial counts for debugging
+puts "Initial counts:"
+puts "Favorites: #{Favorite.count}"
+puts "Recommendations: #{Recommendation.count}"
+puts "Users: #{User.count}"
+
+# Ensure favorites are deleted first to avoid foreign key constraint violations
+puts "Deleting favorites..."
+Favorite.delete_all
+
+# Now delete recommendations
+puts "Deleting recommendations..."
+Recommendation.delete_all
+
+# Now delete users
+puts "Deleting users..."
+User.delete_all
+
+# Print counts after deletion for verification
+puts "Counts after deletion:"
+puts "Favorites: #{Favorite.count}"
+puts "Recommendations: #{Recommendation.count}"
+puts "Users: #{User.count}"
 
 puts "Creating Users..."
-User.create!(email: "rami@gmail.com", password: "123456")
-User.create!(email: "justin@gmail.com", password: "123456")
-User.create!(email: "victory@gmail.com", password: "123456")
+users = [
+  User.create!(email: "rami@gmail.com", password: "123456"),
+  User.create!(email: "justin@gmail.com", password: "123456"),
+  User.create!(email: "victory@gmail.com", password: "123456")
+]
 puts "Done!"
 
 puts "Creating recommendations..."
@@ -30,7 +53,7 @@ recommendations = [
     description: "Native Tours believes the perfect city tour is one tailored to your own likings and needs in order to become a fun and comprehensive excursion that will turn out to be the highlight of your vacation in Montreal.",
     category: "restaurant",
     price_range: "$$ - $$$",
-    price: rand(10..100), # Add random price
+    price: rand(10..100),
     address: "Montreal, Quebec Canada",
     longitude: -73.557274,
     latitude: 45.504864,
@@ -51,7 +74,7 @@ recommendations = [
     description: "Discover Montreal in a unique way with TourBird, offering tailored tours to explore the city.",
     category: "event",
     price_range: "$$ - $$$",
-    price: rand(10..100), # Add random price
+    price: rand(10..100),
     address: "Montreal, Quebec Canada",
     longitude: -73.5678,
     latitude: 45.5088,
@@ -72,7 +95,7 @@ recommendations = [
     description: "ARTÍRIS was founded in 2023 in Montreal. We have photographed more than 1,000 irises, and thanks to our success, we have moved to Montreal's Old Port district. Iris photography is an innovative and highly personal concept.Our irises are unique, so your creation will be one of a kind. We offer our customers the chance to transform their irises into works of art. Proudly a Quebec company, we offer all types of prints on various media (metal, acrylic, poster, canvas, epoxy canvas...). We ship worldwide from Quebec.",
     category: "restaurant",
     price_range: "$$ - $$$",
-    price: rand(10..100), # Add random price
+    price: rand(10..100),
     address: "228 Rue Saint Jacques, Montreal, Quebec H2Y 1L9 Canada",
     longitude: -73.57906,
     latitude: 45.53735,
@@ -93,7 +116,7 @@ recommendations = [
     description: "Photo Tour Montreal offers a 100% private photography tour of Montreal. It is run by Montreal pro-photographer & photography podcast publisher Marko Kulik. The photography tours take place by foot or by car and the locations can always be customized to suit you.",
     category: "event",
     price_range: "$$ - $$$",
-    price: rand(10..100), # Add random price
+    price: rand(10..100),
     address: "Montreal, Quebec Canada",
     longitude: -73.5678,
     latitude: 45.5088,
@@ -114,7 +137,7 @@ recommendations = [
     description: "H2O Adventures offers a variety of water sports activities in Montreal, including kayaking, canoeing, and paddleboarding.",
     category: "event",
     price_range: "$$ - $$$",
-    price: rand(10..100), # Add random price
+    price: rand(10..100),
     address: "Montreal, Quebec Canada",
     longitude: -73.5673,
     latitude: 45.5017,
@@ -135,7 +158,7 @@ recommendations = [
     description: "An unforgettable escape in the heart of the city... Gibson Salon Spa in the Fairmont Queen Elizabeth hotel invites you to discover the finest spa experience in Montreal. Our warm and tranquil surroundings provide the perfect environment to escape from daily stress. For total mind and body relaxation, we offer a full array of treatments and services. Discover complete serenity and wellness through massage therapy, facial care, body care, full esthetic services and hairstyling. Quality, attention to detail and luxurious surroundings will make for a unique and exquisite visit. An unforgettable spa experience awaits you at Gibson Salon Spa.",
     category: "event",
     price_range: "$$ - $$$",
-    price: rand(10..100), # Add random price
+    price: rand(10..100),
     address: "S1 level 900 Rene-Levesque Ouest Fairmont Queen Elizabeth Hotel, Montreal, Quebec H3B 1X8 Canada",
     longitude: -73.56783,
     latitude: 45.500668,
@@ -153,7 +176,6 @@ recommendations = [
   }
 ]
 
-
 recommendations.each do |rec|
   rec[:category] = rec[:category].to_sym if rec[:category].is_a?(String)
   rec[:email] = Faker::Internet.email if rec[:email] == "None"
@@ -164,3 +186,16 @@ recommendations.each do |rec|
 end
 
 puts "Recommendations created successfully!"
+
+puts "Creating favorites..."
+Favorite.create!(user: users.first, recommendation: Recommendation.first)
+Favorite.create!(user: users.last, recommendation: Recommendation.last)
+puts "Favorites created successfully!"
+
+# Print final counts for verification
+puts "Final counts:"
+puts "Favorites: #{Favorite.count}"
+puts "Recommendations: #{Recommendation.count}"
+puts "Users: #{User.count}"
+
+puts "Seeding completed successfully."
