@@ -30,5 +30,13 @@ class RecommendationsController < ApplicationController
     @recommendation = Recommendation.find(params[:id])
     @quote = Faker::Quote.matz
     @recommendations = Recommendation.where(category: @recommendation.category).where.not(id: @recommendation.id).limit(4)
+
+    # This is for the map
+    @recommendations = Recommendation.all
+    @markers = [{
+        lat: @recommendation.latitude,
+        lng: @recommendation.longitude,
+        marker_html: render_to_string(partial: "recommendations/marker", locals: {recommendation: @recommendation})
+      }]
   end
 end

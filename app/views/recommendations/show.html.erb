@@ -38,23 +38,25 @@
 
 <!-- Container for details section -->
 <div class="details-container">
+  <div style="width: 100%; height: 250px;"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+
   <h3 class="colored-text">From $<%= @recommendation.price || @recommendation.price_range %> per adult</h3>
 
   <h1 class="colored-text">What to expect</h1>
-  <p><strong>Is it Kids friendly? </strong>
-  </p>
-  <div class="row">
+  <div class="row mb-3 bg-secondary opacity-50 p-3">
     <div class="col-6 text-center dog-icon">
-      <i class="fa-solid fa-dog"></i>
+      <i class="fa-solid fa-dog opacity-50" style="font-size: 50px; color: white"></i>
+        <%= @recommendation.dog_friendly ? 'Yes' : 'No' %>
     </div>
     <div class="col-6 text-center kid-icon">
-      <i class="fa-solid fa-child-dress"></i>
+      <i class="fa-solid fa-child-dress opacity-50" style="font-size: 50px; color: white"></i>
         <%= @recommendation.kid_friendly ? 'Yes' : 'No' %>
     </div>
   </div>
-  <p><strong>Is it Dogs friendly? </strong>
-    <%= @recommendation.dog_friendly ? 'Yes' : 'No' %>
-  </p>
   <p><strong>Start time: </strong><%= @recommendation.start_time %></p>
   <p><strong>End time: </strong><%= @recommendation.end_time %></p>
 
