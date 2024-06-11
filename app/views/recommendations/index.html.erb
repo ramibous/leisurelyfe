@@ -1,28 +1,222 @@
+  <style>
+    /* Scoped Modal Styles */
+    .filter-modal .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1000; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: hidden; /* Disable scroll */
+      background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+      backdrop-filter: blur(5px); /* Blur background */
+      padding-top: 60px; /* Location of the box */
+    }
+
+    .filter-modal .modal-content {
+      background-color: #fff;
+      position: absolute;
+      right: -500px; /* Start off-screen */
+      top: 0;
+      height: 100%;
+      width: 300px;
+      max-width: 100%; /* Could be more or less, depending on screen size */
+      padding: 20px;
+      border-radius: 8px 0 0 8px; /* Rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow */
+      transition: right 0.3s ease; /* Smooth slide-in */
+    }
+
+    .filter-modal .modal-content.show {
+      right: 0; /* Slide in to this position */
+    }
+
+    .filter-modal .close-button {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .filter-modal .close-button:hover,
+    .filter-modal .close-button:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .filter-modal .modal-content h2 {
+      margin-top: 0;
+      
+      font-size: 24px;
+      color: #333;
+    }
+
+    .filter-modal .input-group-recommendation {
+      margin-bottom: 20px;
+    }
+
+    .filter-modal .input-group-recommendation label {
+      margin-bottom: 5px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .filter-modal .form-control-recommendation {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .filter-modal .category-select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .filter-modal .btn-primary-recommendation {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+
+    .filter-modal .btn-primary-recommendation:hover {
+      background-color: #0056b3;
+    }
+
+    .filter-icon-container {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .filter-icon {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .price-range-container {
+      margin-bottom: 20px;
+    }
+
+    .price-range-container h3 {
+      margin-top: 0;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .price-range-inputs {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .price-range-inputs input {
+      width: 45%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .range-slider {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 15px;
+      background: #ddd;
+      outline: none;
+      opacity: 0.7;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+    }
+
+    .range-slider:hover {
+      opacity: 1;
+    }
+
+    .range-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 25px;
+      height: 25px;
+      background: #4CAF50;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    .range-slider::-moz-range-thumb {
+      width: 25px;
+      height: 25px;
+      background: #4CAF50;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+  </style>
 <!-- app/views/recommendations/index.html.erb -->
-<%= render 'pages/top_bar' %>
-<div class="recommendations-container" data-controller="recommendations">
-  <h1 class="search-recommendation">Search Results</h1>
-  <%= form_with url: recommendations_path, method: :get, local: true, data: { recommendations_target: "searchForm" } do %>
-    <div class="input-group-recommendation">
-      <input type="text" name="query" placeholder="Search by name" class="form-control-recommendation" data-recommendations-target="searchInput" id="search-input" value="<%= params[:query] %>">
-      <button type="submit" class="btn-primary-recommendation">Search</button>
+<div class="recommendations-container filter-modal" data-controller="filter">
+  <div class="filter-icon-container">
+    <i class="fas fa-sliders-h filter-icon"></i>
+  </div>
+
+  <!-- Modal Structure -->
+  <div class="modal" data-filter-target="modal">
+    <div class="modal-content" data-filter-target="modalContent">
+      <span class="close-button" data-action="click->filter#closeModal">&times;</span>
+      <h2>Filter and Search</h2>
+
+      <form action="/recommendations" method="get" data-filter-target="searchForm">
+        <div class="input-group-recommendation">
+          <label for="search-input">Search by name:</label>
+          <input type="text" name="query" placeholder="Enter name" class="form-control-recommendation" data-filter-target="searchInput" id="search-input">
+        </div>
+        <div class="input-group-recommendation">
+          <label for="category-select">Search by category:</label>
+          <select id="category-select" name="category" class="category-select" data-filter-target="categorySelect">
+            <option value="">Select Category</option>
+            <% Recommendation.categories.keys.each do |category| %>
+              <option value="<%= category %>" <%= 'selected' if params[:category] == category %>><%= category.humanize %></option>
+            <% end %>
+          </select>
+        </div>
+        <div class="price-range-container">
+          <h3>Price range</h3>
+          <p>Nightly prices before fees and taxes</p>
+          <input type="range" min="0" max="5000" value="0" class="range-slider" data-filter-target="priceRangeSlider">
+          <div class="price-range-inputs">
+            <input type="number" id="minPrice" name="min_price" placeholder="Min" data-filter-target="minPrice">
+            <input type="number" id="maxPrice" name="max_price" placeholder="Max" data-filter-target="maxPrice">
+          </div>
+        </div>
+        <button type="submit" class="btn-primary-recommendation">Search</button>
+      </form>
     </div>
-  <% end %>
-  <h3 class="opacity-50">There are <%= @recommendations.count %>
-    <% if params[:category].present? %>
-      <%= params[:category].humanize %>
-    <% end %>
-    results
-  </h3>
+  </div>
+
+  <h1 class="search-recommendation">Search Results</h1>
+
+  <h3 class="opacity-50">There are <%= @recommendations.count %> results</h3>
 
   <% if @recommendations.any? %>
     <% @recommendations.each do |recommendation| %>
       <div class="search-item-recommendation">
         <div class="image-container-recommendation">
           <h2 class="description-name-recommendation"><%= recommendation.name %></h2>
-          <div class="rating-recommendation"><%= recommendation.rating %>
-            <i class="fas fa-star"></i>
-          </div>
+          <div class="rating-recommendation"><%= recommendation.rating %> <i class="fas fa-star"></i></div>
           <img src="<%= recommendation.image_url %>" alt="">
           <div class="overlay-icons-recommendation">
             <i class="fa-regular fa-heart heart-icon-recommendation <%= 'liked' if current_user&.favorites.exists?(recommendation: recommendation) %>"
@@ -35,6 +229,7 @@
         </div>
         <div class="labels-recommendation d-flex justify-content-between opacity-50">
           <span class="label-recommendation label-<%= recommendation.category %>"><%= recommendation.category.humanize %></span>
+          <span class="label-recommendation label-<%= recommendation.label %>"><%= recommendation.label %></span>
           <span class="label-recommendation-time label-start-end-time"><%= recommendation.start_time&.strftime('%H:%M') %> - <%= recommendation.end_time&.strftime('%H:%M') %></span>
         </div>
         <p class="description-recommendation"><%= truncate(recommendation.description, length: 100) %></p>

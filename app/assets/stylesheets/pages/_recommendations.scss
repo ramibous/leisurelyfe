@@ -19,37 +19,6 @@
   padding-top: 20px;
 }
 
-.input-group-recommendation {
-  display: flex;
-  margin-bottom: 20px;
-  background-color: #f1f1f1; /* Light background for the input group */
-  border-radius: 25px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
-.input-group-recommendation input {
-  flex: 1;
-  padding: 10px 15px;
-  font-size: 1em;
-  border: none;
-  outline: none;
-  background-color: transparent;
-}
-
-.input-group-recommendation button {
-  padding: 10px 20px;
-  font-size: 1em;
-  border: none;
-  background-color: #5B7553; /* Primary color */
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.input-group-recommendation button:hover {
-  background-color: #2e3a56; /* Darker shade of primary color */
-}
 
 .search-item-recommendation {
   background-color: #ffffff;
