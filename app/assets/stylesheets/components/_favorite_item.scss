@@ -1,35 +1,55 @@
-.favorite-list {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .favorite-item {
-  background-color: #C8EAD0;
-  padding: 20px;
-  border-radius: 16px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  max-width: 600px;
-  width: 100%;
+  overflow: hidden;
+  background-color: #F0F0F0; /* Light gray background */
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-bottom: 20px; /* Add spacing between each favorite item */
+  display: flex; /* Use flexbox */
+  align-items: center; /* Center vertically */
 }
 
 .favorite-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 16px;
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px; /* Add spacing between the image and the content */
 }
 
-.favorite-name-label {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  background: rgba(34, 139, 34, 0.9); 
-  padding: 10px 20px;
-  color: white;
+.content-container {
+  padding: 20px;
+}
+
+.restaurant-name {
+  font-size: 18px; /* Increase font size for prominence */
+  font-weight: bold; /* Add boldness for emphasis */
+  color: rgb(27, 26, 26); /* Dark text color */
+  margin: 0;
+  text-transform: capitalize; /* Capitalize the text for elegance */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Add a subtle text shadow for depth */
+}
+
+.description-container {
+  margin-top: 10px;
+  margin-left: auto; /* Move description to the right */
+}
+
+.truncated-description {
   font-size: 14px;
-  display: flex;
-  align-items: center;
-  border-radius: 20px;
+  color: #333333;
+  margin-bottom: 15px;
+  flex: 1; /* Allow description to take up remaining space */
+}
+
+.remove-favorite {
+  font-size: 18px; /* Adjust font size to make it smaller */
+  color: #FF0000; /* Change color to red */
+  cursor: pointer; /* Show pointer cursor on hover */
+  margin-top: auto; /* Align to the top */
+  display: inline-flex; /* Display as inline-flex to ensure it's positioned correctly */
+  align-items: center; /* Align items vertically */
+}
+
+.remove-favorite:hover {
+  color: #FF6666; /* Lighter shade of red on hover */
 }

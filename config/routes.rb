@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     resource :favorite do
       member do
         get :toggle
+        delete :destroy
       end
     end
   end
