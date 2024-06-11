@@ -26,7 +26,7 @@ puts "Done!"
 puts "Creating recommendations..."
 recommendations = [
   {
-    name: "Native Tours",
+    name: "Native Toulrs",
     description: "Native Tours believes the perfect city tour is one tailored to your own likings and needs in order to become a fun and comprehensive excursion that will turn out to be the highlight of your vacation in Montreal.",
     category: "restaurant",
     price_range: "$$ - $$$",
