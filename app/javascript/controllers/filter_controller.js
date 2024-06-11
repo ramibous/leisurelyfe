@@ -36,15 +36,29 @@ export default class extends Controller {
       this.modalTarget.style.display = 'none'
     }, 300)
 
-  
+    // Prevent the form submission to keep the modal functional
     event.preventDefault()
 
+    // Ensure min and max prices are included in the form submission
+    const minPriceInput = document.createElement('input')
+    minPriceInput.type = 'hidden'
+    minPriceInput.name = 'min_price'
+    minPriceInput.value = this.minPriceTarget.value
+    this.searchFormTarget.appendChild(minPriceInput)
 
+    const maxPriceInput = document.createElement('input')
+    maxPriceInput.type = 'hidden'
+    maxPriceInput.name = 'max_price'
+    maxPriceInput.value = this.maxPriceTarget.value
+    this.searchFormTarget.appendChild(maxPriceInput)
+
+    // Trigger the actual form submission after closing the modal
     this.searchFormTarget.submit()
   }
 
   handleSliderInput() {
-    this.minPriceTarget.value = this.priceRangeSliderTarget.value
-    this.maxPriceTarget.value = parseInt(this.priceRangeSliderTarget.value) + 1000 
+    const value = this.priceRangeSliderTarget.value
+    this.minPriceTarget.value = value
+    this.maxPriceTarget.value = parseInt(value) + 1000 // Example adjustment for 1000 CAD max
   }
 }
