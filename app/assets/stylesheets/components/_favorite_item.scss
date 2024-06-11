@@ -1,35 +1,69 @@
-.favorite-list {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+.favorite-list{
+  background-color: $primary-color;
+}
+
+.card-image {
+  height: 100%;
+  width: 40%;
+  object-fit: cover;
+}
+
+.container-margin{
+  margin: 20px 0;
 }
 
 .favorite-item {
-  background-color: #C8EAD0;
-  padding: 20px;
-  border-radius: 16px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  max-width: 600px;
-  width: 100%;
+  height: 170px;
+  overflow: hidden;
+  background-color: #F0F0F0; /* Light gray background */
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-bottom: 35px; /* Add spacing between each favorite item */
+  display: flex; /* Use flexbox */
+  align-items: start; /* Center vertically */
 }
 
-.favorite-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 16px;
+.restaurant-name {
+  font-size: 18px; /* Increase font size for prominence */
+  font-weight: bold; /* Add boldness for emphasis */
+  color: rgb(27, 26, 26); /* Dark text color */
+  margin: 0;
+  text-transform: capitalize; /* Capitalize the text for elegance */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Add a subtle text shadow for depth */
 }
 
-.favorite-name-label {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  background: rgba(34, 139, 34, 0.9); 
-  padding: 10px 20px;
-  color: white;
-  font-size: 14px;
+.description-container {
+  margin: 10px;
+  padding: 10px;
+  height: 100%;
   display: flex;
-  align-items: center;
-  border-radius: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.truncated-description {
+  font-size: 14px;
+  color: #333333;
+  margin-bottom: 15px;
+  flex: 1; /* Allow description to take up remaining space */
+}
+
+.remove-favorite {
+  cursor: pointer;
+  border: none; /* Show pointer cursor on hover */
+
+}
+.container-button {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.remove-favorite:hover {
+  color: #FF6666; /* Lighter shade of red on hover */
+}
+
+.fa-remove{
+  font-size: 15px;
 }

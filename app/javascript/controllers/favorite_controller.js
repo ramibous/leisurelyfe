@@ -1,33 +1,34 @@
-import { Controller } from "@hotwired/stimulus"
+import { Controller } from "@hotwired/stimulus";
+
 export default class extends Controller {
-  static targets = ["heart"];
+  static targets = ["removeButton"];
 
-  toggle(event) {
+  connect() {
+    this.removeButtons.forEach(button => {
+      button.addEventListener("click", this.removeFavorite.bind(this));
+    });
+  }
+
+  removeFavorite(event) {
     event.preventDefault();
-
-    const recommendationId = this.heartTarget.dataset.recommendationId;
+    const recommendationId = event.currentTarget.dataset.recommendationId;
     const url = `/recommendations/${recommendationId}/favorite/toggle`;
 
-    const options = {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-     };
-
-    fetch(url, options)
-      .then(response => response.json())
-      .then((data) => {
-        if (data.status === "added") {
-          this.heartTarget.classList.add("liked");
-          this.heartTarget.classList.add("fa-solid");
-          this.heartTarget.classList.add("vibrate");
-          setTimeout(() => { this.heartTarget.classList.remove("vibrate"); }, 300);
-        } else {
-          this.heartTarget.classList.remove("liked");
-        }
-      })
-      .catch(error => {
-        console.error("There was an error toggling the favorite!", error);
-      });
+    fetch(url, {
+      method: 'DELETE'
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      // Remove the favorite item from the DOM
+      event.currentTarget.closest('.favorite-item').remove();
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
   }
 }

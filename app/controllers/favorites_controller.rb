@@ -1,4 +1,6 @@
 class FavoritesController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @favorites = current_user.favorites
   end
@@ -16,6 +18,10 @@ class FavoritesController < ApplicationController
     end
   end
 
+  def destroy
+    @existing_recommendation.destroy
+  end
+
   private
 
   def create
@@ -24,9 +30,5 @@ class FavoritesController < ApplicationController
       recommendation: @recommendation
     )
     @favorite.save
-  end
-
-  def destroy
-    @existing_recommendation.destroy
   end
 end
