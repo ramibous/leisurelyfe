@@ -33,8 +33,16 @@
 
   <h1 class="colored-text">What to expect</h1>
   <p><strong>Is it Kids friendly? </strong>
-    <%= @recommendation.kid_friendly ? 'Yes' : 'No' %>
   </p>
+  <div class="row">
+    <div class="col-6 text-center dog-icon">
+      <i class="fa-solid fa-dog"></i>
+    </div>
+    <div class="col-6 text-center kid-icon">
+      <i class="fa-solid fa-child-dress"></i>
+        <%= @recommendation.kid_friendly ? 'Yes' : 'No' %>
+    </div>
+  </div>
   <p><strong>Is it Dogs friendly? </strong>
     <%= @recommendation.dog_friendly ? 'Yes' : 'No' %>
   </p>
