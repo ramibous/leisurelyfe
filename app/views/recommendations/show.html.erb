@@ -15,12 +15,21 @@
     <% end %>
   </div>
   <div class="navigation-icons">
-    <i class="fa-solid fa-share-nodes"></i>
+    <i class="fa-solid fa-share-nodes"
+      data-controller="share-content"
+      data-action="click->share-content#fire"
+      data-share-content-title-value="<%= @recommendation.name %>"
+      data-share-content-text-value="<%= @recommendation.description %>"
+      data-share-content-url-value="<%= recommendation_url(@recommendation) %>"
+    >
+    </i>
     <i class="fa-regular fa-heart heart-icon-recommendation <%= 'liked' if current_user&.favorites.exists?(recommendation: @recommendation) %>"
        data-controller="favorite"
        data-action="click->favorite#toggle"
        data-favorite-target="heart"
-       data-recommendation-id="<%= @recommendation.id %>"></i>
+       data-recommendation-id="<%= @recommendation.id %>"
+    >
+    </i>
   </div>
 </div>
 
@@ -33,8 +42,16 @@
 
   <h1 class="colored-text">What to expect</h1>
   <p><strong>Is it Kids friendly? </strong>
-    <%= @recommendation.kid_friendly ? 'Yes' : 'No' %>
   </p>
+  <div class="row">
+    <div class="col-6 text-center dog-icon">
+      <i class="fa-solid fa-dog"></i>
+    </div>
+    <div class="col-6 text-center kid-icon">
+      <i class="fa-solid fa-child-dress"></i>
+        <%= @recommendation.kid_friendly ? 'Yes' : 'No' %>
+    </div>
+  </div>
   <p><strong>Is it Dogs friendly? </strong>
     <%= @recommendation.dog_friendly ? 'Yes' : 'No' %>
   </p>
