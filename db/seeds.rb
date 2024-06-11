@@ -12,6 +12,10 @@ def random_boolean
   [true, false].sample
 end
 
+def random_guests_count
+  rand(1..100)
+end
+
 puts "Deleting previous data..."
 Recommendation.destroy_all
 User.destroy_all
