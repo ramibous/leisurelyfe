@@ -4,6 +4,7 @@ class Recommendation < ApplicationRecord
   include PgSearch::Model
 
   validates :name, presence: true
+  validates :price, presence: true, numericality: { greater_than_or_equal_to: 0 }
 
   enum category: {
     unknown: 0,
