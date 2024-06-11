@@ -50,7 +50,7 @@
           <div class="rating-recommendation"><%= recommendation.rating %> <i class="fas fa-star"></i></div>
           <img src="<%= recommendation.image_url %>" alt="">
           <div class="overlay-icons-recommendation">
-            <i class="fa-regular fa-heart heart-icon-recommendation <%= 'liked' if current_user&.favorites.exists?(recommendation: recommendation) %>"
+            <i class="fa-regular fa-heart heart-icon-recommendation <%= 'text-danger fa-solid vibrate' if current_user&.favorites.exists?(recommendation: recommendation) %>"
                data-controller="favorite"
                data-action="click->favorite#toggle"
                data-favorite-target="heart"
