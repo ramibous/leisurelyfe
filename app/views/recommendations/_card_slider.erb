@@ -4,12 +4,14 @@
   <div class="recommendations-row">
     <% @recommendations.each do |recommendation| %>
       <div class="recommendation-col">
+        <%= link_to recommendation_path(recommendation), class: "text-decoration-none" do %>
           <div class="recommendation-card">
             <%= image_tag(recommendation.image_url, class: "recommendation-image") %>
             <div class="recommendation-card-body">
               <h5 class="recommendation-card-title"><%= recommendation.name %></h5>
             </div>
           </div>
+        <% end %>
       </div>
     <% end %>
   </div>
