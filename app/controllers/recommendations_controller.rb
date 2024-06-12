@@ -24,6 +24,11 @@ class RecommendationsController < ApplicationController
     if params[:guests].present? && params[:guests].to_i > 0
       @recommendations = @recommendations.where('max_guests >= ?', params[:guests])
     end
+
+    respond_to do |format|
+      format.html
+      format.turbo_stream
+    end
   end
 
   def show
