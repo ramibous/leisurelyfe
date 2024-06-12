@@ -1,6 +1,6 @@
 <!-- app/views/recommendations/index.html.erb -->
 <%= render 'pages/top_bar' %>
-<div class="recommendations-container" data-controller="recommendations">
+<div class="recommendations-container container-padding" data-controller="recommendations">
   <h1 class="search-recommendation">Search Results</h1>
   <%= form_with url: recommendations_path, method: :get, local: true, data: { recommendations_target: "searchForm" } do %>
     <div class="input-group-recommendation">

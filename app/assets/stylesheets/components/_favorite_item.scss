@@ -1,23 +1,27 @@
+
+.favorite-list{
+  background-color: $primary-color;
+}
+
+.card-image {
+  height: 100%;
+  width: 40%;
+  object-fit: cover;
+}
+
+.container-margin{
+  margin: 20px 0;
+}
+
 .favorite-item {
+  height: 170px;
   overflow: hidden;
   background-color: #F0F0F0; /* Light gray background */
   border-radius: 12px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  margin-bottom: 20px; /* Add spacing between each favorite item */
+  margin-bottom: 35px; /* Add spacing between each favorite item */
   display: flex; /* Use flexbox */
-  align-items: center; /* Center vertically */
-}
-
-.favorite-item img {
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-right: 20px; /* Add spacing between the image and the content */
-}
-
-.content-container {
-  padding: 20px;
+  align-items: start; /* Center vertically */
 }
 
 .restaurant-name {
@@ -30,8 +34,12 @@
 }
 
 .description-container {
-  margin-top: 10px;
-  margin-left: auto; /* Move description to the right */
+  margin: 10px;
+  padding: 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .truncated-description {
@@ -42,14 +50,20 @@
 }
 
 .remove-favorite {
-  font-size: 18px; /* Adjust font size to make it smaller */
-  color: #FF0000; /* Change color to red */
-  cursor: pointer; /* Show pointer cursor on hover */
-  margin-top: auto; /* Align to the top */
-  display: inline-flex; /* Display as inline-flex to ensure it's positioned correctly */
-  align-items: center; /* Align items vertically */
+  cursor: pointer;
+  border: none; /* Show pointer cursor on hover */
+
+}
+.container-button {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .remove-favorite:hover {
   color: #FF6666; /* Lighter shade of red on hover */
+}
+
+.fa-remove{
+  font-size: 15px;
 }
