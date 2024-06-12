@@ -26,6 +26,9 @@ class RecommendationsController < ApplicationController
     if params[:guests].present? && params[:guests].to_i > 0
       @recommendations = @recommendations.where('max_guests >= ?', params[:guests])
     end
+
+    # Paginary
+    @recommendations = @recommendations.page params[:page]
   end
 
   def show
