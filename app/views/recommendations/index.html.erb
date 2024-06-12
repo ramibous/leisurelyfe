@@ -37,7 +37,13 @@
     <% @recommendations.each do |recommendation| %>
       <%= render "card", recommendation: recommendation,  page: get_recommendation_card_page %>
     <% end %>
+    <div class="container">
+      <%= paginate @recommendations, theme: 'bootstrap-5',
+                    pagination_class: "pagination-sm flex-wrap justify-content-center",
+                    nav_class: "d-inline-block" %>
+    </div>
   <% else %>
     <%= image_tag "unknown.jpg", height: "100%", width: "100%", style: "border-radius: 50%", class: "opacity-50" %>
   <% end %>
+
 </div>

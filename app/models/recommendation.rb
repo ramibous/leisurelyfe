@@ -2,7 +2,8 @@ class Recommendation < ApplicationRecord
   has_many :favorites
   has_many :users, through: :favorites
   include PgSearch::Model
-
+  # paginari
+  paginates_per 10
   validates :name, presence: true
   validates :price, presence: true, numericality: { greater_than_or_equal_to: 0 }
 
