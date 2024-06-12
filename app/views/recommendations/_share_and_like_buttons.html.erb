@@ -1,0 +1,23 @@
+<% if user_signed_in? %>
+  <i class="fa-solid fa-share-nodes"
+    data-controller="share-content"
+    data-action="click->share-content#fire"
+    data-share-content-title-value="<%= recommendation.name %>"
+    data-share-content-text-value="<%= recommendation.description %>"
+    data-share-content-url-value="<%= recommendation_url(recommendation) %>"
+  >
+  </i>
+  <i class="fa-regular fa-heart heart-icon-recommendation <%= 'text-danger fa-solid vibrate' if current_user&.favorites.exists?(recommendation: recommendation) %>"
+    data-controller="favorite"
+    data-action="click->favorite#toggle"
+    data-favorite-target="heart"
+    data-recommendation-id="<%= recommendation.id %>">
+  </i>
+<% else %>
+  <%= link_to new_user_session_path do %>
+    <i class="fa-solid fa-share-nodes"></i>
+  <% end %>
+  <%= link_to new_user_session_path do %>
+    <i class="fa-regular fa-heart heart-icon-recommendation"></i>
+  <% end %>
+<% end %>

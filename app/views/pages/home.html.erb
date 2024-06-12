@@ -1,3 +1,14 @@
 <%= render 'pages/top_bar' %>
 <%= render 'pages/search_main' %>
+
+<!-- Recommendations Section -->
+<section class="custom-recommendations">
+  <h2 class="custom-title-home-page">Top Picks of the Week</h2>
+  <article class="custom-recommendation">
+    <% @recommendations.each do |recommendation| %>
+      <%= render "recommendations/card", recommendation: recommendation, page: get_recommendation_card_page %>
+    <% end %>
+  </article>
+</section>
+
 <%= render 'pages/footer' %>
