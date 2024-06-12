@@ -94,7 +94,7 @@
 /* Custom horizontal rule */
 .custom-hr {
   border: 1px solid #5B7553;
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 /* Container for details section */
@@ -103,7 +103,6 @@
   border-radius: 8px;
   padding: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
 }
 
 /* Headings and paragraphs within details section */
@@ -151,8 +150,6 @@
 /* Card within recommendation columns */
 .recommendation-card {
   background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 300px;
@@ -202,7 +199,7 @@
 
 
 // Images for kid and dog
-.col > img {
+.col > i {
   border-radius: 50%;
 }
 
