@@ -1,0 +1,15 @@
+<div class="recommendations-container">
+  <h3 class="colored-text">Recommendations based on your likes</h3>
+  <div class="recommendations-row">
+    <% @recommendations.each do |recommendation| %>
+      <div class="recommendation-col">
+        <div class="recommendation-card">
+          <%= image_tag(recommendation.image_url, class: "recommendation-image") %>
+          <div class="recommendation-card-body">
+            <h5 class="recommendation-card-title"><%= recommendation.name %></h5>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

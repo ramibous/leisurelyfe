@@ -149,10 +149,10 @@
 
 /* Card within recommendation columns */
 .recommendation-card {
+  height: 200px;
   background-color: #ffffff;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 300px;
 }
 
 .recommendation-card:hover {
