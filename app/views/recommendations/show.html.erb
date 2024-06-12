@@ -58,7 +58,7 @@
     </div>
     <div class="col-6">
       <h4 class="colored-text">About</h4>
-      <p class="colored-text quote-text"><i class="fa-solid fa-feather colored-text"></i><%= @quote %></p>
+      <p class="colored-text"><i class="fa-solid fa-feather colored-text"></i><%= @quote %></p>
     </div>
   </div>
 </div>
@@ -70,6 +70,5 @@
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
-<!-- Custom horizontal rule -->
 
-<%# User the colored-text class for text-color  %>
+<%= render 'card_slider' %>

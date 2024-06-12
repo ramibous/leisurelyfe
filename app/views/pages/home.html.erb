@@ -3,12 +3,11 @@
 
 <!-- Recommendations Section -->
 <section class="custom-recommendations">
-  <h2 class="custom-title-home-page">Top Picks of the Week</h2>
   <article class="custom-recommendation">
+  <h3 class="colored-text text-center">Top Pick of the week</h3>
     <% @recommendations.each do |recommendation| %>
       <%= render "recommendations/card", recommendation: recommendation, page: get_recommendation_card_page %>
     <% end %>
   </article>
 </section>
-
 <%= render 'pages/footer' %>

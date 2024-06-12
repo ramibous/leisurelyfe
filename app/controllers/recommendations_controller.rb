@@ -31,7 +31,11 @@ class RecommendationsController < ApplicationController
   def show
     @recommendation = Recommendation.find(params[:id])
     @quote = Faker::Quote.matz
-    @recommendations = Recommendation.where(category: @recommendation.category).where.not(id: @recommendation.id).limit(4)
+    @recommendations = Recommendation
+                       .where(category: @recommendation.category)
+                       .where.not(id: @recommendation.id)
+                       .order("RANDOM()")
+                       .limit(4)
 
     # This is for the map
     @recommendations = Recommendation.all
