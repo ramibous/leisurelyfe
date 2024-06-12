@@ -61,8 +61,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
-  padding: 0 20px;
+  margin-bottom: 10px;
+  padding: 0 10px;
 }
 
 /* Navigation item styles */
@@ -100,8 +100,8 @@
 /* Container for details section */
 .details-container {
   background-color: #ffffff;
-  padding: 20px;
   border-radius: 8px;
+  padding: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   margin-bottom: 20px;
 }
@@ -198,4 +198,16 @@
 
 .heart-icon-recommendation:hover {
   color: #e74c3c;
+}
+
+
+// Images for kid and dog
+.col > img {
+  border-radius: 50%;
+}
+
+.dog-border,
+.kid-border {
+  border-style: solid;
+  border-color: #00be6c;
 }

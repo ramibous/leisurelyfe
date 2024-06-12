@@ -35,42 +35,46 @@
 
 <!-- Custom horizontal rule -->
 <hr class="custom-hr">
-
-<!-- Container for details section -->
-<div class="details-container">
-  <div style="width: 100%; height: 250px;"
-    data-controller="map"
-    data-map-markers-value="<%= @markers.to_json %>"
-    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-  </div>
-
-  <h3 class="colored-text">From $<%= @recommendation.price || @recommendation.price_range %> per adult</h3>
-
-  <h1 class="colored-text">What to expect</h1>
-  <div class="row mb-3 bg-secondary opacity-50 p-3">
-    <div class="col-6 text-center dog-icon">
-      <i class="fa-solid fa-dog opacity-50" style="font-size: 50px; color: white"></i>
-        <%= @recommendation.dog_friendly ? 'Yes' : 'No' %>
+<div class="container text-center details-container">
+  <div class="row">
+    <div class="col-6">
+      <div class="row text-center">
+        <div class="col">
+          <i class="fa-solid fa-paw opacity-50"></i>
+          <%= image_tag "Dog.jpg", height: 80, width: "100%", alt: "Logo", class: "dog-border" %>
+        </div>
+        <div class="col">
+          <i class="fa-solid fa-child-reaching opacity-50"></i>
+          <%= image_tag "Kid.jpg", height: 80, width: "100%", alt: "Logo", class: "kid-border" %>
+        </div>
+      </div>
+      <hr class="custom-hr">
+      <div class="row text-center">
+        <div class="col">
+          <i class="fa-regular fa-clock colored-text"></i>
+          <p><%= @recommendation.start_time %></p>
+        </div>
+        <div class="col">
+          <i class="fa-solid fa-clock colored-text"></i>
+        </div>
+      </div>
     </div>
-    <div class="col-6 text-center kid-icon">
-      <i class="fa-solid fa-child-dress opacity-50" style="font-size: 50px; color: white"></i>
-        <%= @recommendation.kid_friendly ? 'Yes' : 'No' %>
+    <div class="col-6">
+      <h4 class="colored-text">About</h4>
+      <p class="colored-text"><i class="fa-solid fa-feather colored-text"></i><%= @quote %></p>
     </div>
   </div>
-  <p><strong>Start time: </strong><%= @recommendation.start_time %></p>
-  <p><strong>End time: </strong><%= @recommendation.end_time %></p>
-
-  <h3 class="colored-text">Departure and return</h3>
-  <ul>
-    <li><%= @recommendation.address %></li>
-  </ul>
-
-  <h1 class="colored-text">About</h1>
-  <p class="quote-text"><i class="fa-solid fa-quote-left"></i> <%= @quote %> <i class="fa-solid fa-quote-right"></i></p>
 </div>
 
+<!-- Container for details section -->
+<div class="container" style="width: 100%; height: 250px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
 <!-- Custom horizontal rule -->
-<hr class="custom-hr">
+
+<%# User the colored-text class for text-color  %>
 
 <!-- Container for recommendation rows -->
 <div class="recommendations-container">
