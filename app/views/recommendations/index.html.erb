@@ -1,4 +1,3 @@
-<!-- app/views/recommendations/index.html.erb -->
 <div class="recommendations-container filter-modal" data-controller="filter">
   <div class="filter-icon-container">
     <i class="fas fa-sliders-h filter-icon"></i>
@@ -15,15 +14,6 @@
           <label for="search-input">Search by name:</label>
           <input type="text" name="query" placeholder="Enter name" class="form-control-recommendation" data-filter-target="searchInput" id="search-input">
         </div>
-        <div class="input-group-recommendation">
-          <label for="category-select">Search by category:</label>
-          <select id="category-select" name="category" class="category-select" data-filter-target="categorySelect">
-            <option value="">Select Category</option>
-            <% Recommendation.categories.keys.each do |category| %>
-              <option value="<%= category %>" <%= 'selected' if params[:category] == category %>><%= category.humanize %></option>
-            <% end %>
-          </select>
-        </div>
         <div class="price-range-container">
           <h3>Price range</h3>
           <p>Nightly prices before fees and taxes</p>
@@ -39,6 +29,7 @@
   </div>
 
   <h1 class="search-recommendation">Search Results</h1>
+   <%= render 'pages/icons' %>
 
   <h3 class="opacity-50">There are <%= @recommendations.count %> results</h3>
 

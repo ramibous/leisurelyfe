@@ -1,5 +1,5 @@
 class RecommendationsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :index, :show ]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @recommendations = Recommendation.all
@@ -8,7 +8,7 @@ class RecommendationsController < ApplicationController
       @recommendations = @recommendations.search_by_name(params[:query])
     end
 
-    if params[:category].present?
+    if params[:category].present? && params[:category] != 'all'
       @recommendations = @recommendations.where(category: params[:category])
     end
 
@@ -36,9 +36,9 @@ class RecommendationsController < ApplicationController
     # This is for the map
     @recommendations = Recommendation.all
     @markers = [{
-        lat: @recommendation.latitude,
-        lng: @recommendation.longitude,
-        marker_html: render_to_string(partial: "recommendations/marker", locals: {recommendation: @recommendation})
-      }]
+      lat: @recommendation.latitude,
+      lng: @recommendation.longitude,
+      marker_html: render_to_string(partial: "recommendations/marker", locals: { recommendation: @recommendation })
+    }]
   end
 end
