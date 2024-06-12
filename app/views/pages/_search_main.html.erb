@@ -29,41 +29,7 @@
     </div>
   </div>
 
-  <h1 class="search-recommendation">Search Results</h1>
   <%= render "pages/icons" %>
 
-  <div id="recommendations-list">
-    <h3 class="opacity-50">There are <%= @recommendations.count %> results</h3>
-
-    <% if @recommendations.any? %>
-      <% @recommendations.each do |recommendation| %>
-        <div class="search-item-recommendation">
-          <div class="image-container-recommendation">
-            <h2 class="description-name-recommendation"><%= recommendation.name %></h2>
-            <div class="rating-recommendation"><%= recommendation.rating %> <i class="fas fa-star"></i></div>
-            <img src="<%= recommendation.image_url %>" alt="">
-            <div class="overlay-icons-recommendation">
-              <i class="fa-regular fa-heart heart-icon-recommendation <%= 'text-danger fa-solid vibrate' if current_user&.favorites.exists?(recommendation: recommendation) %>"
-                 data-controller="favorite"
-                 data-action="click->favorite#toggle"
-                 data-favorite-target="heart"
-                 data-recommendation-id="<%= recommendation.id %>">
-              </i>
-            </div>
-          </div>
-          <div class="labels-recommendation d-flex justify-content-between opacity-50">
-            <span class="label-recommendation label-<%= recommendation.category %>"><%= recommendation.category.humanize %></span>
-            <span class="label-recommendation-friendly label-<%= recommendation.kid_friendly %>"><%= recommendation.kid_friendly ? 'Kids Friendly' : nil %></span>
-            <span class="label-recommendation-friendly label-<%= recommendation.dog_friendly %>"><%= recommendation.dog_friendly ? 'Dog Friendly' : nil %></span>
-          </div>
-          <p class="description-recommendation"><%= truncate(recommendation.description, length: 100) %></p>
-          <%= link_to recommendation_path(recommendation), class: "text-decoration-none" do %>
-            <button class="btn-find-out-more-recommendation">Find Out More</button>
-          <% end %>
-        </div>
-      <% end %>
-    <% else %>
-      <p>No recommendations found.</p>
-    <% end %>
   </div>
 </div>
