@@ -1,5 +1,3 @@
-//this is css for the index page meaning search page //
-
 .recommendations-container {
   position: relative;
   width: 100%;
@@ -16,7 +14,6 @@
   text-transform: capitalize;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
-
 
 .search-item-recommendation {
   background-color: #ffffff;
@@ -120,15 +117,16 @@
   font-weight: 900;
 }
 
-.labels-recommendation {
+.recommendation-labels {
   margin: 10px 20px;
   display: flex;
   justify-content: space-between;
   gap: 10px;
+  align-items: center;
   width: 100%;
 }
 
-.label-recommendation {
+.recommendation-category-label {
   padding: 5px 10px;
   border-radius: 5px;
   color: white;
@@ -138,14 +136,26 @@
   height: 100%;
 }
 
-.label-recommendation-time, .label-recommendation-friendly{
+.recommendation-friendly-label-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.recommendation-friendly-label {
+  display: flex;
+  align-items: center;
   padding: 5px 10px;
   border-radius: 5px;
-  color: rgb(0, 0, 0);
-  font-size: 0.9em;
+  color: #000000;
+  font-size: 20px;
   font-weight: bold;
-  display: inline-block;
   margin-right: 0;
+}
+
+.recommendation-friendly-label i {
+  margin-left: 5px;
+  font-size: 18px;
 }
 
 .label-restaurant {
@@ -191,7 +201,6 @@
   background-color: #85c7a5;
 }
 
-// Justin's CSS File in Recommendations show page
 .show-image-recommendation {
   width: 100%;
 }
