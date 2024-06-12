@@ -1,11 +1,10 @@
 <div class="search-item-recommendation">
-  <div class="image-container-recommendation" style="background-image: url(<%= recommendation.image_url %>)">
+  <div class="image-container-recommendation">
     <h2 class="description-name-recommendation"><%= recommendation.name %></h2>
-    <div class="background-transparent">
-      <div class="rating-recommendation"><%= recommendation.rating %> <i class="fas fa-star"></i></div>
-      <div class="overlay-icons-recommendation">
-        <%= render "recommendations/share_and_like_buttons", recommendation: recommendation %>
-      </div>
+    <div class="rating-recommendation"><%= recommendation.rating %> <i class="fas fa-star"></i></div>
+    <img src="<%= recommendation.image_url %>" alt="">
+    <div class="overlay-icons-recommendation">
+      <%= render "recommendations/share_and_like_buttons", recommendation: recommendation %>
     </div>
   </div>
   <div class="recommendation-labels d-flex justify-content-between opacity-50">
@@ -26,12 +25,9 @@
     </div>
   </div>
   <p class="description-recommendation"><%= truncate(recommendation.description, length: 100) %></p>
-  <% if page == "home" || page == "search_results" %>
-    <%= link_to recommendation_path(recommendation), class: "text-decoration-none" do %>
-     <button class="btn-find-out-more-recommendation">Find Out More</button>
-    <% end %>
+  <%= link_to recommendation_path(recommendation), class: "text-decoration-none" do %>
+    <button class="btn-find-out-more-recommendation">Find Out More</button>
   <% end %>
-  </div>
 </div>
 
 
