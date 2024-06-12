@@ -4,7 +4,6 @@ export default class extends Controller {
 
   toggle(event) {
     event.preventDefault();
-
     const recommendationId = this.heartTarget.dataset.recommendationId;
     const url = `/recommendations/${recommendationId}/favorite/toggle`;
 
@@ -27,9 +26,15 @@ export default class extends Controller {
           this.heartTarget.classList.remove("fa-solid");
           this.heartTarget.classList.remove("vibrate");
         }
+
       })
       .catch(error => {
         console.error("There was an error toggling the favorite!", error);
       });
+
+  }
+  toggleAndDelete(event){
+    this.toggle(event)
+    event.currentTarget.closest(".search-item-recommendation").remove();
   }
 }

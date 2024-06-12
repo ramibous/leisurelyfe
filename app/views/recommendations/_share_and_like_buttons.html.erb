@@ -7,12 +7,21 @@
     data-share-content-url-value="<%= recommendation_url(recommendation) %>"
   >
   </i>
-  <i class="fa-regular fa-heart heart-icon-recommendation fs-1 <%= 'text-danger fa-solid vibrate' if current_user&.favorites.exists?(recommendation: recommendation) %>"
+  <% if controller_name == "favorites" && action_name == "index" %>
+    <i class="fa-regular fa-heart heart-icon-recommendation fs-1 <%= 'text-danger fa-solid vibrate' if current_user&.favorites.exists?(recommendation: recommendation) %>"
+      data-controller="favorite"
+      data-action="click->favorite#toggleAndDelete"
+      data-favorite-target="heart"
+      data-recommendation-id="<%= recommendation.id %>">
+    </i>
+  <% else %>
+    <i class="fa-regular fa-heart heart-icon-recommendation fs-1 <%= 'text-danger fa-solid vibrate' if current_user&.favorites.exists?(recommendation: recommendation) %>"
     data-controller="favorite"
     data-action="click->favorite#toggle"
     data-favorite-target="heart"
     data-recommendation-id="<%= recommendation.id %>">
   </i>
+  <% end %>
 <% else %>
   <%= link_to new_user_session_path do %>
     <i class="fa-solid fa-share-nodes"></i>
