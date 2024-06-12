@@ -1,5 +1,5 @@
 <% if user_signed_in? %>
-  <i class="fa-solid fa-share-nodes"
+  <i class="fa-solid fa-share-nodes text-black fs-1"
     data-controller="share-content"
     data-action="click->share-content#fire"
     data-share-content-title-value="<%= recommendation.name %>"
@@ -7,7 +7,7 @@
     data-share-content-url-value="<%= recommendation_url(recommendation) %>"
   >
   </i>
-  <i class="fa-regular fa-heart heart-icon-recommendation <%= 'text-danger fa-solid vibrate' if current_user&.favorites.exists?(recommendation: recommendation) %>"
+  <i class="fa-regular fa-heart heart-icon-recommendation fs-1 <%= 'text-danger fa-solid vibrate' if current_user&.favorites.exists?(recommendation: recommendation) %>"
     data-controller="favorite"
     data-action="click->favorite#toggle"
     data-favorite-target="heart"
