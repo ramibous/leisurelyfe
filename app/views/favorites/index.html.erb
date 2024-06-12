@@ -1,17 +1,6 @@
 <div class="favorite-list container-padding">
   <h1 class='header-favorite'>My Favorites</h1>
   <% @favorites.each do |favorite| %>
-    <div class="favorite-item">
-      <img src="<%= favorite.recommendation.image_url %>" alt="<%= favorite.recommendation.name %>" class="card-image">
-      <div class="description-container container-margin">
-        <div>
-          <h3 class="restaurant-name"><%= favorite.recommendation.name %></h3>
-          <p class="truncated-description"><%= truncate(favorite.recommendation.description, length: 80) %></p>
-        </div>
-        <div class="container-button">
-          <button class="remove-favorite" data-recommendation-id="<%= favorite.recommendation.id %>"><i class="fa fa-remove"></i></button>
-        </div>
-      </div>
-    </div>
+    <%= render "recommendations/card", recommendation: favorite.recommendation, page: get_recommendation_card_page %>
   <% end %>
 </div>
