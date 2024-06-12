@@ -30,14 +30,14 @@
 
   <h1 class="search-recommendation">Search Results</h1>
    <%= render 'pages/icons' %>
-
-  <h3 class="opacity-50">There are <%= @recommendations.count %> results</h3>
+  <hr class="custom-hr">
+  <h3 class="opacity-25 my-3">There are <%= @recommendations.count %> results</h3>
 
   <% if @recommendations.any? %>
     <% @recommendations.each do |recommendation| %>
       <%= render "card", recommendation: recommendation,  page: get_recommendation_card_page %>
     <% end %>
   <% else %>
-    <p>No recommendation found.</p>
+    <%= image_tag "unknown.jpg", height: "100%", width: "100%", style: "border-radius: 50%", class: "opacity-50" %>
   <% end %>
 </div>

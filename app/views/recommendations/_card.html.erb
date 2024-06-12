@@ -3,12 +3,13 @@
 <%# - recommendation: instance of recommendation %>
 <%# - page: string containing the location where the card is being rendered. The possible values are: 'home', 'search_results' and 'favorite' %>
 <div class="search-item-recommendation">
-  <div class="image-container-recommendation">
+  <div class="image-container-recommendation" style="background-image: url(<%= recommendation.image_url %>)">
     <h2 class="description-name-recommendation"><%= recommendation.name %></h2>
-    <div class="rating-recommendation"><%= recommendation.rating %> <i class="fas fa-star"></i></div>
-    <img src="<%= recommendation.image_url %>" alt="">
-    <div class="overlay-icons-recommendation">
-      <%= render "recommendations/share_and_like_buttons", recommendation: recommendation %>
+    <div class="background-transparent">
+      <div class="rating-recommendation"><%= recommendation.rating %> <i class="fas fa-star"></i></div>
+      <div class="overlay-icons-recommendation">
+        <%= render "recommendations/share_and_like_buttons", recommendation: recommendation %>
+      </div>
     </div>
   </div>
   <div class="recommendation-labels d-flex justify-content-between opacity-50">
@@ -29,9 +30,12 @@
     </div>
   </div>
   <p class="description-recommendation"><%= truncate(recommendation.description, length: 100) %></p>
-  <%= link_to recommendation_path(recommendation), class: "text-decoration-none" do %>
-    <button class="btn-find-out-more-recommendation">Find Out More</button>
+  <% if page == "home" || page == "search_results" %>
+    <%= link_to recommendation_path(recommendation), class: "text-decoration-none" do %>
+     <button class="btn-find-out-more-recommendation">Find Out More</button>
+    <% end %>
   <% end %>
+  </div>
 </div>
 
 
