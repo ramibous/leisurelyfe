@@ -38,7 +38,6 @@ class RecommendationsController < ApplicationController
                        .limit(4)
 
     # This is for the map
-    @recommendations = Recommendation.all
     @markers = [{
       lat: @recommendation.latitude,
       lng: @recommendation.longitude,
