@@ -19,58 +19,57 @@
   </div>
 </div>
 
-<!-- Custom horizontal rule -->
-<hr class="custom-hr">
-
-<!-- Container for details section -->
-<div class="details-container">
-  <div style="width: 100%; height: 250px;"
-    data-controller="map"
-    data-map-markers-value="<%= @markers.to_json %>"
-    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-  </div>
-
-  <h3 class="colored-text">From $<%= @recommendation.price || @recommendation.price_range %> per adult</h3>
-
-  <h1 class="colored-text">What to expect</h1>
-  <div class="row mb-3 bg-secondary opacity-50 p-3">
-    <div class="col-6 text-center dog-icon">
-      <i class="fa-solid fa-dog opacity-50" style="font-size: 50px; color: white"></i>
-        <%= @recommendation.dog_friendly ? 'Yes' : 'No' %>
-    </div>
-    <div class="col-6 text-center kid-icon">
-      <i class="fa-solid fa-child-dress opacity-50" style="font-size: 50px; color: white"></i>
-        <%= @recommendation.kid_friendly ? 'Yes' : 'No' %>
-    </div>
-  </div>
-  <p><strong>Start time: </strong><%= @recommendation.start_time %></p>
-  <p><strong>End time: </strong><%= @recommendation.end_time %></p>
-
-  <h3 class="colored-text">Departure and return</h3>
-  <ul>
-    <li><%= @recommendation.address %></li>
-  </ul>
-
-  <h1 class="colored-text">About</h1>
-  <p class="quote-text"><i class="fa-solid fa-quote-left"></i> <%= @quote %> <i class="fa-solid fa-quote-right"></i></p>
-</div>
-
-<!-- Custom horizontal rule -->
-<hr class="custom-hr">
-
-<!-- Container for recommendation rows -->
-<div class="recommendations-container">
-  <h3 class="colored-text">Recommendations based on your likes</h3>
-  <div class="recommendations-row">
-    <% @recommendations.each do |recommendation| %>
-      <div class="recommendation-col">
-        <div class="recommendation-card">
-          <%= image_tag(recommendation.image_url, class: "recommendation-image") %>
-          <div class="recommendation-card-body">
-            <h5 class="recommendation-card-title"><%= recommendation.name %></h5>
-          </div>
+<%# We can still use the HR with custom-hr class if we want to  %>
+<div class="container text-center details-container">
+  <div class="row">
+    <div class="col-6 pt-3">
+      <div class="row text-center">
+        <div class="col">
+          <% if @recommendation.dog_friendly? %>
+            <i class="fa-solid fa-paw colored-text" style="font-size: 30px"></i>
+            <p class="colored-text">Pet</p>
+          <% else %>
+            <i class="fa-solid fa-paw colored-text opacity-25" style="font-size: 30px"></i>
+            <p class="colored-text">Pet</p>
+          <% end %>
+        </div>
+        <div class="col">
+          <% if @recommendation.kid_friendly? %>
+            <i class="fa-solid fa-child-reaching colored-text" style="font-size: 30px"></i>
+            <p class="colored-text">Kid</p>
+          <% else %>
+            <i class="fa-solid fa-child-reaching colored-text opacity-25" style="font-size: 30px"></i>
+            <p class="colored-text">Kid</p>
+          <% end %>
         </div>
       </div>
-    <% end %>
+      <hr class="custom-hr">
+      <h4 class="colored-text">Time</h4>
+      <div class="row text-center">
+        <div class="col">
+          <i class="fa-regular fa-clock colored-text"></i>
+          <p><%= @recommendation.start_time.strftime("%H:%M") %></p>
+        </div>
+        <div class="col">
+          <i class="fa-solid fa-clock colored-text"></i>
+          <p><%= @recommendation.end_time.strftime("%H:%M") %></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <h4 class="colored-text">About</h4>
+      <p class="colored-text quote-text"><i class="fa-solid fa-feather colored-text"></i><%= @quote %></p>
+    </div>
   </div>
 </div>
+
+
+<!-- Container for details section -->
+<div class="container" style="width: 100%; height: 250px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
+<!-- Custom horizontal rule -->
+
+<%# User the colored-text class for text-color  %>
