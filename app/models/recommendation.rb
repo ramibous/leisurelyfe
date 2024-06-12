@@ -16,8 +16,9 @@ class Recommendation < ApplicationRecord
     attraction: 40,
     kids_activity: 41,
     dog_activity: 42,
-    shopping: 50,
-    hotel: 60
+    biking: 43,
+    pets: 44,
+    shopping: 50
   }, _prefix: true, _default: :unknown
 
   pg_search_scope :search_by_name,
