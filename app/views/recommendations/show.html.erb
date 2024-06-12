@@ -15,21 +15,7 @@
     <% end %>
   </div>
   <div class="navigation-icons">
-    <i class="fa-solid fa-share-nodes"
-      data-controller="share-content"
-      data-action="click->share-content#fire"
-      data-share-content-title-value="<%= @recommendation.name %>"
-      data-share-content-text-value="<%= @recommendation.description %>"
-      data-share-content-url-value="<%= recommendation_url(@recommendation) %>"
-    >
-    </i>
-    <i class="fa-regular fa-heart heart-icon-recommendation <%= 'liked' if current_user&.favorites.exists?(recommendation: @recommendation) %>"
-       data-controller="favorite"
-       data-action="click->favorite#toggle"
-       data-favorite-target="heart"
-       data-recommendation-id="<%= @recommendation.id %>"
-    >
-    </i>
+    <%= render "recommendations/share_and_like_buttons", recommendation: @recommendation, page: "#{params[:controller]}-#{params[:action]} %>
   </div>
 </div>
 
