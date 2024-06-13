@@ -19,6 +19,7 @@ class Recommendation < ApplicationRecord
     dog_activity: 42,
     biking: 43,
     pets: 44,
+    outdoor: 45,
     shopping: 50
   }, _prefix: true, _default: :unknown
 
