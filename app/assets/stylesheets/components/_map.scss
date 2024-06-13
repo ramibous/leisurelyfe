@@ -1,0 +1,14 @@
+.custom-marker {
+    background-color: #ff6347; /* Tomato color for marker background */
+    border-radius: 50%; /* Make it circular */
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+    border: 2px solid white; /* White border for better visibility */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow for a nice 3D effect */
+  }
+  
