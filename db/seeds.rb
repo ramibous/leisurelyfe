@@ -151,6 +151,40 @@ Recommendation.create!(
   end_time: "15:00:00"
 )
 
+Recommendation.create!(
+  name: "Angrignon Park",
+  description: "A large park with walking trails and open spaces, perfect for dogs on leashes.",
+  category: :park,
+  price_range: "Free",
+  price: 0,
+  address: "3400 Boulevard Trinitaires, Montreal, Quebec H4E 4J3 Canada",
+  longitude: -73.614642,
+  latitude: 45.448631,
+  kid_friendly: true,
+  dog_friendly: true,
+  outdoor: true,
+  image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/BBQ_in_Angrignon_park_-_panoramio.jpg/1280px-BBQ_in_Angrignon_park_-_panoramio.jpg",
+  start_time: '2024-06-14 08:00:00',
+  end_time: '2024-06-14 21:00:00'
+)
+
+Recommendation.create!(
+  name: "Mount Royal Park",
+  description: "A large park with trails and a beautiful view of the city, perfect for walking dogs.",
+  category: :park,
+  price_range: "Free",
+  price: 0,
+  address: "1260 Remembrance Road, Montreal, Quebec H3H 1A2 Canada",
+  longitude: -73.58781,
+  latitude: 45.50169,
+  kid_friendly: true,
+  dog_friendly: true,
+  outdoor: true,
+  image_url: "https://a.travel-assets.com/findyours-php/viewfinder/images/res70/48000/48956-Montreal.jpg",
+  start_time: '2024-06-14 08:00:00',
+  end_time: '2024-06-14 20:00:00'
+)
+
 puts "Recommendations created successfully!"
 
 # Print final counts for verification
