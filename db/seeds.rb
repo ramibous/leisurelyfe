@@ -141,7 +141,7 @@ Recommendation.create!(
   address: "1310 Boulevard de Maisonneuve East Àu Coin De La Visitation, Montreal, Quebec H2L 2A5 Canada",
   longitude: -73.55661,
   latitude: 45.520016,
-  kid_friendly: false,
+  kid_friendly: true,
   dog_friendly: true,
   outdoor: true,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0f/d7/5d/54/la-terrasse.jpg",
