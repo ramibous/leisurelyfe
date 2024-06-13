@@ -2,7 +2,6 @@
 .show-container {
   position: relative;
   width: 100%;
-  margin-bottom: 20px;
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -58,11 +57,18 @@
 
 /* Container for navigation items */
 .navigation-container {
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
-  padding: 0 10px;
+  padding: 10px 10px;
+
+                      a {
+                        color: #5B7553;
+                        text-decoration: none;
+                        font-size: 1.5em;
+                        margin: 0 15px;
+                      }
 }
 
 /* Navigation item styles */
@@ -78,7 +84,6 @@
 .navigation-icons {
   display: flex;
   align-items: center;
-  gap: 15px;
 }
 
 .navigation-icons i {
