@@ -24,11 +24,15 @@
 <div class="container text-center details-container">
   <div class="row">
     <div>
+    <%# This is for the ABOUT %>
       <div class="px-5">
         <h1 class="colored-text">About</h1>
         <p class="colored-text"><i class="fa-solid fa-feather colored-text"></i>  <%= @recommendation.description %></p>
       </div>
-         <hr class="custom-hr">
+      <% if @recommendation.web_url? %>
+        <a href="<%= @recommendation.web_url %>" class="text-decoration-none">Website link</a>
+      <% end %>
+    <hr class="custom-hr">
     <%# This is for the dog and kid icons  %>
       <div class="row text-center justify-content-center">
         <div class="col-3">
