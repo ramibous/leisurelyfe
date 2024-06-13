@@ -17,7 +17,7 @@ Recommendation.create!(
   name: "Jean-Talon Market",
   description: "One of Montreal's largest public markets, known for fresh produce and local products.",
   category: :shopping,
-  price_range: "$5 - $100",
+  price_range: nil,
   price: 0,
   address: "7070 Avenue Henri-Julien, Montreal, Quebec H2S 3S3 Canada",
   longitude: -73.614685,
