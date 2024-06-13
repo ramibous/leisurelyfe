@@ -29,6 +29,16 @@ class RecommendationsController < ApplicationController
 
     # Paginary
     @recommendations = @recommendations.page params[:page]
+
+    # Prepare markers for the map
+    @markers = @recommendations.map do |recommendation|
+      {
+        lat: recommendation.latitude,
+        lng: recommendation.longitude,
+        info_window_html: render_to_string(partial: "recommendations/info_window", locals: { recommendation: recommendation }),
+        marker_html: render_to_string(partial: "recommendations/marker", locals: { recommendation: recommendation })
+      }
+    end
   end
 
   def show
@@ -44,6 +54,7 @@ class RecommendationsController < ApplicationController
     @markers = [{
       lat: @recommendation.latitude,
       lng: @recommendation.longitude,
+      info_window_html: render_to_string(partial: "recommendations/info_window", locals: { recommendation: @recommendation }),
       marker_html: render_to_string(partial: "recommendations/marker", locals: { recommendation: @recommendation })
     }]
   end
