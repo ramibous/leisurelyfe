@@ -24,81 +24,83 @@
 <div class="container text-center details-container">
   <div class="row">
     <div>
-    <%# This is for time TIME  %>
-        <h4 class="colored-text">Time</h4>
-        <div class="row text-center justify-content-center">
-        <% if @recommendation.start_time? && @recommendation.end_time? %>
-          <div class="col-3">
-            <i class="fa-regular fa-clock colored-text"></i>
-            <p><%= @recommendation.start_time.strftime("%H:%M") %></p>
-          </div>
-          <div class="col-3">
-            <i class="fa-solid fa-clock colored-text"></i>
-            <p><%= @recommendation.end_time.strftime("%H:%M") %></p>
-          </div>
-        <% else %>
-          <div class="col-3">
-            <i class="fa-regular fa-clock colored-text"></i>
-            <p>TBD</p>
-          </div>
-          <div class="col-3">
-            <i class="fa-solid fa-clock colored-text"></i>
-            <p>TBD</p>
-          </div>
-        <% end %>
-        </div>
-    <%# This is for the PRICE  %>
-        <hr class="custom-hr">
-        <h4 class="colored-text">Pricing</h4>
-        <div class="row text-center justify-content-center">
-        <% if @recommendation.price > 0 %>
-          <div class="col-5">
-            <p><%= @recommendation.price %> / person</p>
-          </div>
-        <% else %>
-          <div class="col-5">
-            <p>FREE ENTRY</p>
-          </div>
-        <% end %>
-        <% if @recommendation.price_range? %>
-          <div class="col-5">
-            <p><%= @recommendation.price_range %></p>
-          </div>
-        <% end %>
-        </div>
-        <hr class="custom-hr">
+      <div class="px-5">
+        <h1 class="colored-text">About</h1>
+        <p class="colored-text"><i class="fa-solid fa-feather colored-text"></i>  <%= @recommendation.description %></p>
+      </div>
+         <hr class="custom-hr">
     <%# This is for the dog and kid icons  %>
       <div class="row text-center justify-content-center">
-        <div class="col-5">
+        <div class="col-3">
           <% if @recommendation.dog_friendly? %>
-            <i class="fa-solid fa-paw colored-text" style="font-size: 30px"></i>
-            <p class="colored-text">Pet</p>
+            <i class="fa-solid fa-paw colored-text" style="font-size: 20px"></i>
+            <p class="colored-text mb-0">Pet</p>
           <% else %>
-            <i class="fa-solid fa-paw colored-text opacity-25" style="font-size: 30px"></i>
-            <p class="colored-text">Pet</p>
+            <i class="fa-solid fa-paw colored-text opacity-25" style="font-size: 20px"></i>
+            <p class="colored-text mb-0">Pet</p>
           <% end %>
         </div>
-        <div class="col-5">
+        <div class="col-3">
           <% if @recommendation.kid_friendly? %>
-            <i class="fa-solid fa-child-reaching colored-text" style="font-size: 30px"></i>
-            <p class="colored-text">Kid</p>
+            <i class="fa-solid fa-child-reaching colored-text" style="font-size: 20px"></i>
+            <p class="colored-text mb-0">Kid</p>
           <% else %>
-            <i class="fa-solid fa-child-reaching colored-text opacity-25" style="font-size: 30px"></i>
-            <p class="colored-text">Kid</p>
+            <i class="fa-solid fa-child-reaching colored-text opacity-25" style="font-size: 20px"></i>
+            <p class="colored-text mb-0">Kid</p>
           <% end %>
         </div>
       </div>
-
-    </div>
-    <div class="px-5">
-        <h4 class="colored-text">About</h4>
-        <p class="colored-text"><i class="fa-solid fa-feather colored-text"></i><%= @recommendation.description %></p>
+      <hr class="custom-hr">
+    <%# This is for the TIME and PRICING %>
+      <div class="row">
+        <div class="col-6">
+          <div class="row text-center justify-content-center">
+            <h5 class="colored-text">Time</h5>
+            <% if @recommendation.start_time? && @recommendation.end_time? %>
+              <div class="col-3">
+                <i class="fa-regular fa-clock colored-text"></i>
+                <p class="colored-text mb-0"><%= @recommendation.start_time.strftime("%H:%M") %></p>
+              </div>
+              <div class="col-3">
+                <i class="fa-solid fa-clock colored-text"></i>
+                <p class="colored-text mb-0"><%= @recommendation.end_time.strftime("%H:%M") %></p>
+              </div>
+            <% else %>
+              <div class="col-3">
+                <i class="fa-regular fa-clock colored-text"></i>
+                <p class="colored-text mb-0">TBD</p>
+              </div>
+              <div class="col-3">
+                <i class="fa-solid fa-clock colored-text"></i>
+                <p class="colored-text mb-0">TBD</p>
+              </div>
+            <% end %>
+            </div>
+        </div>
+        <div class="col-6">
+          <div class="row text-center justify-content-center">
+          <h5 class="colored-text">Pricing</h5>
+          <% if @recommendation.price > 0 %>
+            <div class="col">
+              <p class="colored-text mb-0">$<%= @recommendation.price %> / person</p>
+            </div>
+          <% else %>
+            <div class="col">
+              <p class="colored-text mb-0">FREE ENTRY</p>
+            </div>
+          <% end %>
+          <% if @recommendation.price_range? %>
+            <div class="col">
+              <p class="colored-text mb-0"><%= @recommendation.price_range %></p>
+            </div>
+          <% end %>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-
-<!-- Container for details section -->
 <!-- Container for details section -->
 <div class="container map-container" style="width: 100%; height: 250px;"
   data-controller="map"
