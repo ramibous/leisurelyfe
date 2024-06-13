@@ -46,6 +46,7 @@ Recommendation.create!(
   start_time: '2024-06-14 10:00:00',
   end_time: '2024-06-14 21:00:00'
 )
+
 Recommendation.create!(
   name: "Montreal: Ecomuseum Zoo",
   description: "See a variety of wildlife including Black Bear, Wolves, Foxes, Eagles and more",
@@ -66,6 +67,7 @@ Recommendation.create!(
   name: "Montreal: Private Day Tour to Parc Omega & Montebello Lodge",
   description: "Explore Montreal's beautiful surrounding areas on a private day tour",
   category: :zoo,
+  price_range: nil,
   price: 413,
   address: "399 Route 323 Nord, Montebello, QC J0V 1L0",
   longitude: -74.94370378742934,
@@ -77,6 +79,113 @@ Recommendation.create!(
   start_time: "11:00:00",
   end_time: "15:00:00"
 )
+
+Recommendation.create!(
+  name: "Angrignon Park",
+  description: "A large park with walking trails and open spaces, perfect for dogs on leashes.",
+  category: :park,
+  price_range: nil,
+  price: 0,
+  address: "3400 Boulevard Trinitaires, Montreal, Quebec H4E 4J3 Canada",
+  longitude: -73.614642,
+  latitude: 45.448631,
+  kid_friendly: true,
+  dog_friendly: true,
+  outdoor: true,
+  image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/BBQ_in_Angrignon_park_-_panoramio.jpg/1280px-BBQ_in_Angrignon_park_-_panoramio.jpg",
+  start_time: '2024-06-14 08:00:00',
+  end_time: '2024-06-14 21:00:00'
+)
+
+Recommendation.create!(
+  name: "Mount Royal Park",
+  description: "A large park with trails and a beautiful view of the city, perfect for walking dogs.",
+  category: :park,
+  price_range: nil,
+  price: 0,
+  address: "1260 Remembrance Road, Montreal, Quebec H3H 1A2 Canada",
+  longitude: -73.58781,
+  latitude: 45.50169,
+  kid_friendly: true,
+  dog_friendly: true,
+  outdoor: true,
+  image_url: "https://a.travel-assets.com/findyours-php/viewfinder/images/res70/48000/48956-Montreal.jpg",
+  start_time: '2024-06-14 08:00:00',
+  end_time: '2024-06-14 20:00:00'
+)
+
+Recommendation.create!(
+  name: "Au Pied de Cochon",
+  description: "Known for decadent foie gras poutine and other hearty Québécois dishes.",
+  category: :street_food,
+  price_range: "$10 - $15",
+  price: 0,
+  address: "536 Avenue Duluth E, Montreal, Quebec H2L 1A9 Canada",
+  longitude: -73.57696,
+  latitude: 45.51995,
+  kid_friendly: true,
+  dog_friendly: false,
+  outdoor: false,
+  image_url: "https://resizer.otstatic.com/v2/photos/wide-huge/1/59854044.jpg",
+  start_time: '2024-06-14 17:00:00',
+  end_time: '2024-06-14 23:00:00',
+  rating: 4
+)
+
+Recommendation.create!(
+  name: "La Banquise",
+  description: "Iconic spot for poutine, offering a variety of toppings and combinations.",
+  category: :street_food,
+  price_range: "$12 -$15",
+  price: 0,
+  address: "994 Rue Rachel E, Montreal, Quebec H2J 2J3 Canada",
+  longitude: -73.57537,
+  latitude: 45.53365,
+  kid_friendly: true,
+  dog_friendly: false,
+  outdoor: false,
+  image_url: "https://offloadmedia.feverup.com/secretldn.com/wp-content/uploads/2021/05/25131508/shutterstock_1184320111-2.jpg",
+  start_time: '2024-06-14 11:00:00',
+  end_time: '2024-06-14 23:00:00',
+  rating: 4
+)
+
+Recommendation.create!(
+  name: "Montreal Biodome",
+  description: "Ecosystems from the Americas under one roof, featuring animals, plants, and interactive exhibits.",
+  category: :kids_activity,
+  price_range: "$25 - $50",
+  price: 0,
+  address: "4777 Avenue Pierre-De Coubertin, Montreal, Quebec H1V 1B3 Canada",
+  longitude: -73.55107,
+  latitude: 45.55911,
+  kid_friendly: true,
+  dog_friendly: false,
+  outdoor: false,
+  image_url: "https://www.mtl.org/sites/default/files/styles/playlist_banner_big/public/2022-12/45984.jpg?itok=w0m_UXTG",
+  start_time: '2024-06-14 09:00:00',
+  end_time: '2024-06-14 18:00:00',
+  rating: 4
+)
+
+Recommendation.create!(
+  name: "Montreal Science Centre",
+  description: "Interactive science museum with hands-on exhibits and an IMAX theatre.",
+  category: :kids_activity,
+  price_range: nil,
+  price: 20,
+  address: "2 Rue de la Commune O, Montreal, Quebec H2Y 4B2 Canada",
+  longitude: -73.55482,
+  latitude: 45.50687,
+  kid_friendly: true,
+  dog_friendly: false,
+  outdoor: false,
+  image_url: "https://www.montrealsciencecentre.com/sites/default/files/styles/440_320/public/2020-10/digimg_8918v2_0.jpeg?h=c1f10704&itok=jkKOEJ4F",
+  start_time: '2024-06-14 10:00:00',
+  end_time: '2024-06-14 17:00:00',
+  rating: 4
+)
+
 puts "Recommendations created successfully!"
 
 # Print final counts for verification
