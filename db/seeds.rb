@@ -27,7 +27,8 @@ Recommendation.create!(
   outdoor: true,
   image_url: "https://images.happycow.net/venues/1024/13/61/hcmp136172_1332951.jpeg",
   start_time: '2024-06-14 08:00:00',
-  end_time: '2024-06-14 18:00:00'
+  end_time: '2024-06-14 18:00:00',
+  rating: 4
 )
 
 Recommendation.create!(
@@ -44,7 +45,8 @@ Recommendation.create!(
   outdoor: false,
   image_url: "https://smartcdn.gprod.postmedia.digital/nationalpost/wp-content/uploads/2012/05/eaton.jpg",
   start_time: '2024-06-14 10:00:00',
-  end_time: '2024-06-14 21:00:00'
+  end_time: '2024-06-14 21:00:00',
+  rating: 3
 )
 
 Recommendation.create!(
@@ -61,8 +63,28 @@ Recommendation.create!(
   outdoor: false,
   image_url: "https://media-cdn.tripadvisor.com/media/photo-o/08/8f/0a/18/boustan.jpg",
   start_time: '11:30:00',
-  end_time: '15:00:00'
+  end_time: '15:00:00',
+  rating: 4
 )
+Recommendation.create!(
+  name: "La Boulette",
+  description: "Popular spot for gourmet burgers and fries.",
+  category: :restaurant,
+  price_range: "$$ - $$$",
+  price: 50,
+  address: "2223 Rue Beaubien E, Montreal, Quebec H2G 1M8 Canada",
+  longitude: -73.5937,
+  latitude: 45.546574,
+  kid_friendly: false,
+  dog_friendly: true,
+  outdoor: true,
+  image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0f/14/36/55/img-20170408-192159-516.jpg",
+  start_time: '11:30:00',
+  end_time: '15:00:00',
+  rating: 4
+)
+
+
 
 Recommendation.create!(
   name: "Montreal Botanical Garden",
@@ -80,7 +102,9 @@ Recommendation.create!(
   start_time: "09:00:00",
   end_time: "17:00:00",
   web_url: "https://www.espacepourlavie.ca/en/botanical-garden",
-  )
+  rating: 2
+)
+
 
 Recommendation.create!(
   name: " Bike Tour: Downtown, Old Montreal, Waterfront",
@@ -97,8 +121,10 @@ Recommendation.create!(
   image_url: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/09/34/5d/63.jpg",
   start_time: "10:00:00",
   end_time: "15:00:00",
-  web_url: "https://www.tripadvisor.ca/AttractionProductReview-g155032-d12027499-Montreal_Highlights_Bike_Tour_Downtown_Old_Montreal_Waterfront-Montreal_Quebec.html"
-  )
+  web_url: "https://www.tripadvisor.ca/AttractionProductReview-g155032-d12027499-Montreal_Highlights_Bike_Tour_Downtown_Old_Montreal_Waterfront-Montreal_Quebec.html",
+  rating: 4
+)
+
 
 Recommendation.create!(
   name: " 3 Hour Montreal City Bike Tour with Wine or Beer",
@@ -116,8 +142,10 @@ Recommendation.create!(
   image_url: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/06/6e/e2/ef.jpg",
   start_time: "10:00:00",
   end_time: "15:00:00",
-  web_url:"https://www.tripadvisor.ca/AttractionProductReview-g155032-d11451195-3_Hour_Montreal_City_Bike_Tour_with_Wine_or_Beer_AM_PM-Montreal_Quebec.html"
-  )
+  web_url:"https://www.tripadvisor.ca/AttractionProductReview-g155032-d11451195-3_Hour_Montreal_City_Bike_Tour_with_Wine_or_Beer_AM_PM-Montreal_Quebec.html",
+  rating: 3
+)
+
 
 Recommendation.create!(
   name: "Montreal: Ecomuseum Zoo",
@@ -133,7 +161,8 @@ Recommendation.create!(
   outdoor: true,
   image_url: "https://cdn.getyourguide.com/img/tour/8901013b6cc7e4694f3ebff617429974203d559a45e8386cbc0e93a1c992bbda.jpeg/145.jpg",
   start_time: "11:00:00",
-  end_time: "15:00:00"
+  end_time: "15:00:00",
+  rating: 3
 )
 
 Recommendation.create!(
@@ -150,9 +179,68 @@ Recommendation.create!(
   outdoor: true,
   image_url: "https://cdn.getyourguide.com/img/tour/5e50ac8a822ce.jpeg/145.jpg",
   start_time: "11:00:00",
-  end_time: "15:00:00"
+  end_time: "15:00:00",
+  rating: 4
 )
 
+Recommendation.create!(
+  name: "TourBird",
+  description: "Discover Montreal in a unique way with TourBird, offering tailored tours to explore the city.",
+  category: "event",
+  price_range: nil,
+  price: 86,
+  address: "Montreal, Quebec Canada",
+  longitude: -73.5678,
+  latitude: 45.5088,
+  kid_friendly: true,
+  dog_friendly: false,
+  outdoor: true,
+  image_url: "https://media-cdn.tripadvisor.com/media/photo-m/1280/29/4b/29/5e/caption.jpg",
+  start_time: "14:30",
+  end_time: "18:00",
+  web_url: "https://www.tripadvisor.com/Attraction_Review-g155032-d26168392-Reviews-TourBird-Montreal_Quebec.html",
+  rating: 5
+)
+
+Recommendation.create!(
+  name: "Plateau Mont-Royal",
+  description: "Mount Royal is a mountain in the city of Montreal, immediately west of Downtown Montreal, Quebec, Canada. The city's name is derived from the mountain's name. ",
+  category: "outdoor",
+  price_range: nil,
+  price: 0,
+  address: "Montreal, Quebec Canada",
+  longitude: -73.57095,
+  latitude: 45.51545,
+  kid_friendly: true,
+  dog_friendly: false,
+  outdoor: true,
+  image_url: "https://media-cdn.tripadvisor.com/media/photo-o/10/bf/31/8b/plateau-mont-royal.jpg",
+  start_time: "14:30",
+  end_time: "18:00",
+  web_url: "https://www.tripadvisor.com/Attraction_Review-g155032-d280137-Reviews-Plateau_Mont_Royal-Montreal_Quebec.html",
+  rating: 4
+)
+
+Recommendation.create!(
+  name: "Quartier des Spectacles",
+  description: "Quartier des Spectacles has been Montreal's cultural heart for more than a century. Today, the entertainment district boasts North America's most concentrated and diverse group of cultural venues, making Montreal one of the world's great cultural metropolises. As an exceptional creative space open to artistic diversity, it is the year-round host to countless festivals and events, many of which include free outdoor shows and activities.****Depuis plus de 100 ans, le Quartier des spectacles constitue le coeur culturel de Montreal.Il offre aujourd'hui la plus grande concentration et diversite de lieux de diffusion culturelle en Amerique du Nord, ce qui fait de Montreal une metropole culturelle incontournable dans le monde. Lieu de creation exceptionnel ouvert a la diversite artistique et au metissage culturel, il est anime toute l'annee par un grand nombre de festivals et d'evenements, qui comportent une importante programmation exterieure gratuite.",
+  category: "attraction",
+  price_range: nil,
+  price: 0,
+  address: "1435, rue Saint-Alexandre, Montreal, Quebec H3A 2G4 Canada",
+  longitude: -73.568344,
+  latitude: 45.504177,
+  kid_friendly: true,
+  dog_friendly: false,
+  outdoor: false,
+  image_url: "https://media-cdn.tripadvisor.com/media/photo-m/1280/24/51/c9/91/located-in-downtown-montreal.jpg",
+  start_time: "14:30",
+  end_time: "18:00",
+  web_url: "https://www.tripadvisor.com/Attraction_Review-g155032-d6116892-Reviews-Quartier_des_Spectacles-Montreal_Quebec.html",
+  email: "info@quartierdesspectacles.com",
+  phone: "+1 514-879-0009",
+  rating: 4
+)
 Recommendation.create!(
   name: "Angrignon Park",
   description: "A large park with walking trails and open spaces, perfect for dogs on leashes.",
@@ -167,7 +255,8 @@ Recommendation.create!(
   outdoor: true,
   image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/BBQ_in_Angrignon_park_-_panoramio.jpg/1280px-BBQ_in_Angrignon_park_-_panoramio.jpg",
   start_time: '2024-06-14 08:00:00',
-  end_time: '2024-06-14 21:00:00'
+  end_time: '2024-06-14 21:00:00',
+  rating: 5
 )
 
 Recommendation.create!(
@@ -184,7 +273,8 @@ Recommendation.create!(
   outdoor: true,
   image_url: "https://a.travel-assets.com/findyours-php/viewfinder/images/res70/48000/48956-Montreal.jpg",
   start_time: '2024-06-14 08:00:00',
-  end_time: '2024-06-14 20:00:00'
+  end_time: '2024-06-14 20:00:00',
+  rating: 4
 )
 
 Recommendation.create!(

@@ -131,7 +131,7 @@ color: #ffffff;;
 .recommendation-category-label {
   padding: 5px 10px;
   border-radius: 5px;
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 0.9em;
   font-weight: bold;
   display: inline-block;
@@ -160,6 +160,18 @@ color: #ffffff;;
 }
 .label-kids_activity {
   background-color: chocolate;
+}
+
+.label-outdoor {
+  background-color: #234a69;
+}
+
+.label-park {
+  background-color: #fd057d;
+} 
+
+.label-biking {
+  background-color: #7e7e27;
 }
 
 .label-shopping {
