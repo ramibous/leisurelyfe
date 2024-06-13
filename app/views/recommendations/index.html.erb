@@ -3,7 +3,7 @@
     <i class="fas fa-sliders-h filter-icon"></i>
   </div>
 
-  <!-- Modal Structure -->
+  <!-- Filter Modal Structure -->
   <div class="modal" data-filter-target="modal">
     <div class="modal-content" data-filter-target="modalContent">
       <span class="close-button" data-action="click->filter#closeModal">&times;</span>
@@ -29,13 +29,107 @@
   </div>
 
   <h1 class="search-recommendation">Search Results</h1>
-   <%= render 'pages/icons' %>
+  <%= render 'pages/icons' %>
+
+  <!-- Icon to toggle the map -->
+  <div class="map-toggle-icon" data-bs-toggle="collapse" data-bs-target="#mapDropdown" aria-expanded="false" aria-controls="mapDropdown">
+    <i class="fas fa-map-marked-alt"></i>
+  </div>
+
+  <!-- Map Dropdown Structure -->
+  <div class="collapse" id="mapDropdown">
+    <div class="card card-body">
+      <div id="map" style="width: 100%; height: 500px;"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+    </div>
+  </div>
+
+  <style>
+    #map {
+      width: 100%;
+      height: 500px; /* Adjust the height as needed */
+    }
+
+    .map-toggle-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      background-color: #5B7553; /* Updated color */
+      color: white;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+      margin: 10px auto; /* Center horizontally with some margin */
+    }
+
+    .map-toggle-icon i {
+      font-size: 24px;
+    }
+
+    .map-toggle-icon:hover {
+      background-color: #3e5a39; /* Slightly darker for hover effect */
+      transform: scale(1.1);
+    }
+
+    .map-toggle-icon:active {
+      transform: scale(0.95);
+    }
+    .confirmation-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 300px;
+  text-align: center;
+  padding: 20px;
+}
+
+.confirmation-popup-content {
+  margin: 10px;
+}
+
+.confirmation-popup-content p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.confirmation-popup-content button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#confirmBtn {
+  background-color: #5B7553;
+  color: white;
+}
+
+#cancelBtn {
+  background-color: #ccc;
+  color: black;
+}
+
+  </style>
+
   <hr class="custom-hr">
   <h3 class="opacity-25 my-3">There are <%= @recommendations.count %> results</h3>
 
   <% if @recommendations.any? %>
     <% @recommendations.each do |recommendation| %>
-      <%= render "card", recommendation: recommendation,  page: get_recommendation_card_page %>
+      <%= render "card", recommendation: recommendation, page: get_recommendation_card_page %>
     <% end %>
     <div class="container">
       <%= paginate @recommendations, theme: 'bootstrap-5',
