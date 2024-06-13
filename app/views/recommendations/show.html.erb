@@ -78,7 +78,7 @@
             <p class="colored-text">Pet</p>
           <% end %>
         </div>
-        <div class="col-3">
+        <div class="col-5">
           <% if @recommendation.kid_friendly? %>
             <i class="fa-solid fa-child-reaching colored-text" style="font-size: 30px"></i>
             <p class="colored-text">Kid</p>
@@ -105,7 +105,5 @@
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
-
-<%= render 'card_slider' %>
 
 <%= render 'card_slider' %>
