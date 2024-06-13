@@ -17,7 +17,7 @@ Recommendation.create!(
   name: "Jean-Talon Market",
   description: "One of Montreal's largest public markets, known for fresh produce and local products.",
   category: :shopping,
-  price_range: "$5 - $$$",
+  price_range: "$5 - $100",
   price: 0,
   address: "7070 Avenue Henri-Julien, Montreal, Quebec H2S 3S3 Canada",
   longitude: -73.614685,
@@ -35,8 +35,8 @@ Recommendation.create!(
   name: "Montreal Eaton Centre",
   description: "A large shopping mall with a variety of stores, food court, and services.",
   category: :shopping,
-  price_range: "$ - $$$",
-  price: 5,
+  price_range: "$50 - $150",
+  price: 0,
   address: "705 Rue Sainte-Catherine O, Montreal, Quebec H3B 4G5 Canada",
   longitude: -73.571404,
   latitude: 45.502586,
@@ -151,6 +151,7 @@ Recommendation.create!(
   name: "Montreal: Ecomuseum Zoo",
   description: "See a variety of wildlife including Black Bear, Wolves, Foxes, Eagles and more",
   category: :zoo,
+  price_range: nil,
   price: 24.75,
   address: "21125 Sainte Marie Rd, Sainte-Anne-de-Bellevue, Quebec H9X 3Y7",
   longitude: -73.93478780707474,
@@ -168,6 +169,7 @@ Recommendation.create!(
   name: "Montreal: Private Day Tour to Parc Omega & Montebello Lodge",
   description: "Explore Montreal's beautiful surrounding areas on a private day tour",
   category: :zoo,
+  price_range: nil,
   price: 413,
   address: "399 Route 323 Nord, Montebello, QC J0V 1L0",
   longitude: -74.94370378742934,
@@ -182,22 +184,22 @@ Recommendation.create!(
 )
 
 Recommendation.create!(
-name: "TourBird",
-description: "Discover Montreal in a unique way with TourBird, offering tailored tours to explore the city.",
-category: "event",
-price_range: nil,
-price: 86,
-address: "Montreal, Quebec Canada",
-longitude: -73.5678,
-latitude: 45.5088,
-kid_friendly: true,
-dog_friendly: false,
-outdoor: true,
-image_url: "https://media-cdn.tripadvisor.com/media/photo-m/1280/29/4b/29/5e/caption.jpg",
-start_time: "14:30",
-end_time: "18:00",
-web_url: "https://www.tripadvisor.com/Attraction_Review-g155032-d26168392-Reviews-TourBird-Montreal_Quebec.html",
-rating: 5
+  name: "TourBird",
+  description: "Discover Montreal in a unique way with TourBird, offering tailored tours to explore the city.",
+  category: "event",
+  price_range: nil,
+  price: 86,
+  address: "Montreal, Quebec Canada",
+  longitude: -73.5678,
+  latitude: 45.5088,
+  kid_friendly: true,
+  dog_friendly: false,
+  outdoor: true,
+  image_url: "https://media-cdn.tripadvisor.com/media/photo-m/1280/29/4b/29/5e/caption.jpg",
+  start_time: "14:30",
+  end_time: "18:00",
+  web_url: "https://www.tripadvisor.com/Attraction_Review-g155032-d26168392-Reviews-TourBird-Montreal_Quebec.html",
+  rating: 5
 )
 
 Recommendation.create!(
@@ -216,30 +218,137 @@ Recommendation.create!(
   start_time: "14:30",
   end_time: "18:00",
   web_url: "https://www.tripadvisor.com/Attraction_Review-g155032-d280137-Reviews-Plateau_Mont_Royal-Montreal_Quebec.html",
-  rating: 4.5
+  rating: 4
 )
 
 Recommendation.create!(
   name: "Quartier des Spectacles",
-    description: "Quartier des Spectacles has been Montreal's cultural heart for more than a century. Today, the entertainment district boasts North America's most concentrated and diverse group of cultural venues, making Montreal one of the world's great cultural metropolises. As an exceptional creative space open to artistic diversity, it is the year-round host to countless festivals and events, many of which include free outdoor shows and activities.****Depuis plus de 100 ans, le Quartier des spectacles constitue le coeur culturel de Montreal.Il offre aujourd'hui la plus grande concentration et diversite de lieux de diffusion culturelle en Amerique du Nord, ce qui fait de Montreal une metropole culturelle incontournable dans le monde. Lieu de creation exceptionnel ouvert a la diversite artistique et au metissage culturel, il est anime toute l'annee par un grand nombre de festivals et d'evenements, qui comportent une importante programmation exterieure gratuite.",
-    category: "attraction",
-    price_range: nil,
-    price: 0,
-    address: "1435, rue Saint-Alexandre, Montreal, Quebec H3A 2G4 Canada",
-    longitude: -73.568344,
-    latitude: 45.504177,
-    kid_friendly: true,
-    dog_friendly: false,
-    outdoor: false,
-    image_url: "https://media-cdn.tripadvisor.com/media/photo-m/1280/24/51/c9/91/located-in-downtown-montreal.jpg",
-    start_time: "14:30",
-    end_time: "18:00",
-    web_url: "https://www.tripadvisor.com/Attraction_Review-g155032-d6116892-Reviews-Quartier_des_Spectacles-Montreal_Quebec.html",
-    email: "info@quartierdesspectacles.com",
-    phone: "+1 514-879-0009",
-    ranking_position: 22,
-    rating: 4.5
+  description: "Quartier des Spectacles has been Montreal's cultural heart for more than a century. Today, the entertainment district boasts North America's most concentrated and diverse group of cultural venues, making Montreal one of the world's great cultural metropolises. As an exceptional creative space open to artistic diversity, it is the year-round host to countless festivals and events, many of which include free outdoor shows and activities.****Depuis plus de 100 ans, le Quartier des spectacles constitue le coeur culturel de Montreal.Il offre aujourd'hui la plus grande concentration et diversite de lieux de diffusion culturelle en Amerique du Nord, ce qui fait de Montreal une metropole culturelle incontournable dans le monde. Lieu de creation exceptionnel ouvert a la diversite artistique et au metissage culturel, il est anime toute l'annee par un grand nombre de festivals et d'evenements, qui comportent une importante programmation exterieure gratuite.",
+  category: "attraction",
+  price_range: nil,
+  price: 0,
+  address: "1435, rue Saint-Alexandre, Montreal, Quebec H3A 2G4 Canada",
+  longitude: -73.568344,
+  latitude: 45.504177,
+  kid_friendly: true,
+  dog_friendly: false,
+  outdoor: false,
+  image_url: "https://media-cdn.tripadvisor.com/media/photo-m/1280/24/51/c9/91/located-in-downtown-montreal.jpg",
+  start_time: "14:30",
+  end_time: "18:00",
+  web_url: "https://www.tripadvisor.com/Attraction_Review-g155032-d6116892-Reviews-Quartier_des_Spectacles-Montreal_Quebec.html",
+  email: "info@quartierdesspectacles.com",
+  phone: "+1 514-879-0009",
+  rating: 4
 )
+Recommendation.create!(
+  name: "Angrignon Park",
+  description: "A large park with walking trails and open spaces, perfect for dogs on leashes.",
+  category: :park,
+  price_range: nil,
+  price: 0,
+  address: "3400 Boulevard Trinitaires, Montreal, Quebec H4E 4J3 Canada",
+  longitude: -73.614642,
+  latitude: 45.448631,
+  kid_friendly: true,
+  dog_friendly: true,
+  outdoor: true,
+  image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/BBQ_in_Angrignon_park_-_panoramio.jpg/1280px-BBQ_in_Angrignon_park_-_panoramio.jpg",
+  start_time: '2024-06-14 08:00:00',
+  end_time: '2024-06-14 21:00:00',
+  rating: 5
+)
+
+Recommendation.create!(
+  name: "Mount Royal Park",
+  description: "A large park with trails and a beautiful view of the city, perfect for walking dogs.",
+  category: :park,
+  price_range: nil,
+  price: 0,
+  address: "1260 Remembrance Road, Montreal, Quebec H3H 1A2 Canada",
+  longitude: -73.58781,
+  latitude: 45.50169,
+  kid_friendly: true,
+  dog_friendly: true,
+  outdoor: true,
+  image_url: "https://a.travel-assets.com/findyours-php/viewfinder/images/res70/48000/48956-Montreal.jpg",
+  start_time: '2024-06-14 08:00:00',
+  end_time: '2024-06-14 20:00:00',
+  rating: 4
+)
+
+Recommendation.create!(
+  name: "Au Pied de Cochon",
+  description: "Known for decadent foie gras poutine and other hearty Québécois dishes.",
+  category: :street_food,
+  price_range: "$10 - $15",
+  price: 0,
+  address: "536 Avenue Duluth E, Montreal, Quebec H2L 1A9 Canada",
+  longitude: -73.57696,
+  latitude: 45.51995,
+  kid_friendly: true,
+  dog_friendly: false,
+  outdoor: false,
+  image_url: "https://resizer.otstatic.com/v2/photos/wide-huge/1/59854044.jpg",
+  start_time: '2024-06-14 17:00:00',
+  end_time: '2024-06-14 23:00:00',
+  rating: 4
+)
+
+Recommendation.create!(
+  name: "La Banquise",
+  description: "Iconic spot for poutine, offering a variety of toppings and combinations.",
+  category: :street_food,
+  price_range: "$12 -$15",
+  price: 0,
+  address: "994 Rue Rachel E, Montreal, Quebec H2J 2J3 Canada",
+  longitude: -73.57537,
+  latitude: 45.53365,
+  kid_friendly: true,
+  dog_friendly: false,
+  outdoor: false,
+  image_url: "https://offloadmedia.feverup.com/secretldn.com/wp-content/uploads/2021/05/25131508/shutterstock_1184320111-2.jpg",
+  start_time: '2024-06-14 11:00:00',
+  end_time: '2024-06-14 23:00:00',
+  rating: 4
+)
+
+Recommendation.create!(
+  name: "Montreal Biodome",
+  description: "Ecosystems from the Americas under one roof, featuring animals, plants, and interactive exhibits.",
+  category: :kids_activity,
+  price_range: "$25 - $50",
+  price: 0,
+  address: "4777 Avenue Pierre-De Coubertin, Montreal, Quebec H1V 1B3 Canada",
+  longitude: -73.55107,
+  latitude: 45.55911,
+  kid_friendly: true,
+  dog_friendly: false,
+  outdoor: false,
+  image_url: "https://www.mtl.org/sites/default/files/styles/playlist_banner_big/public/2022-12/45984.jpg?itok=w0m_UXTG",
+  start_time: '2024-06-14 09:00:00',
+  end_time: '2024-06-14 18:00:00',
+  rating: 4
+)
+
+Recommendation.create!(
+  name: "Montreal Science Centre",
+  description: "Interactive science museum with hands-on exhibits and an IMAX theatre.",
+  category: :kids_activity,
+  price_range: nil,
+  price: 20,
+  address: "2 Rue de la Commune O, Montreal, Quebec H2Y 4B2 Canada",
+  longitude: -73.55482,
+  latitude: 45.50687,
+  kid_friendly: true,
+  dog_friendly: false,
+  outdoor: false,
+  image_url: "https://www.montrealsciencecentre.com/sites/default/files/styles/440_320/public/2020-10/digimg_8918v2_0.jpeg?h=c1f10704&itok=jkKOEJ4F",
+  start_time: '2024-06-14 10:00:00',
+  end_time: '2024-06-14 17:00:00',
+  rating: 4
+)
+
 puts "Recommendations created successfully!"
 
 # Print final counts for verification

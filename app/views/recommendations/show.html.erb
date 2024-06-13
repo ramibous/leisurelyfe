@@ -24,6 +24,7 @@
 <div class="container text-center details-container">
   <div class="row">
     <div>
+    <%# This is for time TIME  %>
         <h4 class="colored-text">Time</h4>
         <div class="row text-center justify-content-center">
         <% if @recommendation.start_time? && @recommendation.end_time? %>
@@ -46,10 +47,29 @@
           </div>
         <% end %>
         </div>
+    <%# This is for the PRICE  %>
         <hr class="custom-hr">
-
+        <h4 class="colored-text">Pricing</h4>
+        <div class="row text-center justify-content-center">
+        <% if @recommendation.price > 0 %>
+          <div class="col-5">
+            <p><%= @recommendation.price %> / person</p>
+          </div>
+        <% else %>
+          <div class="col-5">
+            <p>FREE ENTRY</p>
+          </div>
+        <% end %>
+        <% if @recommendation.price_range? %>
+          <div class="col-5">
+            <p><%= @recommendation.price_range %></p>
+          </div>
+        <% end %>
+        </div>
+        <hr class="custom-hr">
+    <%# This is for the dog and kid icons  %>
       <div class="row text-center justify-content-center">
-        <div class="col-3">
+        <div class="col-5">
           <% if @recommendation.dog_friendly? %>
             <i class="fa-solid fa-paw colored-text" style="font-size: 30px"></i>
             <p class="colored-text">Pet</p>
@@ -58,7 +78,7 @@
             <p class="colored-text">Pet</p>
           <% end %>
         </div>
-        <div class="col-3">
+        <div class="col-5">
           <% if @recommendation.kid_friendly? %>
             <i class="fa-solid fa-child-reaching colored-text" style="font-size: 30px"></i>
             <p class="colored-text">Kid</p>
@@ -85,7 +105,5 @@
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
-
-<%= render 'card_slider' %>
 
 <%= render 'card_slider' %>
