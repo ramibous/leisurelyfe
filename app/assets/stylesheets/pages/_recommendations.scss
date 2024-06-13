@@ -64,6 +64,19 @@
   z-index: 3;
 }
 
+.rating-star {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px;
+  font-size: 1.5em;
+  color: white;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  z-index: 3;
+}
+
 .rating-recommendation {
   position: absolute;
   top: 10px;
@@ -95,11 +108,16 @@
   z-index: 3;
 }
 
+
 .overlay-icons-recommendation .heart-icon-recommendation {
   color: white;
   font-size: 18px;
   cursor: pointer;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+.overlay-icons-recommendation .fa-solid{
+color: #ffffff;;
+
 }
 
 .recommendation-labels {
@@ -141,6 +159,14 @@
   font-size: 18px;
 }
 
+.label-shopping {
+  background-color: #9824ce;
+}
+
+.label-zoo {
+  background-color: #6d4caf;
+}
+
 .label-restaurant {
   background-color: #4CAF50;
 }
@@ -158,7 +184,7 @@
 }
 
 .description-recommendation {
-  margin: 10px 20px 0;
+  margin-bottom: 15px;
   font-size: 1.1em;
   color: #394867;
   line-height: 1.6;
@@ -168,7 +194,6 @@
 
 .btn-find-out-more-recommendation {
   width: 100%;
-  margin-top: 20px;
   padding: 10px 20px;
   font-size: 1em;
   background-color: #5B7553;

@@ -13,22 +13,38 @@ puts "Done!"
 
 puts "Creating recommendations..."
 
+Recommendation.create!(
+  name: "Jean-Talon Market",
+  description: "One of Montreal's largest public markets, known for fresh produce and local products.",
+  category: :shopping,
+  price_range: "$5 - $$$",
+  price: 0,
+  address: "7070 Avenue Henri-Julien, Montreal, Quebec H2S 3S3 Canada",
+  longitude: -73.614685,
+  latitude: 45.536241,
+  kid_friendly: true,
+  dog_friendly: true,
+  outdoor: true,
+  image_url: "https://images.happycow.net/venues/1024/13/61/hcmp136172_1332951.jpeg",
+  start_time: '2024-06-14 08:00:00',
+  end_time: '2024-06-14 18:00:00'
+)
 
 Recommendation.create!(
-  name: "Saiko Bistrot Izakaya",
-  description: "The first Japanese gastro-bistro in the heart of the business district, Saikō Bistrot offers a distinctive dining experience. You will find traditional Japanese dishes from chefs Shatoshi and Shin Ichi-san. Saikō Bistrot is one of the first restaurants in Montreal that combines a sushi house and a Japanese bistro.",
-  category: :restaurant,
-  price_range: "$$ - $$$",
-  price: 35,
-  address: "1065 Cote Du Beaver-hall, Montreal, Quebec H2Z 1S5 Canada",
-  longitude: -73.56474,
-  latitude: 45.502373,
+  name: "Montreal Eaton Centre",
+  description: "A large shopping mall with a variety of stores, food court, and services.",
+  category: :shopping,
+  price_range: "$ - $$$",
+  price: 5,
+  address: "705 Rue Sainte-Catherine O, Montreal, Quebec H3B 4G5 Canada",
+  longitude: -73.571404,
+  latitude: 45.502586,
   kid_friendly: true,
   dog_friendly: false,
   outdoor: false,
-  image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/c9/53/cd/view-from-inside.jpg?w=1100&h=-1&s=1",
-  start_time: '2024-06-13 11:30:00',
-  end_time: '2024-06-13 15:00:00'
+  image_url: "https://smartcdn.gprod.postmedia.digital/nationalpost/wp-content/uploads/2012/05/eaton.jpg",
+  start_time: '2024-06-14 10:00:00',
+  end_time: '2024-06-14 21:00:00'
 )
 
 Recommendation.create!(
@@ -65,62 +81,75 @@ Recommendation.create!(
   end_time: "17:00:00",
   web_url: "https://www.espacepourlavie.ca/en/botanical-garden",
   )
-  Recommendation.create!(
-    name: "Chateau Ramezay Historic Site and Museum of Montreal",
-    description: "Historic Site and Museum of Montreal. Visit Montreal’s portal to its past, the first building in Quebec to be classified an historic monument! Chosen as one of the 1001 Historic Sites You Must See Before You Die, the Château Ramezay invites you to relive, with its rich collections and multiple exhibitions, over 500 years of history, from pre-contact to the 20th century. In addition to the multimedia displays’ historical figures, costumed animators and guides will transport you through time. From the sumptuous Salle de Nantes, to the vaults where splendors and misery of New France come to life, and with the beautiful Governor’s Garden as a bonus – this is a not-to-be-missed landmark in the heart of Old Montreal!",
-    category: "park",
-    price_range: "$",
-    price: 10,
-    address: "200 rue Notre-Dame O, Montreal, Quebec H2Y 1Z5 Canada",
-    longitude: -73.55483899346075,
-    latitude: 45.51278140190878,
-    kid_friendly: true,
-    dog_friendly: false,
-    outdoor: true,
-    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/e0/7a/b2/le-chateau-ramesay-un.jpg?w=1400&h=-1&s=1",
-    start_time: "09:00:00",
-    end_time: "17:00:00",
-    web_url: "https://www.espacepourlavie.ca/en/botanical-garden",
-    )
 
-  Recommendation.create!(
-    name: " Bike Tour: Downtown, Old Montreal, Waterfront",
-    description: "Follow Montreal bike paths on a guided bike tour of Mont-Royal Park, Old Montreal, and the Saint Lawrence River, exploring local history and some of the city’s most important sites along the way. With a relaxed pace and plenty of breaks, this Montreal bike tour is a great introduction to the city's vibrant cycling culture, and it includes a bike, helmet, and water bottle.",
-    category: "biking",
-    price_range: "$",
-    price: 86,
-    address: "1455, Peel street 3rd Floor, Montreal, Quebec H3A 1T5 Canada",
+Recommendation.create!(
+  name: " Bike Tour: Downtown, Old Montreal, Waterfront",
+  description: "Follow Montreal bike paths on a guided bike tour of Mont-Royal Park, Old Montreal, and the Saint Lawrence River, exploring local history and some of the city’s most important sites along the way. With a relaxed pace and plenty of breaks, this Montreal bike tour is a great introduction to the city's vibrant cycling culture, and it includes a bike, helmet, and water bottle.",
+  category: "biking",
+  price_range: "$",
+  price: 86,
+  address: "1455, Peel street 3rd Floor, Montreal, Quebec H3A 1T5 Canada",
   longitude: -73.55292486749346,
   latitude: 45.50774092165434,
-    kid_friendly: false,
-    dog_friendly: false,
-    outdoor: true,
-    image_url: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/09/34/5d/63.jpg",
-    start_time: "10:00:00",
-    end_time: "15:00:00",
-    web_url: "https://www.tripadvisor.ca/AttractionProductReview-g155032-d12027499-Montreal_Highlights_Bike_Tour_Downtown_Old_Montreal_Waterfront-Montreal_Quebec.html"
-    )
-    Recommendation.create!(
-      name: " 3 Hour Montreal City Bike Tour with Wine or Beer",
-      description: "Explore Montreal by bike to discover the city’s colorful neighborhoods, historic buildings, and cuisine. You’ll get a great introduction to Montreal bike paths and bike lanes, too; since your bike rental is good for the whole day, you can keep sightseeing on your own after the tour concludes. Choose between a 9-mile (14-km.) City Tour or the 12-mile (20-km.) Architecture Tour to see the city with a local guide.
-    ",
-      category: "biking",
-      price_range: "$",
-      price: 86,
-      address: "1455, Peel street 3rd Floor, Montreal, Quebec H3A 1T5 Canada",
-      longitude: -73.55361088701993,
-      latitude: 45.50828780903704,
-      kid_friendly: false,
-      dog_friendly: false,
-      outdoor: true,
-      image_url: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/06/6e/e2/ef.jpg",
-      start_time: "10:00:00",
-      end_time: "15:00:00",
-      web_url:"https://www.tripadvisor.ca/AttractionProductReview-g155032-d11451195-3_Hour_Montreal_City_Bike_Tour_with_Wine_or_Beer_AM_PM-Montreal_Quebec.html"
-      )
+  kid_friendly: false,
+  dog_friendly: false,
+  outdoor: true,
+  image_url: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/09/34/5d/63.jpg",
+  start_time: "10:00:00",
+  end_time: "15:00:00",
+  web_url: "https://www.tripadvisor.ca/AttractionProductReview-g155032-d12027499-Montreal_Highlights_Bike_Tour_Downtown_Old_Montreal_Waterfront-Montreal_Quebec.html"
+  )
 
+Recommendation.create!(
+  name: " 3 Hour Montreal City Bike Tour with Wine or Beer",
+  description: "Explore Montreal by bike to discover the city’s colorful neighborhoods, historic buildings, and cuisine. You’ll get a great introduction to Montreal bike paths and bike lanes, too; since your bike rental is good for the whole day, you can keep sightseeing on your own after the tour concludes. Choose between a 9-mile (14-km.) City Tour or the 12-mile (20-km.) Architecture Tour to see the city with a local guide.
+",
+  category: "biking",
+  price_range: "$",
+  price: 86,
+  address: "1455, Peel street 3rd Floor, Montreal, Quebec H3A 1T5 Canada",
+  longitude: -73.55361088701993,
+  latitude: 45.50828780903704,
+  kid_friendly: false,
+  dog_friendly: false,
+  outdoor: true,
+  image_url: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/06/6e/e2/ef.jpg",
+  start_time: "10:00:00",
+  end_time: "15:00:00",
+  web_url:"https://www.tripadvisor.ca/AttractionProductReview-g155032-d11451195-3_Hour_Montreal_City_Bike_Tour_with_Wine_or_Beer_AM_PM-Montreal_Quebec.html"
+  )
 
+Recommendation.create!(
+  name: "Montreal: Ecomuseum Zoo",
+  description: "See a variety of wildlife including Black Bear, Wolves, Foxes, Eagles and more",
+  category: :zoo,
+  price: 24.75,
+  address: "21125 Sainte Marie Rd, Sainte-Anne-de-Bellevue, Quebec H9X 3Y7",
+  longitude: -73.93478780707474,
+  latitude: 45.42571305750004,
+  kid_friendly: true,
+  dog_friendly: false,
+  outdoor: true,
+  image_url: "https://cdn.getyourguide.com/img/tour/8901013b6cc7e4694f3ebff617429974203d559a45e8386cbc0e93a1c992bbda.jpeg/145.jpg",
+  start_time: "11:00:00",
+  end_time: "15:00:00"
+)
 
+Recommendation.create!(
+  name: "Montreal: Private Day Tour to Parc Omega & Montebello Lodge",
+  description: "Explore Montreal's beautiful surrounding areas on a private day tour",
+  category: :zoo,
+  price: 413,
+  address: "399 Route 323 Nord, Montebello, QC J0V 1L0",
+  longitude: -74.94370378742934,
+  latitude: 45.682514881676504,
+  kid_friendly: true,
+  dog_friendly: false,
+  outdoor: true,
+  image_url: "https://cdn.getyourguide.com/img/tour/5e50ac8a822ce.jpeg/145.jpg",
+  start_time: "11:00:00",
+  end_time: "15:00:00"
+)
 
 puts "Recommendations created successfully!"
 

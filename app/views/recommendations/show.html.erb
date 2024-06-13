@@ -26,6 +26,7 @@
     <div>
         <h4 class="colored-text">Time</h4>
         <div class="row text-center justify-content-center">
+        <% if @recommendation.start_time? && @recommendation.end_time? %>
           <div class="col-3">
             <i class="fa-regular fa-clock colored-text"></i>
             <p><%= @recommendation.start_time.strftime("%H:%M") %></p>
@@ -34,6 +35,16 @@
             <i class="fa-solid fa-clock colored-text"></i>
             <p><%= @recommendation.end_time.strftime("%H:%M") %></p>
           </div>
+        <% else %>
+          <div class="col-3">
+            <i class="fa-regular fa-clock colored-text"></i>
+            <p>TBD</p>
+          </div>
+          <div class="col-3">
+            <i class="fa-solid fa-clock colored-text"></i>
+            <p>TBD</p>
+          </div>
+        <% end %>
         </div>
         <hr class="custom-hr">
 
