@@ -199,7 +199,8 @@ Recommendation.create!(
   start_time: "14:30",
   end_time: "18:00",
   web_url: "https://www.tripadvisor.com/Attraction_Review-g155032-d26168392-Reviews-TourBird-Montreal_Quebec.html",
-  rating: 5
+  rating: 5,
+  max_guests: 5
 )
 
 Recommendation.create!(
