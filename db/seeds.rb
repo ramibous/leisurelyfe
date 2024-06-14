@@ -166,24 +166,6 @@ Recommendation.create!(
 )
 
 Recommendation.create!(
-  name: "Montreal: Private Day Tour to Parc Omega & Montebello Lodge",
-  description: "Explore Montreal's beautiful surrounding areas on a private day tour",
-  category: :zoo,
-  price_range: nil,
-  price: 413,
-  address: "399 Route 323 Nord, Montebello, QC J0V 1L0",
-  longitude: -74.94370378742934,
-  latitude: 45.682514881676504,
-  kid_friendly: true,
-  dog_friendly: false,
-  outdoor: true,
-  image_url: "https://cdn.getyourguide.com/img/tour/5e50ac8a822ce.jpeg/145.jpg",
-  start_time: "11:00:00",
-  end_time: "15:00:00",
-  rating: 4
-)
-
-Recommendation.create!(
   name: "TourBird",
   description: "Discover Montreal in a unique way with TourBird, offering tailored tours to explore the city.",
   category: :event,
