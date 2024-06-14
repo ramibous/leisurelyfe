@@ -1,3 +1,6 @@
+<% content_for :meta_title, "#{@recommendation.name} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @recommendation.description %>
+<% content_for :meta_image, image_path(@recommendation.image_url) %>
 <!-- Container for the show section -->
 
 <div class="show-container">
