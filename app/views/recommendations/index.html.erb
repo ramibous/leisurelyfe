@@ -131,7 +131,7 @@
     <% @recommendations.each do |recommendation| %>
       <%= render "card", recommendation: recommendation, page: get_recommendation_card_page %>
     <% end %>
-    <div class="container">
+    <div class="paginary-container">
       <%= paginate @recommendations, theme: 'bootstrap-5',
                     pagination_class: "pagination-sm flex-wrap justify-content-center",
                     nav_class: "d-inline-block" %>
