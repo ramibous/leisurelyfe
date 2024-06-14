@@ -100,7 +100,7 @@ Recommendation.create!(
   longitude: -73.55586320495809,
   latitude:  45.561696508921194,
   kid_friendly: true,
-  dog_friendly: false,
+  dog_friendly: true,
   outdoor: true,
   image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/ae/2d/88/etang-du-jardin-japonais.jpg?w=1400&h=-1&s=1",
   start_time: "09:00:00",
@@ -169,6 +169,26 @@ Recommendation.create!(
   rating: 3
 )
 
+
+Recommendation.create!(
+  name: "Montreal Biodome",
+  description: "Ecosystems from the Americas under one roof, featuring animals, plants, and interactive exhibits.",
+  category: :kids_activity,
+  price_range: "$25 - $50",
+  price: 0,
+  address: "4777 Avenue Pierre-De Coubertin, Montreal, Quebec H1V 1B3 Canada",
+  longitude: -73.55107,
+  latitude: 45.55911,
+  kid_friendly: true,
+  dog_friendly: false,
+  outdoor: false,
+  image_url: "https://www.mtl.org/sites/default/files/styles/playlist_banner_big/public/2022-12/45984.jpg?itok=w0m_UXTG",
+  start_time: '2024-06-14 09:00:00',
+  end_time: '2024-06-14 18:00:00',
+  rating: 4
+)
+
+
 Recommendation.create!(
   name: "Montreal: Private Day Tour to Parc Omega & Montebello Lodge",
   description: "Explore Montreal's beautiful surrounding areas on a private day tour",
@@ -179,7 +199,7 @@ Recommendation.create!(
   longitude: -74.94370378742934,
   latitude: 45.682514881676504,
   kid_friendly: true,
-  dog_friendly: true,
+  dog_friendly: false,
   outdoor: true,
   image_url: "https://cdn.getyourguide.com/img/tour/5e50ac8a822ce.jpeg/145.jpg",
   start_time: "11:00:00",
@@ -413,23 +433,7 @@ Recommendation.create!(
   rating: 4
 )
 
-Recommendation.create!(
-  name: "Montreal Biodome",
-  description: "Ecosystems from the Americas under one roof, featuring animals, plants, and interactive exhibits.",
-  category: :kids_activity,
-  price_range: "$25 - $50",
-  price: 0,
-  address: "4777 Avenue Pierre-De Coubertin, Montreal, Quebec H1V 1B3 Canada",
-  longitude: -73.55107,
-  latitude: 45.55911,
-  kid_friendly: true,
-  dog_friendly: false,
-  outdoor: false,
-  image_url: "https://www.mtl.org/sites/default/files/styles/playlist_banner_big/public/2022-12/45984.jpg?itok=w0m_UXTG",
-  start_time: '2024-06-14 09:00:00',
-  end_time: '2024-06-14 18:00:00',
-  rating: 4
-)
+
 
 Recommendation.create!(
   name: "Montreal Science Centre",

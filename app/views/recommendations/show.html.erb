@@ -14,7 +14,7 @@
 <!-- Container for navigation items -->
 <div class="navigation-container">
   <div class="navigation-item">
-    <%= link_to recommendations_path do %>
+    <%= link_to recommendations_path(kid_friendly: params[:kid_friendly], dog_friendly: params[:dog_friendly])  do %>
       <i class="fa-solid fa-arrow-left"></i>
     <% end %>
   </div>
