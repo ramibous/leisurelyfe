@@ -61,7 +61,7 @@ Recommendation.create!(
   kid_friendly: true,
   dog_friendly: false,
   outdoor: false,
-  image_url: "https://media-cdn.tripadvisor.com/media/photo-o/08/8f/0a/18/boustan.jpg",
+  image_url: "https://i0.wp.com/houstonfoodfinder.com/wp-content/uploads/2021/04/IMG_5788.jpg?fit=1440%2C960&ssl=1",
   start_time: '11:30:00',
   end_time: '15:00:00',
   rating: 4
@@ -223,25 +223,59 @@ Recommendation.create!(
 )
 
 Recommendation.create!(
-  name: "Quartier des Spectacles",
-  description: "Quartier des Spectacles has been Montreal's cultural heart for more than a century. Today, the entertainment district boasts North America's most concentrated and diverse group of cultural venues, making Montreal one of the world's great cultural metropolises. As an exceptional creative space open to artistic diversity, it is the year-round host to countless festivals and events, many of which include free outdoor shows and activities.****Depuis plus de 100 ans, le Quartier des spectacles constitue le coeur culturel de Montreal.Il offre aujourd'hui la plus grande concentration et diversite de lieux de diffusion culturelle en Amerique du Nord, ce qui fait de Montreal une metropole culturelle incontournable dans le monde. Lieu de creation exceptionnel ouvert a la diversite artistique et au metissage culturel, il est anime toute l'annee par un grand nombre de festivals et d'evenements, qui comportent une importante programmation exterieure gratuite.",
+  name: "Sir Wilfrid Laurier Park",
+  description: "Sir Wilfrid Laurier Park offers sports facilities, a wading pool, and ample green space. It's a great spot for a leisurely walk with your dog.",
   category: :pets,
   price_range: nil,
   price: 0,
-  address: "1435, rue Saint-Alexandre, Montreal, Quebec H3A 2G4 Canada",
-  longitude: -73.568344,
-  latitude: 45.504177,
+  address: "1115 Laurier Ave E, Montreal, Quebec H2J 1E9 Canada",
+  longitude: -73.576424,
+  latitude: 45.534380,
   kid_friendly: true,
-  dog_friendly: false,
-  outdoor: false,
-  image_url: "https://media-cdn.tripadvisor.com/media/photo-m/1280/24/51/c9/91/located-in-downtown-montreal.jpg",
-  start_time: "14:30",
-  end_time: "18:00",
-  web_url: "https://www.tripadvisor.com/Attraction_Review-g155032-d6116892-Reviews-Quartier_des_Spectacles-Montreal_Quebec.html",
-  email: "info@quartierdesspectacles.com",
-  phone: "+1 514-879-0009",
+  dog_friendly: true,
+  outdoor: true,
+  image_url: "https://www.threeriversparks.org/sites/default/files/2020-08/Dog%20trails%20-%20summer.jpg",
+  start_time: '2024-06-14 06:00:00',
+  end_time: '2024-06-14 23:00:00',
   rating: 4
 )
+
+Recommendation.create!(
+  name: "Parc des Rapides",
+  description: "A beautiful park along the Lachine Rapids with walking trails and scenic views, ideal for dogs on leashes.",
+  category: :pets,
+  price_range: nil,
+  price: 0,
+  address: "111 Rue Saint-Patrick, Montreal, Quebec H8R 1H5 Canada",
+  longitude: -73.603689,
+  latitude: 45.432456,
+  kid_friendly: true,
+  dog_friendly: true,
+  outdoor: true,
+  image_url: "https://images.ctfassets.net/hivti1x80euy/240WZOY2QAWD3OfUwdPG5T/3451765ac40cc2bbf13d3795f81557ad/shutterstock_652358353.jpg",
+  start_time: '2024-06-14 06:00:00',
+  end_time: '2024-06-14 21:00:00',
+  rating: 5
+)
+
+Recommendation.create!(
+  name: "Westmount Park",
+  description: "A charming park with gardens, walking paths, and plenty of open space for dogs to explore.",
+  category: :pets,
+  price_range: nil,
+  price: 0,
+  address: "327 Avenue Melville, Westmount, Quebec H3Z 2J7 Canada",
+  longitude: -73.600658,
+  latitude: 45.484378,
+  kid_friendly: true,
+  dog_friendly: true,
+  outdoor: true,
+  image_url: "https://imengine.prod.srp.navigacloud.com/?uuid=61ba73d4-f42b-5280-8a4a-310a74a17065&type=primary&q=75&width=1024&height=768&function=cropresize&crop_w=0.99999&crop_h=0.99999&x=1.0E-5&y=1.0E-5",
+  start_time: '2024-06-14 06:00:00',
+  end_time: '2024-06-14 21:00:00',
+  rating: 5
+)
+
 Recommendation.create!(
   name: "Angrignon Park",
   description: "A large park with walking trails and open spaces, perfect for dogs on leashes.",
