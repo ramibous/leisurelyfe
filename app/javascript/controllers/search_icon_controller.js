@@ -11,7 +11,7 @@ export default class extends Controller {
 
   toggleIconColor(checkbox, icon) {
     if (checkbox.checked) {
-      icon.style.color = 'brown';
+      icon.style.color = '#4A5D42';
     } else {
       icon.style.color = '';
     }

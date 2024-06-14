@@ -5,34 +5,13 @@
 </section>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-  .landing-intro {
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #C8EAD0; /* Light grey background */
-    color: #333; /* Dark grey text */
-  }
-
-  .landing-intro h1 {
-    font-size: 2.5em; /* Adjust size as needed */
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #2c3e50; /* Dark blue text for the heading */
-  }
-
-  .landing-intro p {
-    font-size: 1.25em; /* Adjust size as needed */
-    color: #7f8c8d; /* Lighter grey for the paragraph */
-    max-width: 600px; /* Limit width for better readability */
-    margin: 0 auto;
-  }
 </style>
 
 
 <main data-controller="search-icon search-main">
   <section class="search">
-  <%# This is for the NUMBER OF GUESTS  %>
+  <div class="d-flex align-items-center">
+    <%# This is for the NUMBER OF GUESTS  %>
     <div class="input-group guests-group">
       <i class="fas fa-user-friends"></i>
       <input type="number" class="input-guests" name="guests" value="0" min="0" data-search-main-target="inputGuests">
@@ -55,10 +34,11 @@
           </label>
         </div>
       </div>
-
+    </div>
       <div class="form-submit">
         <%= f.submit "Search", class: "search-button" %>
       </div>
     <% end %>
+
   </section>
 </main>
