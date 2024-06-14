@@ -1,36 +1,35 @@
 <div style="width: 400px">
   <section class="icons-section">
     <div class="icon-container" id="icon-container">
-      <%= link_to recommendations_path, class: "icon-item text-decoration-none text-dark" do %>
+      <%= link_to recommendations_path(request.params.merge(category: nil)), class: "icon-item text-decoration-none text-dark" do %>
         <i class="fas fa-globe"></i>
-        <span class="icon-name">See All </span>
+        <span class="icon-name">See All</span>
       <% end %>
-      <%= link_to recommendations_path(category: 'restaurant'), class: "icon-item text-decoration-none text-dark" do %>
+      <%= link_to recommendations_path(request.params.merge(category: 'restaurant')), class: "icon-item text-decoration-none text-dark" do %>
         <i class="fas fa-utensils"></i>
         <span class="icon-name">Food</span>
       <% end %>
-      <%= link_to recommendations_path(category: 'biking'), class: "icon-item text-decoration-none text-dark" do %>
+      <%= link_to recommendations_path(request.params.merge(category: 'biking')), class: "icon-item text-decoration-none text-dark" do %>
         <i class="fas fa-biking"></i>
         <span class="icon-name">Biking</span>
       <% end %>
-      <%= link_to recommendations_path(category: 'pets'), class: "icon-item text-decoration-none text-dark" do %>
+      <%= link_to recommendations_path(request.params.merge(category: 'pets')), class: "icon-item text-decoration-none text-dark" do %>
         <i class="fas fa-dog"></i>
         <span class="icon-name">Pets</span>
       <% end %>
-      <%= link_to recommendations_path(category: 'shopping'), class: "icon-item text-decoration-none text-dark" do %>
+      <%= link_to recommendations_path(request.params.merge(category: 'shopping')), class: "icon-item text-decoration-none text-dark" do %>
         <i class="fas fa-tshirt"></i>
         <span class="icon-name">Shopping</span>
       <% end %>
-
-      <%= link_to recommendations_path(category: 'park'), class: "icon-item text-decoration-none text-dark" do %>
+      <%= link_to recommendations_path(request.params.merge(category: 'park')), class: "icon-item text-decoration-none text-dark" do %>
         <i class="fas fa-tree"></i>
         <span class="icon-name">Parks</span>
       <% end %>
-      <%= link_to recommendations_path(category: 'street_food'), class: "icon-item text-decoration-none text-dark" do %>
+      <%= link_to recommendations_path(request.params.merge(category: 'street_food')), class: "icon-item text-decoration-none text-dark" do %>
         <i class="fas fa-hotdog"></i>
         <span class="icon-name">Street Food</span>
       <% end %>
-      <%= link_to recommendations_path(category: 'outdoor'), class: "icon-item text-decoration-none text-dark" do %>
+      <%= link_to recommendations_path(request.params.merge(category: 'outdoor')), class: "icon-item text-decoration-none text-dark" do %>
         <i class="fas fa-mountain"></i>
         <span class="icon-name">Outdoor</span>
       <% end %>
@@ -38,11 +37,11 @@
         <i class="fas fa-paw"></i>
         <span class="icon-name">Dogs Activity</span>
       <% end %>
-      <%= link_to recommendations_path(category: 'kids_activity'), class: "icon-item text-decoration-none text-dark" do %>
+      <%= link_to recommendations_path(request.params.merge(category: 'kids_activity')), class: "icon-item text-decoration-none text-dark" do %>
         <i class="fas fa-child"></i>
         <span class="icon-name">Kids Activity</span>
       <% end %>
-      <%= link_to recommendations_path(category: 'zoo'), class: "icon-item text-decoration-none text-dark" do %>
+      <%= link_to recommendations_path(request.params.merge(category: 'zoo')), class: "icon-item text-decoration-none text-dark" do %>
         <i class="fas fa-hippo"></i>
         <span class="icon-name">Zoo</span>
       <% end %>

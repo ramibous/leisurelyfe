@@ -15,7 +15,7 @@
       data-recommendation-id="<%= recommendation.id %>">
     </i>
   <% else %>
-    <i class="fa-regular fa-heart heart-icon-recommendation fs-3 <%= 'text-danger fa-solid vibrate' if current_user&.favorites.exists?(recommendation: recommendation) %>"
+    <i class="fa-regular fa-heart heart-icon-recommendation fs-3 <%= 'text-d"anger fa-solid vibrate' if current_user&.favorites.exists?(recommendation: recommendation) %>"
     data-controller="favorite"
     data-action="click->favorite#toggle"
     data-favorite-target="heart"

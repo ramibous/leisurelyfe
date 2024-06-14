@@ -2,10 +2,29 @@
 .search {
     background-color: #C8EAD0;
     padding: 20px;
-    border-radius: 8px;
     box-shadow: var(--box-shadow);
-    display: grid;
-    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-options {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+
+.search-icon {
+  font-size: 20px;
+  margin: 0 10px;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  border-radius: 8px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  width: 35px;
+  text-align: center;
 }
 
 .input-group {
@@ -13,8 +32,6 @@
     align-items: center;
     border: 1px solid var(--border-color);
     border-radius: 18px; /* Choosing the new value */
-    padding: 0 10px; /* Choosing the new value */
-    height: 50px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Keeping this new property */
     background-color: white; /* Keeping this new property */
 }
@@ -96,10 +113,6 @@
     background-color: var(--secondary-color);
 }
 
-.form-with {
-    display: grid;
-    gap: 15px;
-}
 
 .form-submit {
     display: flex;
@@ -168,7 +181,7 @@
     .input-group {
         flex-direction: row;
         justify-content: space-between;
-        padding: 10px;
+        padding: 10px 10px;
         height: auto;
     }
 
@@ -178,7 +191,7 @@
 
     .input-group input {
         flex: 1;
-        padding: 5px;
+        padding: 2px;
     }
 
     .button-minus, .button-plus {
@@ -187,7 +200,7 @@
     }
 
     .search-button {
-        width: 120px;
+        width: 220px;
         max-width: none;
     }
 
@@ -296,12 +309,6 @@
 
 .btn-custom:hover {
     background-color: #85c7a5;
-}
-
-.checkbox-label {
-    font-size: 14px;
-    margin-left: 8px;
-    color: #394867;
 }
 
 /* Heart icon styles */
