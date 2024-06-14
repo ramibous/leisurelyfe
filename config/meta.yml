@@ -1,0 +1,6 @@
+
+meta_product_name: "Leisure Lyfe"
+meta_title: "Leisurelyfe - Your go-to platform for leisure activities and recommendations."
+meta_description: "The weekend is creeping up again and you realize you still haven’t planned anything to do with your family. With LeisureLyfe, find out which activities are happening around you based on your family’s needs"
+meta_image: "logo.png" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account" # required for Twitter Cards
