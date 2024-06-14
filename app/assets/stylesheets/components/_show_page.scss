@@ -87,9 +87,11 @@
 }
 
 .navigation-icons i {
-  font-size: 1.5em;
+  font-size: 2em;
   transition: color 0.3s ease;
   cursor: pointer;
+  color: #5B7553;
+  padding-right: 8px;
 }
 
 .navigation-icons i:hover {

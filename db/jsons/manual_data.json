@@ -3,7 +3,7 @@
     "name": "YATAI MTL",
     "description": "YATAI MTL is a popular 4 days event that celebrates Japanese culture and its street food. The event has 3 components: a street food zone, an exhibitor zone and a cultural zone. It is an opportunity to celebrate the beauty of Montreal's cultural diversity and the way communities live together.",
     "category": "event",
-    "price_range": "$",
+    "price_range": null,
     "location": "Hangar 1825",
     "rating": 4.5,
     "latitude": 45.4847145394446,
