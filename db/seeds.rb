@@ -279,6 +279,43 @@ Recommendation.create!(
 )
 
 Recommendation.create!(
+  name: 'Puppy Playdate',
+  description: 'A meetup for puppies and their owners to socialize and play.',
+  category: :dog_activity,
+  price_range: nil,
+  price: 0,
+  address: "3819 Avenue Calixa-Lavallée, Montreal, QC",
+  longitude: -73.567256,
+  latitude: 45.528735,
+  kid_friendly: true,
+  dog_friendly: true,
+  outdoor: true,
+  image_url: "https://www.petfairasia.com/en/wp-content/uploads/2019/09/Diving-Competition-7.jpg",
+  start_time: '2024-06-20 10:00:00',
+  end_time: '2024-06-20 12:00:00',
+  rating: 5,
+)
+
+Recommendation.create!(
+  name: 'Summer Dog Show',
+  description: 'A fun dog show featuring various breeds and competitions.',
+  category: :dog_activity,
+  price_range: nil,
+  price: 0,
+  address: "1 Circuit Gilles Villeneuve, Montreal, QC",
+  longitude: -73.534133,
+  latitude: 45.507443,
+  kid_friendly: true,
+  dog_friendly: true,
+  outdoor: true,
+  image_url: "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2021/03/25184045/shih-tzu-2021-premier-cup.jpeg",
+  start_time: '2024-06-18 09:00:00',
+  end_time: '2024-06-18 15:00:00',
+  rating: 4,
+
+)
+
+Recommendation.create!(
   name: "Au Pied de Cochon",
   description: "Known for decadent foie gras poutine and other hearty Québécois dishes.",
   category: :street_food,
