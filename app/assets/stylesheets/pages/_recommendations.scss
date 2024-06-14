@@ -110,13 +110,13 @@
 
 .overlay-icons-recommendation .heart-icon-recommendation {
   color: white;
-  font-size: 18px;
+  font-size: 20px;
   cursor: pointer;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 .overlay-icons-recommendation .fa-solid{
-color: #ffffff;;
-
+color: #ffffff;
+font-size: 21px;
 }
 
 .recommendation-labels {
@@ -157,6 +157,14 @@ color: #ffffff;;
   margin-left: 5px;
   font-size: 18px;
 }
+.label-dog_activity {
+  background-color: black;
+}
+
+label-pets{
+ background-color: rgb(114, 252, 34);
+}
+
 .label-kids_activity {
   background-color: chocolate;
 }
