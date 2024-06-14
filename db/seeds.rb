@@ -11,6 +11,26 @@ users << User.create!(email: "justin@gmail.com", password: "123456")
 users << User.create!(email: "victory@gmail.com", password: "123456")
 puts "Done!"
 
+def build_recommendation(data, filename, dog_friendly = false, kid_friendly = false)
+  Recommendation.create!(
+    name: data['name'],
+    description: data['description'],
+    category: data['category'] || 'unknown',
+    price_range: data['price_range'],
+    price: data['price'] || 0,
+    address: data['address'],
+    longitude: data['longitude'],
+    latitude: data['latitude'],
+    kid_friendly: data['kid_friendly'] || kid_friendly,
+    dog_friendly: data['dog_friendly'] || dog_friendly,
+    outdoor: data['outdoor'] || false,
+    image_url: data['image_url'],
+    start_time: data['start_time'],
+    end_time: data['end_time'],
+    rating: data['rating']
+  )
+end
+
 puts "Creating recommendations..."
 
 Recommendation.create!(
@@ -31,23 +51,7 @@ Recommendation.create!(
   rating: 4
 )
 
-Recommendation.create!(
-  name: "Montreal Eaton Centre",
-  description: "A large shopping mall with a variety of stores, food court, and services.",
-  category: :shopping,
-  price_range: "$50 - $150",
-  price: 0,
-  address: "705 Rue Sainte-Catherine O, Montreal, Quebec H3B 4G5 Canada",
-  longitude: -73.571404,
-  latitude: 45.502586,
-  kid_friendly: true,
-  dog_friendly: false,
-  outdoor: false,
-  image_url: "https://smartcdn.gprod.postmedia.digital/nationalpost/wp-content/uploads/2012/05/eaton.jpg",
-  start_time: '2024-06-14 10:00:00',
-  end_time: '2024-06-14 21:00:00',
-  rating: 3
-)
+
 
 Recommendation.create!(
   name: "Boustan",
@@ -157,13 +161,37 @@ Recommendation.create!(
   longitude: -73.93478780707474,
   latitude: 45.42571305750004,
   kid_friendly: true,
-  dog_friendly: false,
+  dog_friendly: true,
   outdoor: true,
   image_url: "https://cdn.getyourguide.com/img/tour/8901013b6cc7e4694f3ebff617429974203d559a45e8386cbc0e93a1c992bbda.jpeg/145.jpg",
   start_time: "11:00:00",
   end_time: "15:00:00",
   rating: 3
 )
+
+Recommendation.create!(
+  name: "Montreal: Private Day Tour to Parc Omega & Montebello Lodge",
+  description: "Explore Montreal's beautiful surrounding areas on a private day tour",
+  category: :zoo,
+  price_range: nil,
+  price: 413,
+  address: "399 Route 323 Nord, Montebello, QC J0V 1L0",
+  longitude: -74.94370378742934,
+  latitude: 45.682514881676504,
+  kid_friendly: true,
+  dog_friendly: true,
+  outdoor: true,
+  image_url: "https://cdn.getyourguide.com/img/tour/5e50ac8a822ce.jpeg/145.jpg",
+  start_time: "11:00:00",
+  end_time: "15:00:00",
+  rating: 4
+)
+
+manual_data_filename = 'db/jsons/manual_data.json'
+manual_data = JSON.parse(File.read(manual_data_filename))
+manual_data.each { |data| build_recommendation(data, manual_data_filename) }
+
+
 
 Recommendation.create!(
   name: "TourBird",
@@ -183,6 +211,24 @@ Recommendation.create!(
   web_url: "https://www.tripadvisor.com/Attraction_Review-g155032-d26168392-Reviews-TourBird-Montreal_Quebec.html",
   rating: 5,
   max_guests: 5
+)
+
+Recommendation.create!(
+  name: "Montreal Eaton Centre",
+  description: "A large shopping mall with a variety of stores, food court, and services.",
+  category: :shopping,
+  price_range: "$50 - $150",
+  price: 0,
+  address: "705 Rue Sainte-Catherine O, Montreal, Quebec H3B 4G5 Canada",
+  longitude: -73.571404,
+  latitude: 45.502586,
+  kid_friendly: true,
+  dog_friendly: false,
+  outdoor: false,
+  image_url: "https://smartcdn.gprod.postmedia.digital/nationalpost/wp-content/uploads/2012/05/eaton.jpg",
+  start_time: '2024-06-14 10:00:00',
+  end_time: '2024-06-14 21:00:00',
+  rating: 3
 )
 
 Recommendation.create!(
@@ -402,6 +448,14 @@ Recommendation.create!(
   end_time: '2024-06-14 17:00:00',
   rating: 4
 )
+
+mapped_attractions_data_filename = 'db/jsons/mapped_attractions_data.json'
+mapped_attractions_data = JSON.parse(File.read(mapped_attractions_data_filename))
+mapped_attractions_data.each { |data| build_recommendation(data, mapped_attractions_data_filename) }
+
+mapped_dog_data_filename = 'db/jsons/mapped_dog_activities.json'
+mapped_dog_data = JSON.parse(File.read(mapped_dog_data_filename))
+mapped_dog_data.each { |data| build_recommendation(data, mapped_dog_data_filename, true) }
 
 puts "Recommendations created successfully!"
 
