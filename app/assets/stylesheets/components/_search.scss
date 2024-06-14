@@ -66,15 +66,14 @@
     border: none;
     outline: none;
     cursor: pointer;
-    font-size: 20px; /* Choosing the new value */
-    font-weight: bold; /* Keeping this new property */
-    display: flex; /* Keeping this new property */
-    align-items: center; /* Keeping this new property */
-    justify-content: center; /* Keeping this new property */
-    width: 30px; /* Keeping this new property */
-    height: 30px; /* Keeping this new property */
-    border-radius: 50%; /* Keeping this new property */
-    transition: background-color 0.3s ease; /* Keeping this new property */
+    font-size: 20px; 
+    font-weight: bold; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: 30px; 
+    height: 30px; 
+    transition: background-color 0.3s ease;
 }
 
 .button-plus::before {
@@ -181,7 +180,7 @@
     .input-group {
         flex-direction: row;
         justify-content: space-between;
-        padding: 10px 40px;
+        padding: 10px 30px;
         height: auto;
     }
 
