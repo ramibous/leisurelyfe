@@ -6,12 +6,23 @@ body {
 .colored-text {
   color: #5B7553;
 }
+
+.guests-group {
+  width: 200px;
+  display: flex;
+  height: 50px;
+  padding-top: 5px;
+  .input-guests {
+    width: 0px;
+  }
+}
+
 // Specific CSS for your home-page
 .search-section .title_home_page {
-  text-align: center; 
+  text-align: center;
   font-size: 16px;
   color: #c90000;
-  margin-top: 20px; 
+  margin-top: 20px;
 }
 
 .recommendations {
@@ -21,7 +32,7 @@ body {
 
 .search-item {
   background-color: var(--background-color);
-  padding: 20px; 
+  padding: 20px;
   border-radius: 8px;
   box-shadow: var(--box-shadow);
   margin-bottom: 20px;
