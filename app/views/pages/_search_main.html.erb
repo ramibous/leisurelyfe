@@ -10,31 +10,31 @@
 
 <main data-controller="search-icon search-main">
   <section class="search">
-  <div class="d-flex align-items-center">
-    <%# This is for the NUMBER OF GUESTS  %>
-    <div class="input-group guests-group">
-      <i class="fas fa-user-friends"></i>
-      <input type="number" class="input-guests" name="guests" value="0" min="0" data-search-main-target="inputGuests">
-      <button class="button-minus" data-action="click->search-main#decrementGuests" data-search-icon-target="minusButton">-</button>
-      <button class="button-plus" data-action="click->search-main#incrementGuests" data-search-icon-target="plusButton">+</button>
-    </div>
     <%= form_with url: recommendations_path, method: :get, class: "form-with" do |f| %>
-      <div class="container-options">
-        <input type="hidden" name="guests" id="guests-count" value="0">
-        <div class="checkbox-wrapper-61">
-          <%= f.check_box :kid_friendly, class: 'check', id: 'kid-friendly', data: { action: "change->search-icon#changeKidFriendlyColor", search_icon_target: "kidFriendlyCheckbox" } %>
-          <label for="kid-friendly" class="label m-0">
-            <i class="fa-solid fa-child-reaching search-icon" data-search-icon-target="kidFriendlyIcon"></i>
-          </label>
+      <div class="d-flex align-items-center">
+        <%# This is for the NUMBER OF GUESTS  %>
+        <div class="input-group guests-group">
+          <i class="fas fa-user-friends"></i>
+          <input type="number" class="input-guests" name="guests" value="0" min="0" data-search-main-target="inputGuests">
+          <button class="button-minus" data-action="click->search-main#decrementGuests" data-search-icon-target="minusButton">-</button>
+          <button class="button-plus" data-action="click->search-main#incrementGuests" data-search-icon-target="plusButton">+</button>
         </div>
-        <div class="checkbox-wrapper-61">
-          <%= f.check_box :dog_friendly, class: 'check', id: 'dog-friendly', data: { action: "change->search-icon#changeDogFriendlyColor", search_icon_target: "dogFriendlyCheckbox" } %>
-          <label for="dog-friendly" class="label m-0">
-            <i class="fa-solid fa-dog search-icon" data-search-icon-target="dogFriendlyIcon"></i>
-          </label>
+        <div class="container-options">
+          <input type="hidden" name="guests" id="guests-count" value="0">
+          <div class="checkbox-wrapper-61">
+            <%= f.check_box :kid_friendly, class: 'check', id: 'kid-friendly', data: { action: "change->search-icon#changeKidFriendlyColor", search_icon_target: "kidFriendlyCheckbox" } %>
+            <label for="kid-friendly" class="label m-0">
+              <i class="fa-solid fa-child-reaching search-icon" data-search-icon-target="kidFriendlyIcon"></i>
+            </label>
+          </div>
+          <div class="checkbox-wrapper-61">
+            <%= f.check_box :dog_friendly, class: 'check', id: 'dog-friendly', data: { action: "change->search-icon#changeDogFriendlyColor", search_icon_target: "dogFriendlyCheckbox" } %>
+            <label for="dog-friendly" class="label m-0">
+              <i class="fa-solid fa-dog search-icon" data-search-icon-target="dogFriendlyIcon"></i>
+            </label>
+          </div>
         </div>
       </div>
-    </div>
       <div class="form-submit">
         <%= f.submit "Search", class: "search-button" %>
       </div>

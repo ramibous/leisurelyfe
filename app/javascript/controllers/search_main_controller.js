@@ -27,7 +27,8 @@ export default class extends Controller {
     }
   }
 
-  decrementGuests() {
+  decrementGuests(event) {
+    event.preventDefault();
     let value = parseInt(this.inputGuestsTarget.value)
     if (value > parseInt(this.inputGuestsTarget.min)) {
       value--
@@ -36,7 +37,8 @@ export default class extends Controller {
     }
   }
 
-  incrementGuests() {
+  incrementGuests(event) {
+    event.preventDefault();
     let value = parseInt(this.inputGuestsTarget.value)
     value++
     this.inputGuestsTarget.value = value
