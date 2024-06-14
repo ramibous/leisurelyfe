@@ -1,5 +1,5 @@
 <% if user_signed_in? %>
-  <i class="fa-solid fa-share-nodes fs-3"
+  <i class="fa-solid fa-share-nodes navigations-icon"
     data-controller="share-content"
     data-action="click->share-content#fire"
     data-share-content-title-value="<%= recommendation.name %>"
@@ -8,14 +8,14 @@
   >
   </i>
   <% if controller_name == "favorites" && action_name == "index" %>
-    <i class="fa-regular fa-heart heart-icon-recommendation fs-1 <%= 'text-danger fa-solid vibrate' if current_user&.favorites.exists?(recommendation: recommendation) %>"
+    <i class="fa-regular fa-heart heart-icon-recommendation navigations-icon <%= 'text-danger fa-solid vibrate' if current_user&.favorites.exists?(recommendation: recommendation) %>"
       data-controller="favorite"
       data-action="click->favorite#toggleAndDelete"
       data-favorite-target="heart"
       data-recommendation-id="<%= recommendation.id %>">
     </i>
   <% else %>
-    <i class="fa-regular fa-heart heart-icon-recommendation fs-3 <%= 'text-d"anger fa-solid vibrate' if current_user&.favorites.exists?(recommendation: recommendation) %>"
+    <i class="fa-regular fa-heart heart-icon-recommendation navigations-icon <%= 'text-d"anger fa-solid vibrate' if current_user&.favorites.exists?(recommendation: recommendation) %>"
     data-controller="favorite"
     data-action="click->favorite#toggle"
     data-favorite-target="heart"
@@ -27,6 +27,6 @@
     <i class="fa-solid fa-share-nodes"></i>
   <% end %>
   <%= link_to new_user_session_path do %>
-    <i class="fa-regular fa-heart heart-icon-recommendation"></i>
+    <i class="fa-regular fa-heart heart-icon-recommendation navigations-icon"></i>
   <% end %>
 <% end %>
