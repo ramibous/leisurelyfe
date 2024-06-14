@@ -5,14 +5,14 @@
 
 
 
-<main data-controller="search-icon">
+<main data-controller="search-icon search-main">
   <section class="search">
   <%# This is for the NUMBER OF GUESTS  %>
     <div class="input-group guests-group">
       <i class="fas fa-user-friends"></i>
-      <input type="number" class="input-guests" name="guests" value="0" min="0" data-search-icon-target="inputGuests">
-      <button class="button-minus" data-search-icon-target="minusButton">-</button>
-      <button class="button-plus" data-search-icon-target="plusButton">+</button>
+      <input type="number" class="input-guests" name="guests" value="0" min="0" data-search-main-target="inputGuests">
+      <button class="button-minus" data-action="click->search-main#decrementGuests" data-search-icon-target="minusButton">-</button>
+      <button class="button-plus" data-action="click->search-main#incrementGuests" data-search-icon-target="plusButton">+</button>
     </div>
     <%= form_with url: recommendations_path, method: :get, class: "form-with" do |f| %>
       <div class="container-options">
