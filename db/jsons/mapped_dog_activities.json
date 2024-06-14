@@ -1,0 +1,362 @@
+[
+  {
+    "name": "Parc Sir-Wilfrid-Laurier Dog Park",
+    "description": "Parc Sir-Wilfrid-Laurier Dog Park is located within Sir Wilfrid Laurier Parc in Montreal, QC. This fenced-in area is perfect for dogs to run and play. There's also a drinking fountain for fresh water.",
+    "rating": 5.0,
+    "latitude": 45.5311491,
+    "longitude": -73.5881728,
+    "image_url": "https://photos.bringfido.com/photo/2016/10/28/iStock_41074996_XXLARGE.jpg?size=tile&density=2x",
+    "address": "1115 Laurier Ave E, Montreal, QC H2J 1G8"
+  },
+  {
+    "name": "Mount Royal Park",
+    "description": "Mount Royal Park in Montreal is dog-friendly. The park features a popular trail that's a perfect nature escape from city life. The trail stretches for miles around the area, giving you and your pooch plenty to explore. Dogs must be on leash at all times, and owners must pick up after their pet.",
+    "rating": 5.0,
+    "latitude": 45.5015977,
+    "longitude": -73.5932345,
+    "image_url": "https://photos.bringfido.com/posted/2019/06/15/640746/Screenshot_2019-06-15_at_5.38.01_PM.png?size=tile&density=2x",
+    "address": "1260 Chemin Remembrance, Montreal, QC H3H 1A2"
+  },
+  {
+    "name": "Microbrasserie 4 Origines",
+    "description": "Microbrasserie 4 Origines is a dog-friendly taproom and brewery in Montreal, QC. Pups are welcome inside and at outdoor tables on their patio. Take a tour of the brewery and learn how they make their delicious beers, including their apricot flavored beer, a golden ale and a cappuccino stout. They don't sell food but you can eat takeout inside. To entertain humans, there are board games to enjoy as well.",
+    "rating": 5.0,
+    "latitude": 45.4882101,
+    "longitude": -73.5578727,
+    "image_url": "https://photos.bringfido.com/tiles/meadow.jpg?size=tile&density=2x",
+    "address": "1304 Saint-Patrick St, Montreal, QC"
+  },
+  {
+    "name": "Parc de la Promenade-Bellerive",
+    "description": "Parc de la Promenade-Bellerive in Montreal, QC is pet-friendly. This is the perfect place for you and your pup to escape city life. There is a path that you can walk along the river, as well as a number of small beaches. In the summer, it is host to social activities and outdoor shows. Dogs must be leashed while enjoying this Montreal spot. Dog owners are reminded to clean up any mess that is left behind.",
+    "rating": 4.5,
+    "latitude": 45.6023126,
+    "longitude": -73.5102034,
+    "image_url": "https://photos.bringfido.com/posted/2019/08/12/611504/Screenshot_2019-08-12_at_11.43.23_AM.png?size=tile&density=2x",
+    "address": "87Q8JF2Q+WW, Montreal, QC H1L 4J2"
+  },
+  {
+    "name": "Parc de la Louisianne Dog Park",
+    "description": "Bring Fido for some off-leash exercise at Parc de la Louisianne Dog Park in Montreal, QC. The fully-fenced dog park offers tons of grass, agility equipment, a drinking trough, benches and plenty of space for pups to run and play. Please remember to clean up after your pup, and be sure they are leashed outside of the dog park space.",
+    "rating": 5.0,
+    "latitude": 45.568237,
+    "longitude": -73.5712341,
+    "image_url": "https://photos.bringfido.com/tiles/types/park.jpg?size=tile&density=2x",
+    "address": "6240 31e Avenue, Montreal, QC H1T 3E3"
+  },
+  {
+    "name": "Bois de Liesse",
+    "description": "You might forget you're in the city at this woodsy gem in Montreal. With its many trails, beautiful stream and some interactive activities, dog-friendly Bois de Liesse is the perfect spot for hiking, cycling, tobogganing, skiing and snowshoeing. Leashed dogs are welcome.",
+    "rating": 4.0,
+    "latitude": 45.4972693,
+    "longitude": -73.7661889,
+    "image_url": "https://photos.bringfido.com/tiles/types/trail.jpg?size=tile&density=2x",
+    "address": "3500 Rue Douglas B Floreani, Montreal, QC H4S 2B9"
+  },
+  {
+    "name": "La Fontaine Park",
+    "description": "La Fontaine Park is dog-friendly. This park is beautiful during all seasons, offering respite from the urban bustle with charming lanscape, plants, facilities and recreational opportunities. Leashed dogs are welcome to join you around the park as you explore the pretty areas via the trails. The park is open every day of the week from 6am until 12am.",
+    "rating": 3.0,
+    "latitude": 45.5270784,
+    "longitude": -73.5692815,
+    "image_url": "https://photos.bringfido.com/tiles/types/park.jpg?size=tile&density=2x",
+    "address": "3819 Avenue Calixa-Lavallée, Montreal, QC H2L 3A7"
+  },
+  {
+    "name": "Parc du Sault-au-Récollet Dog Park",
+    "description": "Fido is welcome to join other canine pals for some off-leash fun at Parc du Sault-au-Récollet Dog Park in Montreal. This fenced dog park features a separate area for small pups, mature trees that offer shade, agility equipment and benches for humans. Please clean up after Fido and remember that dogs must be leashed outside of the dog park.",
+    "rating": 4.0,
+    "latitude": 45.5700968,
+    "longitude": -73.6544927,
+    "image_url": "https://photos.bringfido.com/tiles/types/park.jpg?size=tile&density=2x",
+    "address": "13070 Av. Charton, Montreal, QC H2B 2E1"
+  },
+  {
+    "name": "Notre-Dame-de-Grace Dog Run ",
+    "description": "Plenty of open space for Fido to walk and play.",
+    "rating": 4.0,
+    "latitude": 45.471621,
+    "longitude": -73.6138103,
+    "image_url": "https://photos.bringfido.com/attractions/3/7/6/10673/10673_29729.jpg?size=tile&density=2x",
+    "address": "5584 Rue Sherbrooke O , Montreal, QC"
+  },
+  {
+    "name": "Île-de-la-Visitation Nature Park",
+    "description": "You and Fido can enjoy some time spent at the Île-de-la-Visitation Nature Park, a peaceful nature preserve located in Montréal, QC. Trek along the dog-friendly hiking trails and observe a variety of native birds and other wildlife. You can also find pristine views of the Rivière des Prairies and access to the island of Île de la Visitation. Dogs must remain leashed on all trails.",
+    "rating": null,
+    "latitude": 45.5787259,
+    "longitude": -73.6574798,
+    "image_url": "https://photos.bringfido.com/tiles/types/trail.jpg?size=tile&density=2x",
+    "address": "2425 Boul. Gouin E, Montreal, QC H2B 1X7"
+  },
+  {
+    "name": "Aire commune",
+    "description": "Dogs are also welcome on the terrace. An alternative, non-conventional desk, Air commune is the first outdoor coworking space and terrace in Canada with Wifi, a bar, restaurant, and community space to work, relax, and meet other working professionals in the neighborhood. The space also offers enclosed meeting spaces to reserve. Nightly events include yoga, game nights, expositions, and music.",
+    "rating": null,
+    "latitude": 45.5282905,
+    "longitude": -73.5987544,
+    "image_url": "https://photos.bringfido.com/posted/2019/06/27/446746/65917575_2285202635141447_6733068196686856192_n.jpg?size=tile&density=2x",
+    "address": "5705 Avenue de Gaspé, Montreal, QC H2T 2A3"
+  },
+  {
+    "name": "Old Port of Montreal",
+    "description": "The Old Port of Montreal is pet-friendly. Wander with your pooch through the historic port of Montreal, Quebec, Canada. Located in Old Montreal, it stretches for over 2 km along the Saint Lawrence River. It was used as early as 1611, when French fur traders used it as a trading post. Leashed pups are welcome to walk with you down memory lane.",
+    "rating": null,
+    "latitude": 45.4999814,
+    "longitude": -73.5555662,
+    "image_url": "https://photos.bringfido.com/attractions/1/1/0/19011/19011_42516.jpg?size=tile&density=2x",
+    "address": "333 Rue de la Commune O, Montreal, QC"
+  },
+  {
+    "name": "Jarry Park",
+    "description": "The dog-friendly Jarry Park in Montreal occupies a large expanse with areas designated for various sports fields, as well as a network of trails and a pond with a fountain. It's a great place to explore with your pooch, as long as he is leashed and cleaned up after.",
+    "rating": null,
+    "latitude": 45.5330002,
+    "longitude": -73.6271011,
+    "image_url": "https://photos.bringfido.com/posted/2019/07/26/793212/31708H.jpg?size=tile&density=2x",
+    "address": "285 Rue Gary-Carter, Montreal, QC H2R 2W1"
+  },
+  {
+    "name": "Parc a Chien Pointe-aux-Trembles",
+    "description": "Parc a Chien Pointe-aux-Trembles is pet-friendly. This enclosed grassy area is a perfect place for your dog to run freely off a leash. From May to September 2019, free dog behavior workshops will be held in this dog park. Permanent residents in Montreal are required to purchase a permit annually, allowing dogs to use parks throughout the area. Parc a Chien Pointe-aux-Trembles is open every day of the week from 7am until 11pm.",
+    "rating": null,
+    "latitude": 45.68474,
+    "longitude": -73.497097,
+    "image_url": "https://photos.bringfido.com/photo/2019/06/26/photo/2019/06/26/11403410_734390340004565_4924446432966445387_n.jpg?size=tile&density=2x",
+    "address": "15200 Rue Sherbrooke Est, Montreal, QC H1A 3P9"
+  },
+  {
+    "name": "Parc a chiens Ahuntsic",
+    "description": "Parc a chiens Ahuntsic is a pet-friendly recreation area in Montreal. One of 50 dog parks in the area, this fenced-in space provides a great place for your dog to run and play without the constraints of a leash. They even host free behavioral classes for dogs at this dog park throughout the year. Although dogs are allowed on a leash outside of the dog park, they should avoid playing in the playground or drinking from the water fountain for humans. Permanent residents in Montreal are required to purchase a permit annually, allowing dogs to use parks throughout the area.",
+    "rating": null,
+    "latitude": 45.5565661,
+    "longitude": -73.6695112,
+    "image_url": "https://photos.bringfido.com/photo/2023/02/23/photo/2023/02/23/Nicco171130_111022_FV.jpg?size=tile&density=2x",
+    "address": "Rue Lajeunesse/Henri-Bourassa, Montreal, QC"
+  },
+  {
+    "name": "Percy Walters Park",
+    "description": "Dogs are welcome to join their owners at Percy Walters Park in Montreal. Your pooch can run around off-leash in this fenced-in grassy space. There are plenty of benches that allow human visitors to relax and keep an eye on their pets while they have fun and socialize. Water is available in the summer for both you and your dog. The park is always open and there are other trails to explore with your dog on a leash, too.",
+    "rating": null,
+    "latitude": 45.4988889,
+    "longitude": -73.5857407,
+    "image_url": "https://photos.bringfido.com/attractions/2/0/3/18302/18302_41168.jpg?size=tile&density=2x",
+    "address": "40 Avenue Mcgregor, Montreal, QC H3G 2J8"
+  },
+  {
+    "name": "Parc a chiens La fontaine",
+    "description": "Parc a chiens La fontaine is pet-friendly. The open area is fenced-in, so your pooch can run freely without a leash inside. There are benches and log stumps for humans to take a rest on while dogs play fetch and hangs out with the other dogs in the park. The pretty trees around the park provide lots of shade on sunny days. Permanent residents in Montreal are required to purchase a permit annually, allowing dogs to use parks throughout the area. The park is open every day of the week from 8am until 11pm.",
+    "rating": 3.0,
+    "latitude": 45.5251509,
+    "longitude": -73.5697693,
+    "image_url": "https://photos.bringfido.com/posted/2019/06/25/786322/57882290_2100931216690624_3521100840225996800_n.jpg?size=tile&density=2x",
+    "address": "3933 Avenue du Parc-La Fontaine, Montreal, QC H2L 0C7"
+  },
+  {
+    "name": "William Bowie Park ",
+    "description": "A special fenced-in area provides dogs a long run in which to exercise.",
+    "rating": null,
+    "latitude": 45.4579584,
+    "longitude": -73.6503808,
+    "image_url": "https://photos.bringfido.com/photo/2016/12/20/iStock-623846576.jpg?size=tile&density=2x",
+    "address": "4951 Avenue Trenholme, Montreal, QC H4V 1Y2"
+  },
+  {
+    "name": "Little Burgundy",
+    "description": "Little Burgundy is pet friendly! The store primarily sells shoes, but various accessories are also available for purchase. Leashed pups can join you inside to help you decide what new fashion item you want to take home with you. Little Burgundy is open Tuesday from 10am to 7pm, Wednesday from 10am to 8pm, Thursday to Friday from 10am to 9pm, Saturday from 10am to 8pm, Sunday from 11am to 6pm.",
+    "rating": null,
+    "latitude": 45.5207351,
+    "longitude": -73.5860214,
+    "image_url": "https://photos.bringfido.com/posted/2019/08/08/372952/Screenshot_2019-08-08_at_4.05.39_PM.png?size=tile&density=2x",
+    "address": "55 Avenue du Mont-Royal Est, Montreal, QC H2T 1N6"
+  },
+  {
+    "name": "Parc à chiens du parc Lucie-Bruneau",
+    "description": "Parc à chiens du parc Lucie-Bruneau is a dog park in Montreal. This pet-friendly recreation area is fenced-in, allowing your pooch to play freely without a leash, as long you're supervising and pick up any mess that they leave behind. The park also hosts canine behavior lessons. Permanent residents in Montreal are required to purchase a permit annually, allowing dogs to use parks throughout the area. Permanent residents in Montreal are required to purchase a permit annually, allowing dogs to use parks throughout the area. The park is open every day of the week from 7am to 11pm.",
+    "rating": null,
+    "latitude": 45.6038821,
+    "longitude": -73.5824252,
+    "image_url": "https://photos.bringfido.com/tiles/types/park.jpg?size=tile&density=2x",
+    "address": "7051 Avenue de l'Alsace, Montreal, QC"
+  },
+  {
+    "name": "Parc a chien Angrignon",
+    "description": "Dogs are welcome at Parc a chien Angrignon. This pet-friendly enclosed space is reserved for dogs to run freely off of their leash. Dog owners are reminded to clean up any mess that their pets leave behind in the park and to keep their pooch under control while they are playing with other dogs. Permanent residents in Montreal are required to purchase a permit annually, allowing dogs to use parks throughout the area. Parc a chien Angrignon is open every day of the week from 7am until 11pm.",
+    "rating": null,
+    "latitude": 45.4413136,
+    "longitude": -73.5964202,
+    "image_url": "https://photos.bringfido.com/tiles/types/park.jpg?size=tile&density=2x",
+    "address": "7503 Boulevard de la Vérendrye, Montreal, QC H4E 4J3"
+  },
+  {
+    "name": "Maison Pepin",
+    "description": "Maison Pepin is pet-friendly. They curate the very best in style, home, and fashion, with a strong focus on Canadian talent. You can even order something at the cafe and enjoy it in their charming courtyard, where various events and activities are put on throughout the year. Well-behaved, leashed dogs are allowed throughout the store. Maison Pepin is open Monday through Saturday from 10am to 6pm and Sunday from 11am to 5pm.",
+    "rating": null,
+    "latitude": 45.500766,
+    "longitude": -73.556467,
+    "image_url": "https://photos.bringfido.com/posted/2019/08/16/397363/Screenshot_2019-08-16_at_10.32.36_AM.png?size=tile&density=2x",
+    "address": "378 Rue Saint-Paul Ouest, Montreal, QC H2Y 2A6"
+  },
+  {
+    "name": "Parc à chiens Baldwin",
+    "description": "Parc à chiens Baldwin is a pet-friendly recreation area. Dogs are welcome to enjoy the park without a leash, although the area is not fully fenced-in. This shared space is a compromise between a real dog park and an open area in a specific area of ​​a park. Dogs who are not trained and won't listen to their owner should use La Fontaine or Sir-Wilfrid-Laurier parks instead. Permanent residents in Montreal are required to purchase a permit annually, allowing dogs to use parks throughout the area. Owners are also reminded to clean up any mess that their pets leave behind and to keep them under control during their visit.",
+    "rating": null,
+    "latitude": 45.5355472,
+    "longitude": -73.5660034,
+    "image_url": "https://photos.bringfido.com/posted/2019/06/25/503836/11216566_1545705775690030_4664415204787062446_n.jpg?size=tile&density=2x",
+    "address": "Rue Fullum, Montreal, QC"
+  },
+  {
+    "name": "Dog Park at Jeanne-Mance Park",
+    "description": "Fido is invited to play at the dog park at Jeanne-Mance Park in Montreal, QC. This space permits your pup to roam off-leash during specific times of the year. However, note that it's not entirely enclosed, so keeping your dog under control is essential. From October 15 to April 14, dogs can enjoy off-leash play from 6:00 AM to 8:30 AM and from 8:00 PM to 12:00 AM. From April 15 to October 14, off-leash hours are from 6:00 AM to 8:30 AM and 9:30 AM to 12:00 AM. Montreal residents must purchase an annual permit granting their furry friends access to parks throughout the area. Please refer to their current regulations and guidelines here.",
+    "rating": null,
+    "latitude": 45.518377,
+    "longitude": -73.587957,
+    "image_url": "https://photos.bringfido.com/tiles/types/park.jpg?size=tile&density=2x",
+    "address": "Avenue du Mont-Royal Ouest, Montreal, QC H2W 2N4"
+  },
+  {
+    "name": "Room Service Loft Boutique",
+    "description": "Room Service Loft Boutique is pet-friendly. Located in the charming streets of Old Montreal, Room Service Loft Boutique's sell designer clothing in a chic interior. There is even a small dog at the store to welcome you and your pooch when you arrive. Room Service Loft Boutique is open Thursday to Friday 11am to 7pm, Saturday from 11am to 6pm, Sunday through Wednesday from 11am to 5pm.",
+    "rating": null,
+    "latitude": 45.502774,
+    "longitude": -73.557459,
+    "image_url": "https://photos.bringfido.com/posted/2019/08/08/585401/Screenshot_2019-08-08_at_3.39.01_PM.png?size=tile&density=2x",
+    "address": "465 Rue Saint Jean, Montreal, QC H2Y 1V8"
+  },
+  {
+    "name": "Parc a chiens Marcel-Laurin",
+    "description": "Parc a chiens Marcel-Laurin is pet-friendly. This enclosed space is perfect for dogs to run freely without a leash. Permanent residents in Montreal are required to purchase a permit annually, allowing dogs to use parks throughout the area. The park is open every day of the week from sunrise until 11pm.",
+    "rating": null,
+    "latitude": 45.4987034,
+    "longitude": -73.7110842,
+    "image_url": "https://photos.bringfido.com/tiles/types/park.jpg?size=tile&density=2x",
+    "address": "Boulevard Thimens, Montreal, QC"
+  },
+  {
+    "name": "Boutique Station Service",
+    "description": "Boutique Station Service is pet-friendly. All of the products sold here are made in Quebec. What makes this spot even more unique is that you can both buy and rent their clothes. Dogs are welcome, and a water bowl is available for them. Boutique Station Service is open Monday through Wednesday from 11am to 7pm, Thursday to Friday from 11am to 8pm, and Saturday to Sunday from 11am to 6pm.",
+    "rating": null,
+    "latitude": 45.518761,
+    "longitude": -73.580871,
+    "image_url": "https://photos.bringfido.com/posted/2019/08/08/676209/Screenshot_2019-08-08_at_3.56.11_PM.png?size=tile&density=2x",
+    "address": "72 Rue Rachel Est, Montreal, QC H2W 1C6"
+  },
+  {
+    "name": "Parc a chiens du parc ignace-bourget",
+    "description": "Parc a chiens du parc ignace-bourget is pet-friendly. This dog park is a fenced area that allows you to let your dog run freely, without a leash, under your supervision. From May to September 2019, free dog behavior workshops will be held in this dog park. Permanent residents in Montreal are required to purchase a permit annually, allowing dogs to use parks throughout the area. The park can be accessed every day of the week from 7am until 11pm.",
+    "rating": null,
+    "latitude": 45.4578598,
+    "longitude": -73.6041342,
+    "image_url": "https://photos.bringfido.com/tiles/types/park.jpg?size=tile&density=2x",
+    "address": "5925 Avenue de Montmagny, Montreal, QC H4E 2V6"
+  },
+  {
+    "name": "Crimes and Red Light of Montreal",
+    "description": "'Crimes and Red Light of Montreal' is a pet-friendly Airbnb Experience hosted by Nicolas. You and your pooch will take a guided walking tour of downtown and explore what used to be the Red Light district. \nLearn about the crimes scene and the sex work of Montreal from the 1920’s to the 1950’s and discuss about the impact of the prohibition that led Montreal to be known as the Sin City of the North or the Paris of North America. Subjects might not be suitable for people under the age of 16 years old. The experience lasts 2 hours and can accommodate up to 10 guests ages 18 and up. Rates start at $20 per person.",
+    "rating": null,
+    "latitude": 45.5061995,
+    "longitude": -73.5601371,
+    "image_url": "https://photos.bringfido.com/attractions/4/0/4/21404/21404_47797.jpg?size=tile&density=2x",
+    "address": "De la Gauchetière St, Montreal, QC"
+  },
+  {
+    "name": "ESPACE LOWELL ST-LRNT // FASHION + ART | COLLECTIVE",
+    "description": "Lowell is pet-friendly. This popular shop sells local and ethical hand-made products from their trendy store on Boulevard St-Laurent. Leashed dogs are allowed to join their owners inside. Lowell is open Monday to Tuesday from 11am to 6pm, Wednesday through Friday from 11am to 8pm, and Saturday to Sunday from 11am to 5pm.",
+    "rating": null,
+    "latitude": 45.5244342,
+    "longitude": -73.5962085,
+    "image_url": "https://photos.bringfido.com/posted/2019/08/14/689376/Screenshot_2019-08-14_at_1.28.36_PM.png?size=tile&density=2x",
+    "address": "5298 Boulevard Saint-Laurent, Montreal, QC H2T 1S1"
+  },
+  {
+    "name": "Parc du Pere-Marquette",
+    "description": "Parc du Pere-Marquette is pet-friendly. This dog park is fenced-in, allowing your pooch to run freely without a leash. The park is very spacious and well-kept, including a large green space for a bit of fetch, benches for humans to rest on, and some ideal bollards for a pee target. The dog park at Parc du Pere-Marquette can be accessed every day of the week from 7am to 11pm.",
+    "rating": null,
+    "latitude": 45.5379519,
+    "longitude": -73.5911707,
+    "image_url": "https://photos.bringfido.com/tiles/types/park.jpg?size=tile&density=2x",
+    "address": "5760 Rue Garnier, Montreal, QC H2G 2Z7"
+  },
+  {
+    "name": "Parc canin Louis-Cyr du Sud-Ouest",
+    "description": "Parc canin Louis-Cyr du Sud-Ouest is a pet-friendly area in Montreal. This park is reserved for dogs to run freely without a leash. The fenced-in exercise area is a great place for dogs to run freely. Make sure your pooch has a tag to prove they have the relevant vaccines to enter the park. Permanent residents in Montreal are required to purchase a permit annually, allowing dogs to use parks throughout the area. The park can be accessed every day of the week from 7am until 11pm.",
+    "rating": null,
+    "latitude": 45.475686,
+    "longitude": -73.5848527,
+    "image_url": "https://photos.bringfido.com/tiles/types/park.jpg?size=tile&density=2x",
+    "address": "205 la rue Saint-Ferdinand, Montreal, QC"
+  },
+  {
+    "name": "Life Drawing with Live Music",
+    "description": "'Life Drawing with Live Music' is a pet-friendly Airbnb Experience hosted by Karine. This experience is an opportunity to discover something new and soothe your mind through drawing. You'll be in a relaxing cafe environment with pillows, dimmed lights, a nude model, and a musician. During this workshop, you will be able to sketch while listening to live music playing in the background. It is to the discretion of the manager on site during the experience to decide if your dog can stay inside. There should be no problem with calm dogs. The experience lasts 2.5 hours and can accommodate up to 25 guests ages 18 and up. Please know that you will be sketching nude models. If you are not comfortable with nudity, please avoid this activity. Rates start at $12 per person.",
+    "rating": null,
+    "latitude": 45.510967,
+    "longitude": -73.553098,
+    "image_url": "https://photos.bringfido.com/attractions/5/2/1/20125/20125_45765.jpg?size=tile&density=2x",
+    "address": "Anticafe Montreal, Montreal, QC"
+  },
+  {
+    "name": "Yoga Au Parc Jeanne-Mance Avec Camille",
+    "description": "'Yoga Au Parc Jeanne-Mance Avec Camille' is a pet-friendly Airbnb Experience hosted by Camille. Start with a little meditation and then enjoy about an hour of yoga with your pooch by your side. The experience lasts 1 hour and can accommodate up to 10 guests of all ages. Rates start at $16 per person.",
+    "rating": null,
+    "latitude": 45.5142124,
+    "longitude": -73.5833733,
+    "image_url": "https://photos.bringfido.com/attractions/2/1/0/22012/22012_53062.jpg?size=tile&density=2x",
+    "address": "Le Plateau, Montreal, QC"
+  },
+  {
+    "name": "Frederick-Mackenzie Dog Park",
+    "description": "Frederick-Mackenzie Dog Park is pet-friendly. This fenced-in area is a great place for Fido to hang out and socialize with other dogs. Dog owners are reminded to clean up any mess that their pets leave behind and to keep them under control during their visit. From May to September 2019, free workshops on dog behavior will be held in this dog park. Permanent residents in Montreal are required to purchase a permit annually, allowing dogs to use parks throughout the area. Frederick-Mackenzie Dog Park is open every day of the week from 7am until 11pm.",
+    "rating": null,
+    "latitude": 45.4384618,
+    "longitude": -73.6200902,
+    "image_url": "https://photos.bringfido.com/tiles/types/park.jpg?size=tile&density=2x",
+    "address": "Rue Lapierre, Montreal, QC H8N 1B4"
+  },
+  {
+    "name": "Canal Kayak Tour to Old Montreal",
+    "description": "'Canal Kayak Tour to Old Montreal' is a pet-friendly Airbnb Experience hosted by Marc. Witness the majestic birds, turtles and beavers that call the canal home while we look upon the changing landscape of the Montreal Skyline in a kayak with your pooch. Dogs are welcome to enjoy this experience, too. The experience lasts 3 hours and can accommodate up to 10 guests ages 8 and up. Rates start at $56 per person.",
+    "rating": null,
+    "latitude": 45.4802274,
+    "longitude": -73.5728287,
+    "image_url": "https://photos.bringfido.com/attractions/4/7/0/22074/22074_48449.jpeg?size=tile&density=2x",
+    "address": "Lachine Canal Nautical Centre, Montreal, QC H3K 0A8"
+  },
+  {
+    "name": "Parc canin Le Ber de Pointe-Saint-Charles",
+    "description": "Parc canin Le Ber de Pointe-Saint-Charles is pet-friendly. This fenced dog exercise area allows dogs to run freely off-leash. Humans can relax on the picnic tables provided, while dogs run and play in the open space. There are also trash cans for dog waste to be disposed of. Permanent residents in Montreal are required to purchase a permit annually, allowing dogs to use parks throughout the area. The park can be accessed from 7am until 11pm every day of the week.",
+    "rating": null,
+    "latitude": 45.4785249,
+    "longitude": -73.5534547,
+    "image_url": "https://photos.bringfido.com/tiles/types/park.jpg?size=tile&density=2x",
+    "address": "Avenue Ash, Montreal, QC 000 H3K"
+  },
+  {
+    "name": "Parc à chiens du parc Leroux",
+    "description": "Parc à chiens du parc Leroux is pet-friendly. This dog park is fenced-in, allowing your pooch to play freely without a leash. Dog owners are reminded to clean up any mess that their pets leave behind and to keep an eye on dogs throughout. Permanent residents in Montreal are required to purchase a permit annually, allowing dogs to use parks throughout the area. Permanent residents in Montreal are required to purchase a permit annually, allowing dogs to use parks throughout the area. The dog park is open every day of the week from 7am until 11pm.",
+    "rating": null,
+    "latitude": 45.4352127,
+    "longitude": -73.5949507,
+    "image_url": "https://photos.bringfido.com/tiles/types/park.jpg?size=tile&density=2x",
+    "address": "505 Avenue Lacharité, Montreal, QC H8P 2C1"
+  },
+  {
+    "name": "Discover Montreal's Best Street Art",
+    "description": "'Discover Montreal's Best Street Art' is a pet-friendly Airbnb Experience hosted by Shea, Diego and Fitz. This walk takes you through the must-see Plateau neighbourhood to take in some of the best street art Montreal has to offer. Leashed dogs are welcome on the tour. The experience lasts 2.5 hours and can accommodate up to 10 guests ages 8 and up. Parents may also bring children under 2 years of age. Rates start at $31 per person.",
+    "rating": null,
+    "latitude": 45.5198496,
+    "longitude": -73.5744081,
+    "image_url": "https://photos.bringfido.com/attractions/6/4/2/20246/20246_44950.jpg?size=tile&density=2x",
+    "address": "3980 St Denis St, Montreal, QC H2W 2M2"
+  },
+  {
+    "name": "Film Noir au Canal",
+    "description": "As the name suggests, Film Noir au Canal puts on classic film noir movies on the banks of the Lachine Canal. Before the movie begins, you an your pup can come early for a musical performance. Quiet, leashed dogs are allowed.",
+    "rating": null,
+    "latitude": 45.4897801,
+    "longitude": -73.5592656,
+    "image_url": "https://photos.bringfido.com/posted/2019/08/16/595296/Screenshot_2019-08-16_at_10.01.31_AM.png?size=tile&density=2x",
+    "address": "Square Saint-Patrick, Montreal, QC H3K 1A4"
+  }
+]
