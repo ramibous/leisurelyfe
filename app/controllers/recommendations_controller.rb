@@ -28,9 +28,9 @@ class RecommendationsController < ApplicationController
       @recommendations = @recommendations.where(dog_friendly: true)
     end
 
-    if params[:guests].present? && params[:guests].to_i > 0
-      @recommendations = @recommendations.where('max_guests >= ?', params[:guests])
-    end
+    # if params[:guests].present? && params[:guests].to_i > 0
+    #   @recommendations = @recommendations.where('max_guests >= ?', params[:guests])
+    # end
 
     @counts = @recommendations.count
     # Paginary
