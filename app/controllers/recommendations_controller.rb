@@ -27,6 +27,7 @@ class RecommendationsController < ApplicationController
       @recommendations = @recommendations.where('max_guests >= ?', params[:guests])
     end
 
+    @counts = @recommendations.count
     # Paginary
     @recommendations = @recommendations.page params[:page]
 
